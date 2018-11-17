@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.checkinfo.CheckinfoMapper" >
+
+	
+	<insert id="insertCheckinfo" parameterType="com.ssm.pojo.Vo.Checkinfo_t_Vo">
+		INSERT INTO checkinfo_t(ch_id,ch_name,ch_info)
+		
+		VALUES(#{ch_id},#{ch_name},#{ch_info})
+	</insert>
+	
+	
+	<select id="checkinfoFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Checkinfo_t_Vo">
+		SELECT * FROM checkinfo_t WHERE ch_id =#{value}
+	</select>
+	
+	<update id="updateCheckinfo" parameterType="com.ssm.pojo.Vo.Checkinfo_t_Vo">
+		UPDATE course_t SET ch_name = #{ch_name} ,ch_info = #{ch_info}
+		WHERE ch_id =#{ch_id} 
+	</update>
+	
+	<delete id="deleteCheckinfo" parameterType="String" >
+		DELETE FROM checkinfo_t WHERE ch_id =#{value}
+	</delete>
+</mapper>

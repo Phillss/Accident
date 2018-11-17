@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.log.LogMapper" >
+
+	<!--增加日志  -->
+	<insert id="insertLog" parameterType="com.ssm.pojo.Vo.Log_t_Vo">
+		INSERT INTO log_t(lo_id,lo_text,lo_createId,lo_createTime,lo_class)
+		VALUES(#{lo_id},#{lo_text},#{lo_createId},#{lo_createTime},#{lo_class})
+	</insert>
+	
+	<!--查询  -->
+	<select id="logFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Log_t_Vo">
+		SELECT * FROM log_t WHERE lo_id =#{value}
+	</select>
+</mapper>

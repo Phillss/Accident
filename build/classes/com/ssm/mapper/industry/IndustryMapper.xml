@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.industry.IndustryMapper" >
+
+	<!--添加行业 -->
+	<insert id="insertIndustry" parameterType="com.ssm.pojo.Vo.Industry_t_Vo">
+		INSERT INTO industry_t(in_id,in_name,in_createTime,in_info)
+		VALUES(#{in_id},#{in_name},#{in_createTime},#{in_info})
+	</insert>
+	
+	<!--查询一条行业  -->
+	<select id="findIndustryById" parameterType="String" resultType="com.ssm.pojo.Vo.Industry_t_Vo">
+		SELECT * FROM industry_t WHERE in_id =#{value}
+	</select>
+	
+	<!--更新行业  -->
+	<update id="updateIndustry" parameterType="com.ssm.pojo.Vo.Industry_t_Vo">
+		UPDATE industry_t SET in_createTime = #{in_createTime} ,
+		in_info =#{in_info} 
+		WHERE in_id =#{value} 
+	</update>
+	
+	<!--删除行业  -->	
+	<delete id="deleteIndustry" parameterType="String" >
+		DELETE FROM industry_t WHERE in_id =#{value}
+	</delete>
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.result.ResultMapper" >
+
+
+	<insert id="insertResult" parameterType="com.ssm.pojo.Vo.Result_t_Vo">
+		INSERT INTO result_t(re_id , re_accidentInfo , re_analyzeId , re_checkId , 
+		re_reasion , re_measure , re_causeClass , re_law , re_flag , re_uploadTime ,
+		 re_accidentName) 
+		
+		VALUES(#{re_id} , #{re_accidentInfo} , #{re_analyzeId} , #{re_checkId} ,
+		 #{re_reasion} , #{re_measure} , #{re_causeClass} , #{re_law} , #{re_flag} ,
+		  #{re_uploadTime} , #{re_accidentName})
+	</insert>
+	
+	<!--查询单个调查结果  -->
+	<select id="ResultFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Result_t_Vo">
+		SELECT * FROM result_t WHERE re_id =#{value}
+	</select>
+	
+	<!--查询所有  -->
+	<select id="findall" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Result_t_Vo">
+		SELECT * FROM result_t LIMIT #{current},#{per_record}
+	</select>
+	
+	<!--查询所有记录数  -->
+	<select id="findcounts" resultType="Integer">
+		SELECT COUNT(*) FROM result_t
+	</select>
+	
+	<!--模糊查询  -->
+	<select id="likefind" parameterType="com.ssm.pojo.PageIndex" 
+ 	resultType="com.ssm.pojo.Vo.Result_t_Vo">
+		SELECT * from ssm_demo.result_t LIMIT #{current},#{per_record}
+	</select>
+	
+	<update id="updateResult" parameterType="com.ssm.pojo.Vo.Result_t_Vo">
+		UPDATE result_t SET re_accidentInfo =#{re_accidentInfo}, 
+		re_analyzeId = #{re_analyzeId} ,re_checkId = #{re_checkId} , 
+		re_reasion = #{re_reasion} ,
+		re_measure = #{re_measure} ,re_causeClass = #{re_causeClass} , 
+		re_law  = #{re_law} ,re_flag  = #{re_flag},
+		re_uploadTime  = #{re_uploadTime} , re_accidentName = #{re_accidentName},
+		WHERE re_id =#{re_id} 
+	</update>
+	
+	<delete id="deleteResult" parameterType="String" >
+		DELETE FROM result_t WHERE re_id =#{value}
+	</delete>
+</mapper>

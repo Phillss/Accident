@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.accidentlevel.AccidentLevelMapper" >
+
+	<!--添加 事故等级信息 -->
+	<insert id="insertAccidentlevel" parameterType="com.ssm.pojo.Vo.Accidentlevel_t_Vo">
+		INSERT INTO accidentlevel_t(al_id,al_name,al_createTime)
+		VALUES(#{al_id},#{al_name},#{al_createTime})
+	</insert>
+	
+	<!--查询一条事故等级信息  -->
+	<select id="findAccidentlevelById" parameterType="String" resultType="com.ssm.pojo.Vo.Accidentlevel_t_Vo">
+		SELECT *FROM accidentlevel_t WHERE al_id =#{value}
+	</select>
+	
+	<!--更新事故等级信息  -->
+	<update id="updateAccidentlevel" parameterType="com.ssm.pojo.Vo.Accidentlevel_t_Vo" >
+		UPDATE accidentlevel_t SET  al_name = #{al_name} ,
+		al_createTime =#{al_createTime} 
+		WHERE al_id =#{al_id} 
+	</update>
+	
+	<!--删除事故等级信息  -->	
+	<delete id="deleteAccidentlevel" parameterType="String">
+		DELETE FROM accidentlevel_t WHERE al_id =#{value}
+	</delete>
+</mapper>

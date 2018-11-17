@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.accidentinfo.AccidentinfoMapper" >
+
+	<!--添加事故信息  -->
+	<insert id="insertAccidentinfo" parameterType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
+		INSERT INTO 
+		accidentinfo_t(acc_id,acc_industryId,acc_level,acc_name,acc_time,
+		acc_site,acc_deathSum,acc_injuredSum,acc_financial,acc_boss,
+		acc_org,acc_fileName,acc_save,acc_uploadTime,acc_industryName,acc_levelName)
+		
+		VALUES(#{acc_id} , #{acc_industryId} , #{acc_level} , #{acc_name} , 
+		#{acc_time} , #{acc_site} , #{acc_deathSum} , #{acc_injuredSum} , 
+		#{acc_financial} , #{acc_boss} , #{acc_org} , #{acc_fileName} , 
+		#{acc_save} , #{acc_uploadTime} , #{acc_industryName} , #{acc_levelName})
+	</insert>
+	
+	<!--查询所有  -->
+	<select id="findAll" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
+		SELECT * FROM accidentinfo_t LIMIT #{current},#{per_record}
+	</select>
+	<!--模糊查询  -->
+	<select id="likefinds" parameterType="String" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
+		SELECT * FROM accidentinfo_t WHERE us_account LIKE '%${name}%'
+	</select>
+	
+	<!--查询所有记录数  -->
+	<select id="findCounts" resultType="Integer">
+		SELECT COUNT(*) FROM accidentinfo_t
+	</select>
+	
+	<!--根据id查询事故信息  -->
+	<select id="findAccidentById" parameterType="String" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
+		SELECT * FROM accidentinfo_t WHERE acc_id =#{value}
+	</select>
+	
+	<!--更新事故信息  -->
+	<update id="updateAccidentinfo" parameterType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
+		UPDATE course_t 
+		SET acc_industryId =#{acc_industryId}, acc_level = #{acc_level} ,
+		acc_name = #{acc_name} , acc_time = #{acc_time} ,acc_site = #{acc_site} ,
+		acc_deathSum = #{acc_deathSum} , acc_injuredSum  = #{acc_injuredSum} ,
+		acc_financial  = #{acc_financial},acc_boss  = #{acc_boss} , acc_org = #{acc_org},
+		acc_fileName  = #{acc_fileName},acc_save  = #{acc_save},
+		acc_uploadTime  = #{acc_uploadTime},acc_industryName  = #{acc_industryName},
+		acc_levelName  = #{acc_levelName}
+		
+		WHERE acc_id =#{value} 
+	</update>
+	
+	<!--删除事故信息  -->
+	<delete id="deleteAccidentinfo" parameterType="String" >
+		DELETE FROM accidentinfo_t WHERE acc_id =#{value}
+	</delete>
+</mapper>

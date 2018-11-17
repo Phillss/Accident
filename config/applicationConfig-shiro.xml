@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+<!--开启shiro注解支持  -->
+	<bean
+		class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+		<property name="securityManager" ref="securityManager" />
+	</bean>
+<!--1、 配置securityManager -->
+<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+	<property name="cacheManager" ref="cacheManager"/>
+	<property name="sessionMode" value="native"/>
+	<property name="authenticator" ref="authenticator"></property>
+	<!--添加到  securityManager中为 授权设置-->
+	<property name="realms">
+		<list>
+			<ref bean="jdbcRealm"/>
+			<!-- <ref bean="SHA1ShiroRealm"/> -->
+		</list>
+	</property>
+	<!--设置rememberMe的有效时间  -->
+	<!-- <property name="rememberMeManager.cookie.maxAge" value="10"></property> -->
+</bean>
+
+<!--2、 配置CacheManager (加入ehcache的jar包)-->
+<bean id="cacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+	<property name="cacheManagerConfigFile" value="classpath:ehcache.xml"/>
+</bean>
+
+<!--配置认证器  -->
+<bean  id="authenticator" class="org.apache.shiro.authc.pam.ModularRealmAuthenticator">
+	<!-- <property name="realms">
+		<list>
+			<ref bean="jdbcRealm"/>
+			<ref bean="SHA1ShiroRealm"/>
+		</list>
+	</property> -->
+	<!-- 更改默认认证策略！  -->
+	<!-- <property name="authenticationStrategy">
+		<bean class="org.apache.shiro.authc.pam.AllSuccessfulStrategy"></bean>
+	</property> -->
+</bean>
+
+<!--3、配置Realm 
+	   直接配置实现了Realm接口的Bean 
+	   指定前台输入的密码加密方式 并指定加密的次数-->
+<bean id="jdbcRealm" class="com.ssm.shiro.realm.ShiroRealm">
+	<property name="credentialsMatcher">
+		<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+			<property name="hashAlgorithmName" value="MD5"></property>
+			<property name="hashIterations" value="1024"></property>
+		</bean>
+	</property>
+</bean>
+
+<!--配置 SHA1 的realm bean  -->
+<!-- <bean id="SHA1ShiroRealm" class="com.ali.shiro.realms.SHA1ShiroRealm">
+	<property name="credentialsMatcher">
+		<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+			<property name="hashAlgorithmName" value="SHA1"></property>
+			<property name="hashIterations" value="1024"></property>
+		</bean>
+	</property>
+</bean> -->
+
+<!--4、配置LifecycleBeanPostProcessor 自动调用配置在spring ioc 容器中 shiro bean 声明周期方法  -->
+<bean id="lifecycleBeanPostProcessor" 
+class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+<!--5、启用IOC容器中使用shirod的注解，但必在配置了lifecycleBeanPostProcessor之后才可以使用  -->
+<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" 
+depends-on="lifecycleBeanPostProcessor"/>
+
+<bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+	<property name="securityManager" ref="securityManager"/>
+</bean>
+
+<!--6、配置shiroFilter
+	id必须和web.xml 文件中配置的DelegatingFilterProxy filter-name一致  -->
+<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+	<property name="securityManager" ref="securityManager"/>
+	<property name="loginUrl" value="/login.jsp"/>
+	<property name="successUrl" value="/index.jsp"/>
+	<property name="unauthorizedUrl" value="/login.jsp"/>
+	<!--配置从数据表中初始化资源和权限  -->
+	<property name="filterChainDefinitionMap" ref="filterChainDefinitionMap"></property>
+	<!--配置哪些页面需要受保护 以及访问这些页面需要的权限 -->
+	<!-- <property name="filterChainDefinitions">
+		<value>
+			/login.jsp = anon
+			/shiro/login=anon
+			/shiro/logout=logout
+			/admin.jsp=roles[admin]
+			/user.jsp=roles[user]
+			/** = authc
+		</value>
+	</property> -->
+</bean>
+	<!--配置bean 指向map  通过实例工厂化的方式-->
+	<bean id="FilterChainDefinitionBuilder" 
+			class="com.ssm.shiro.filter.FilterChainDefinitionBuilder">
+	</bean>
+	<bean id="filterChainDefinitionMap" 
+			factory-bean="FilterChainDefinitionBuilder" 
+			factory-method="buildFilterChainDefinitionMap">
+	</bean>
+</beans>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.laws.LawsMapper" >
+
+	<insert id="insertLaws" parameterType="com.ssm.pojo.Vo.Laws_t_Vo">
+		INSERT INTO laws_t(la_id,la_industryId,la_name,la_save,la_fileName,
+		la_number,la_time,la_info)
+		VALUES(#{la_id},#{la_industryId},#{la_name},#{la_save},#{la_fileName},
+		#{la_number},#{la_time},#{la_info})
+	</insert>
+	
+	<select id="findall" resultType="com.ssm.pojo.Vo.Laws_t_Vo">
+		SELECT * FROM laws_t
+	</select>
+	
+	<select id="lawsFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Laws_t_Vo">
+		SELECT * FROM laws_t WHERE la_id =#{value}
+	</select>
+	
+	<update id="updateLaws" parameterType="com.ssm.pojo.Vo.Laws_t_Vo">
+		UPDATE laws_t SET la_industryId =#{la_industryId}, la_name = #{la_name} ,
+		la_save =#{la_save} ,la_save =#{la_save}, la_fileName = #{la_fileName} ,
+		la_number =#{la_number}, la_time =#{la_time}, la_info =#{la_info} 
+		WHERE la_id =#{la_id} 
+	</update>
+	
+	<delete id="deleteLaws" parameterType="String" >
+		DELETE FROM laws_t WHERE la_id =#{la_id}
+	</delete>
+</mapper>

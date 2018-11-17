@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.ssm.mapper.user.UserMapper">
+ 
+ 	<!--根据id查找用户  -->
+ 	<select id="findUserById" parameterType="String" resultType="com.ssm.pojo.Vo.User_t_Vo">
+ 		SELECT * FROM user_t WHERE us_id=#{value}
+ 	</select>
+ 	
+ 	<!--根据用户名查找用户  -->
+ 	<select id="findUserByName" parameterType="String" resultType="com.ssm.pojo.Vo.User_t_Vo">
+ 		SELECT * FROM user_t WHERE us_account=#{value}
+ 	</select>
+ 	
+ 	<!--根据用户名模糊查询用户  -->
+ 	<select id="findLikeUserByName" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.User_t_Vo">
+ 		SELECT * FROM user_t WHERE us_account LIKE '%${name}%' LIMIT #{current},#{per_record}
+ 	</select>
+ 	
+ 	<!--增加一名用户  -->
+ 	<insert id="insertintoUser" parameterType="com.ssm.pojo.Vo.User_t_Vo">
+ 		INSERT INTO ssm_Demo.user_t(us_id,us_roles, us_account, 
+ 		us_passwd,us_createTime,us_flag) 
+ 		VALUES (#{us_id}, #{us_roles}, #{us_account}, #{us_passwd},#{us_createTime},
+ 		#{us_flag})
+ 	</insert>
+ 	
+ 	<!--超级管理员修改用户信息（账户名称、密码、时间不可更改）  -->
+ 	<update id="updateUser" parameterType="com.ssm.pojo.Vo.User_t_Vo">
+ 		UPDATE ssm_demo.user_t SET us_roles = #{us_roles},   
+ 		us_flag = #{us_flag} 
+ 		WHERE us_id = #{us_id}
+ 	</update>
+ 	
+ 	<!--用户个人修改信息  -->
+ 	<update id="updateUserByself" parameterType="com.ssm.pojo.Vo.User_t_Vo">
+ 		UPDATE ssm_demo.user_t SET us_passwd=#{us_passwd}
+ 		WHERE us_id = #{us_id}
+ 	</update>
+ 	
+ 	<!--删除用户信息  -->
+ 	<delete id="deleteUser" parameterType="String">
+ 		DELETE FROM ssm_demo.user_t 
+ 		WHERE us_id =#{value}
+ 	</delete>
+ 	
+ 	<!--查询所有记录数  -->
+ 	<select id="findCounts" resultType="Integer">
+ 		SELECT COUNT(*) FROM user_t
+ 	</select>
+ 	
+ 	<!--查询所有用户  -->
+ 	<select id="findAllUsers" parameterType="com.ssm.pojo.PageIndex" 
+ 	resultType="com.ssm.pojo.Vo.User_t_Vo">
+ 		SELECT * from ssm_demo.user_t LIMIT #{current},#{per_record}
+ 	</select>
+ 	
+ </mapper>

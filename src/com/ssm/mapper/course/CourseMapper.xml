@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.course.CourseMapper" >
+
+	<insert id="insertCourse" parameterType="com.ssm.pojo.Vo.Course_t_Vo">
+		INSERT INTO course_t(cu_id,cu_industry,cu_name,cu_introduce,
+		cu_save,cu_uploadTime,cu_fileName,cu_industryName)
+		VALUES(#{cu_id},#{cu_industry},#{cu_name},#{cu_introduce},#{cu_save},
+		#{cu_uploadTime},#{cu_fileName})
+	</insert>
+	
+	<!--查询所有信息  -->
+	<select id="findAll" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Course_t_Vo">
+		SELECT * FROM course_t LIMIT #{current},#{per_record}
+	</select>	
+	
+	<!--查询所有记录  -->
+	<select id="findCounts" resultType="Integer">
+		SELECT COUNT(*) FROM course_t
+	</select>
+	
+	<!--模糊查询  -->
+	<select id="likeFind" parameterType="String" resultType="com.ssm.pojo.Vo.Course_t_Vo">
+		SELECT * FROM course_t WHERE cu_name LIKE '%${value}%' 
+	</select>
+	
+	<select id="CourseFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Course_t_Vo">
+		SELECT * FROM course_t WHERE cu_id =#{value}
+	</select>
+	
+	<update id="updateCourse" parameterType="com.ssm.pojo.Vo.Course_t_Vo">
+		UPDATE course_t SET cu_industry =#{cu_industry}, cu_name = #{cu_name} ,
+		cu_introduce =#{cu_introduce},cu_save = #{cu_save} ,
+		cu_uploadTime = #{cu_uploadTime} ,cu_fileName = #{cu_fileName} ,
+		cu_industryName  = #{cu_industryName} 
+		WHERE cu_id =#{cu_id} 
+	</update>
+	
+	<delete id="deleteCourse" parameterType="String" >
+		DELETE FROM course_t WHERE cu_id =#{value}
+	</delete>
+</mapper>

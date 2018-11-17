@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.result.ResultMapper" >
+
+	<!--针对员工信息  -->
+	<!--插入一条员工信息  -->
+	<insert id="insertEmployee" parameterType="com.ssm.pojo.Vo.Employeeinfo_t_Vo">
+		INSERT INTO ssm_demo.employeeinfo_t
+		(em_id, em_name, em_position, em_number, em_sex, 
+		em_companyName, em_departmentName, em_positionName, em_age, 
+		em_phoneNumber, em_idCard) VALUES (#{em_id}, 
+		#{em_name}, #{em_position}, #{em_number}, #{em_sex}, #{em_companyName},
+		 #{em_departmentName}, #{em_positionName}, #{em_age}, #{em_phoneNumber}, 
+		 #{em_idCard})
+	</insert>
+	
+	<!--查询单个员工  -->
+	<select id="employeeFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Employeeinfo_t_Vo">
+		SELECT * FROM employeeinfo_t WHERE em_id =#{value}
+	</select>
+	
+	<!--查询所有  -->
+	<select id="findall" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Employeeinfo_t_Vo">
+		SELECT * FROM employeeinfo_t LIMIT #{current},#{per_record}
+	</select>
+	
+	<!--查询所有记录数  -->
+	<select id="findcounts" resultType="Integer">
+		SELECT COUNT(*) FROM employeeinfo_t
+	</select>
+	
+	<!--模糊查询  -->
+	<select id="likefind" parameterType="com.ssm.pojo.PageIndex" 
+ 	resultType="com.ssm.pojo.Vo.Employeeinfo_t_Vo">
+		SELECT * from ssm_demo.employeeinfo_t LIMIT #{current},#{per_record}
+	</select>
+	
+	<!--更新员工信息  -->
+	<update id="updateemployee" parameterType="com.ssm.pojo.Vo.Result_t_Vo">
+		 
+	</update>
+	
+	<!--删除一条员工信息  -->
+	<delete id="deleteemployee" parameterType="String" >
+		DELETE FROM employeeinfo_t WHERE em_id =#{value}
+	</delete>
+	
+	<!--针对值位  -->
+	<select id=""></select>
+	<insert id=""></insert>
+	<update id=""></update>
+	<delete id=""></delete>
+	<!--针对部门  -->
+	<select id=""></select>
+	<insert id=""></insert>
+	<update id=""></update>
+	<delete id=""></delete>
+	<!--针对公司  -->
+	<select id=""></select>
+	<insert id=""></insert>
+	<update id=""></update>
+	<delete id=""></delete>
+	
+</mapper>

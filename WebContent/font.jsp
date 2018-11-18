@@ -58,7 +58,7 @@
 
 			</div>
 
-			<!-- 个人中心和退出 -->
+			<%-- <!-- 个人中心和退出 -->
 			<div class="dropdown fr bu">
 			<!-- 按钮 -->
 			<div class="fr">
@@ -78,7 +78,7 @@
 				<div class="fr">
 					<img src="img/4.jpg" />
 				</div>
-			</div>
+			</div> --%>
 
 		</div>
 		<!--顶部E-->

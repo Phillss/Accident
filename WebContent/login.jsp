@@ -81,8 +81,8 @@
 				type: "post",
 				dataType: "json",
 				data: {
-					username: usernameval,
-					password: passwordval
+					userid: usernameval,
+					pass: passwordval
 				},
 				success: function(mes) {
 

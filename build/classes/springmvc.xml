@@ -20,7 +20,7 @@
      <!--注解驱动  -->
 	<mvc:annotation-driven conversion-service="dataconverters">
 	</mvc:annotation-driven>
-	
+
 	<!--自定义类型（时间）参数绑定  -->
 	<bean id="dataconverters" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
 		<property name="converters">
@@ -29,7 +29,7 @@
 			</list>
 		</property>
 	</bean>
-	
+
 	<!--配置全局拦截器  -->
 	<mvc:interceptors>
 		<mvc:interceptor>

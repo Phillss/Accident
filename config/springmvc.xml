@@ -20,7 +20,13 @@
      <!--注解驱动  -->
 	<mvc:annotation-driven conversion-service="dataconverters">
 	</mvc:annotation-driven>
+	
+	<mvc:default-servlet-handler/>
 
+	<mvc:resources mapping="/css/**" location="/css/"/>
+	<mvc:resources mapping="/img/**" location="/img/"/>
+
+	
 	<!--自定义类型（时间）参数绑定  -->
 	<bean id="dataconverters" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
 		<property name="converters">

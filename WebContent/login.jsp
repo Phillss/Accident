@@ -7,7 +7,7 @@
 		<title>login</title>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base.css"/>
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css">
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css"/>
 		<style type="text/css">
 			.warnning {
 				font-size: 10px;
@@ -23,7 +23,6 @@
 				height: 10px;
 			}
 		</style>
-
 	</head>
 
 	<body>
@@ -43,7 +42,7 @@
 					
 					<button type="submit" name="submit" id="login">登 录</button>
 					
-					<button type="button" name="submit" id="register">注 册</button>
+					<button type="button" name="submit" id="register" >注册</button>
 					
 				</form>
 			</div>
@@ -51,12 +50,9 @@
 	</body>
 
 	<script type="text/javascript">
-		$(function() {
-
-		});
 		$("#login").click(function() {
-			var usernameval = $("#userid").val();
-			var passwordval = $("#pass").val();
+			var usernameval = $("#username").val();
+			var passwordval = $("#password").val();
 			if(!usernameval) {
 				$("#warnning1").text("账号不能为空");
 				if(!passwordval) {
@@ -76,7 +72,7 @@
 				$("#warnning2").text("");
 			}
 
-			$.ajax({
+			/* $.ajax({
 				url: "", //通过ajax舔砖后端
 				type: "post",
 				dataType: "json",
@@ -90,12 +86,12 @@
 				error: function(err) {
 					alert("ajax跳转错误");
 				}
-			});
+			}); */
 		});
 	</script>
 
 </html>
-<!--<html>
+<%-- <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>login</title>
@@ -119,4 +115,4 @@
 	</form>
 </center>
 </body>
-</html>-->
+</html> --%>

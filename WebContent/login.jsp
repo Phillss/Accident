@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<title>login</title>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/base.css"/>
-		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css">
 		<style type="text/css">
 			.warnning {
 				font-size: 10px;

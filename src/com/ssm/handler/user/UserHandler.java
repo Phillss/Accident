@@ -71,7 +71,6 @@ public class UserHandler {
 	//提交数据
 	@RequestMapping(value="/update",method=RequestMethod.POST)
 	public String update(String us_id,Integer us_roles,Integer us_flag,Model model) throws Exception {
-		PageIndex pageindex=new PageIndex();
 		User_t_Vo user=new User_t_Vo();
 		user.setUs_id(us_id);
 		user.setUs_roles(us_roles);
@@ -79,9 +78,8 @@ public class UserHandler {
 		service.serviceUpdate(user);
 		ModelMap map=new ModelMap();
 		map.addAttribute("message", "修改成功!");
-		map.addAttribute("listuser", service.serviceFindAllUsers(pageindex));
 		model.addAllAttributes(map);
-		return "WEB-INF/jsp/superadmin/userlist";
+		return "redirect:/userhandler/findAllUsers.action";
 	}
 	
 	//删除用户

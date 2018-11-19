@@ -2,6 +2,8 @@ package com.ssm.handler.course;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,7 +50,6 @@ public class CourseHandler {
 		pagebean.setCurrent(current);
 		pagebean.setTotal_record(service.servicefindcouts());
 		pagebean.setBeanList(list);
-		System.out.println(pagebean.getTotal_pages());
 		ModelAndView view =new ModelAndView();
 		view.addObject("listcourse", pagebean);
 		view.setViewName("WEB-INF/jsp/course/courselist");

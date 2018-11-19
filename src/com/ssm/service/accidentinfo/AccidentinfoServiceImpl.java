@@ -11,7 +11,7 @@ import com.ssm.pojo.Vo.Accidentinfo_t_Vo;
 public class AccidentinfoServiceImpl{
 
 	@Autowired
-	private AccidentinfoMapper accidentMapper;
+	public AccidentinfoMapper accidentMapper;
 	
 
 	public Accidentinfo_t_Vo serviceAccidentinfoFind(String id) throws Exception {

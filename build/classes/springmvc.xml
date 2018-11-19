@@ -21,8 +21,10 @@
 	<mvc:annotation-driven conversion-service="dataconverters">
 	</mvc:annotation-driven>
 	
+	<!--默认处理器  -->
 	<mvc:default-servlet-handler/>
 
+	<!--配置静态文件加载  -->
 	<mvc:resources mapping="/css/**" location="/css/"/>
 	<mvc:resources mapping="/img/**" location="/img/"/>
 
@@ -46,13 +48,14 @@
 	
 	<!--组件扫描 -->
 	<context:component-scan
+		base-package="com.ssm.handler.course"></context:component-scan>
+	<context:component-scan
 		base-package="com.ssm.handler"></context:component-scan>
 		<!-- <context:component-scan
 		base-package="com.ssm.handler.user"></context:component-scan> -->
 	<context:component-scan
 		base-package="com.ssm.shiro.handler"></context:component-scan>
-		<!-- <context:component-scan
-		base-package="com.ssm.handler.accidentinfo"></context:component-scan> -->
+		
 	<!--配配置处理器映射器 -->
 	<!-- <bean
 		class="org.springframework.web.servlet.mvc.method.annotation.

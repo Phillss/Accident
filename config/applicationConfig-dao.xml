@@ -33,19 +33,7 @@
         <!--配置sqlsessionFactory  -->
         <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 			<property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
-			<property name="dataSource" ref="dataSource"></property>  
-			<!-- <property name="plugins">
-				<array>
-				<bean class="com.github.pagehelper.PageHelper">
-					<property name="properties" >
-			<value>
-				dialect=mysql
-				reasonable=true
-			</value>
-				</property>
-			</bean>
-			</array>
-			</property>  -->   
+			<property name="dataSource" ref="dataSource"></property>    
         </bean>
         
         <!--配置mapper接口扫描器  -->
@@ -63,6 +51,4 @@
         		   com.ssm.mapper.course"></property>
         	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
         </bean>
-        
-        <!-- <bean id="service" class="com.ssm.service.serviceImpl"></bean> -->
 </beans>

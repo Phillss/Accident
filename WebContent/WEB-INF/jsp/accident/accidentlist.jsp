@@ -8,6 +8,58 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>事故信息列表</title>
 <%@ include file="/font.jsp" %>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<!--<script type="text/javascript" src="js/switch.js"></script>-->
+		<script src="js/echarts.min.js"></script>
+		<script type="text/javascript">	
+//			下拉框
+			function ggle() {
+				$('.bu_tr_cd_co').slideToggle(500);
+			}
+			function ggl() {
+				$('.rank').slideToggle(500);
+			}
+			function gg() {
+				$('.rank').slideToggle(500);
+			}
+//			238
+			$(function(){
+				$('.menu').bind({
+					mouseover:function(){
+						$(this).css('background-color','#213862');
+						$(this).css('color','white');
+					},
+					mouseout:function(){
+						$(this).css('background-color','#d1d5dc');
+						$(this).css('color','#213862');
+					}
+				});
+				$('.bu_tr_cd_co').bind({
+					mouseover:function(){
+						$(this).css('background-color','#213862');
+						$(this).css('color','white');
+					},
+					mouseout:function(){
+						$(this).css('background-color','#e2e5e9');
+						$(this).css('color','#213862');
+					}
+				});
+				$('.rank').bind({
+					mouseover:function(){
+						$(this).css('background-color','#213862');
+						$(this).css('color','white');
+					},
+					mouseout:function(){
+						$(this).css('background-color','#e2e5e9');
+						$(this).css('color','#213862');
+					}
+				});
+			});
+		</script>
 </head>
 <body>
 <center>

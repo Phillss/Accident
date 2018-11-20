@@ -44,13 +44,19 @@ body {
 	margin-top: 10px;
 }
 .lo .g #register {
+	display: inline-block;
 	width: 100px;
 	height: 36px;
 	margin-left: 64px;
+	margin-bottom: 5px;
+	font-size: 15px;
+	line-height: 36px;
+	color: black;
+	vertical-align: middle;
+	text-align: center;
 	background-color: #1a57a1;
 	border-width: 0;
 	border-radius: 5px;
-	margin-top: 10px;
 }
 /*普通人员*/
 

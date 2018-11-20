@@ -1,0 +1,78 @@
+/*超管*/
+body {
+	background: url(../img/back.jpg) no-repeat;
+	background-size: 100% 750px;
+}
+.lo {
+	margin: 0 auto;
+	width: 380px;
+	height: 324px;
+	margin-top: 150px;
+}
+h3 {
+	display: block;
+	margin: 0 auto;
+	color: white;
+	width: 380px;
+	height: 58px;
+	line-height: 58px;
+	text-align: center;
+	font-weight: 255px;
+	font-size: 45px;
+	font-family: "宋体";
+}
+.lo .g {
+	margin-top: 50px;
+}
+.lo .g input {
+	display: inline-block;
+	width: 240px;
+	height: 37px;
+	border-width: 0;
+	border-radius: 5px;
+	background-color: #959bab;
+	position: absolute;
+	right: 0;
+}
+.lo .g .wd {
+	margin-left: 55px;
+	width: 272px;
+	height: 38px;
+	border-width: 0;
+	border-radius: 5px;	
+	background-color: #959bab;
+	margin-bottom: 10px;
+	position: relative;
+}
+.lo .g .wd img {
+	display: inline-block;
+	border: 0;
+	margin-top: 9.5px;
+	margin-left: 6px;
+}
+.lo .g .ps {
+	margin-left: 55px;
+	width: 272px;
+	height: 38px;
+	border-width: 0;
+	border-radius: 5px;	
+	background-color: #959bab;
+	margin-bottom: 10px;
+	position: relative;
+}
+.lo .g .ps img {
+	display: inline-block;
+	border: 0;
+	margin-top: 9.5px;
+	margin-left: 6px;
+}
+.lo .g #login {
+	width: 272px;
+	height: 37px;
+	margin-left: 55px;
+	background-color: #1a57a1;
+	border-width: 0;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+/*超管*/

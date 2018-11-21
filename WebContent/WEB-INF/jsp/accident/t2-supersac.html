@@ -59,100 +59,47 @@
 	</head>
 
 	<body>
-		<!--顶部S-->
-		<div class="head">
-			<!--logo-->
-			<div class="im"></div>
-			<!--退出-->
-			<div class="fr exit">
-				<input type="button" name="" id="" />
-			</div>
-
-		</div>
-		<!--顶部E-->
-
-		<!--导航栏S-->
-		<div class="topnav">
-			<table>
-				<tr>
-					<td>
-						<a href="#" onclick="table1()">
-							课程
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table2()">
-							行业法规
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table3()">
-							事故报告管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table4()">
-							管理分类
-						</a>
-					</td>
-					<td id="chart">
-						<a href="#" onclick="table5()">
-							统计图
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table6()">
-							账户管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table7()">
-							记录管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table8()">
-							题库
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!--导航栏E-->
 		
 		<div class="t">
-			<div class="t3 main">
-				<div class="fl incause">
-					<table>
-						<tr id="visit">
-							<td>
-								<a href="#" onclick="industry()">
-									行业
-								</a>
-							</td>
-						</tr>
-						<tr id="visit">
-							<td>
-								<a href="#" onclick="course()">
-									原因
-								</a>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="addin">
-					<form action="">
-						<div class="ch">
-							<span>类别：</span>
-							<span style="width: 28px;">行业</span>
-							<br /><br />
-							<span>名称：</span>	
-							<input type="text" name="" id="" value="" />
+			<div class="t2 main">
+				<div class="sac">
+					<div class="search">
+						<input type="text" name="" id="" value="" />
+					</div>
+					<div class="accident">
+						<form action="">
+							<table>
+								<tr>
+									<th>报告编号</th>
+									<th>报告名称</th>
+									<th>事故等级</th>
+									<th>发生时间</th>
+									<th>发生地点</th>
+									<th>人员伤亡</th>
+									<th>财产损失</th>
+									<th>所属行业</th>
+									<th>删除</th>
+								</tr>
+								
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+									<td>8</td>
+									<td class="de">
+										<a href="#" download="statute.txt"></a>
+									</td>
+								</tr>
+							</table>
+						</form>
+						<div class="upload">
+							<a href="#" onclick="addaccidents()"></a>
 						</div>
-						<div class="po">
-							<input type="button" name="" id="" value="修改" />
-						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>

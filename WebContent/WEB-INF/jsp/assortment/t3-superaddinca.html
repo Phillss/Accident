@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<title>超管/管理课程</title>
+		<title>超管</title>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -56,6 +57,7 @@
 			});
 		</script>
 	</head>
+
 	<body>
 		<!--顶部S-->
 		<div class="head">
@@ -68,115 +70,44 @@
 
 		</div>
 		<!--顶部E-->
-
-		<!--导航栏S-->
-		<div class="topnav">
-			<table>
-				<tr>
-					<td>
-						<a href="#" onclick="table1()">
-							课程
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table2()">
-							行业法规
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table3()">
-							事故报告管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table4()">
-							管理分类
-						</a>
-					</td>
-					<td id="chart">
-						<a href="#" onclick="table5()">
-							统计图
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table6()">
-							账户管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table7()">
-							记录管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table8()">
-							题库
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!--导航栏E-->
+		
 		<div class="t">
-			<div class="t0 main">
-				<div class="fl tle">
+			<div class="t3 main">
+				<div class="fl incause">
 					<table>
 						<tr id="visit">
 							<td>
+								<a href="#" onclick="industry()">
+									行业
+								</a>
+							</td>
+						</tr>
+						<tr id="visit">
+							<td>
 								<a href="#" onclick="course()">
-									管理课程
-								</a>
-							</td>
-						</tr>
-						<tr id="visit">
-							<td>
-								<a href="#" onclick="addcourse()">
-									添加课程
-								</a>
-							</td>
-						</tr>
-						<tr id="visit">
-							<td>
-								<a href="#" onclick="theory()">
-									事故致因理论
+									原因
 								</a>
 							</td>
 						</tr>
 					</table>
 				</div>
-				<div class="fr cour">
-					<form action="" method="post">
-						<table>
-							<tr>
-								<th style="text-align: center;">课程编号</th>
-								<th style="text-align: center;">课程名称</th>
-								<th style="text-align: center;">所属行业</th>
-								<th style="text-align: center;">课程属性</th>
-								<th style="text-align: center;">课程类型</th>
-								<th style="width: 60px;text-align: center;">修改</th>
-								<th style="width: 60px;text-align: center;">删除</th>
-							</tr>
-							<tr>
-								<td>123</td>
-								<td>123</td>
-								<td>123</td>
-								<td>123</td>
-								<td>123</td>
-								<td>
-									<div class="rs">
-										<a href="#" onclick="modify()"></a>
-									</div>
-
-								</td>
-								<td>
-									<div class="de">
-										<a href="#"></a>
-									</div>
-								</td>
-							</tr>
-						</table>
+				<div class="addinca">
+					<form action="">
+						<div class="ch">
+							<span>类别：</span>
+							<select name="">
+								<option value="">行业</option>
+								<option value="">原因</option>
+							</select><br /><br />
+							<span>名称：</span>	
+							<input type="text" name="" id="" value="" />
+						</div>
+						<div class="po">
+							<input type="button" name="" id="" value="提交" />
+						</div>
 					</form>
 				</div>
+			</div>
 		</div>
 		
 		<!--底部S-->

@@ -8,39 +8,14 @@ body {
 	background: url(../img/header.jpg) no-repeat;
 	background-size: 100% auto;
 }
-.head .bu img {
-	width: 34px;
-	height: 34px;
-}
-.head .bu {
-	display: inline-block;
-	width: 142px;
-	height: 34px;
-	margin-top: 25px;	
-	margin-right: 25px;
-}
-.head a {
-	text-align: center;
-}
-.head .ct {
-	display: inline-block;
-	width: 600px;
-	height: 34px;
-	margin-top: 25px;	
-	margin-right: 50px;
-}
-.head .ct span {
-	width: 47px;
-	height: 34px;
-}
-.head .ct span a:link {
-	text-decoration: none;
-}
-.head .ct span a:visited {
-	text-decoration: none;
-}
-.head .ct input {
-	width: 300px;
+.exit input {
+	position: relative;
+	width: 30px;
+	height: 16px;
+	border: 1px solid red;
+	top: 38px;
+	right: 58px;
+	background-color: rgba(0,0,0,0);
 }
 /*顶部end*/
 /*导航栏start*/
@@ -96,10 +71,6 @@ body {
 }
 /*导航栏end*/
 /*主内容start*/
-/*开始状态none*/
-.t1,.t2,.t3,.t4,.t5,.t6,.t7,.import,.modifycourse,.Causationtheory {
-	display: none;
-}
 /*t0课程模块start*/
 .t {
 	width: 100%;
@@ -760,7 +731,194 @@ body {
 	color: #213862;
 	display: none;
 }
+.t .t4 .men {
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #d1d5dc;
+	color: #213862;
+}
+.t .t4 .rank {
+	margin: 0;
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #e2e5e9;
+	color: #213862;
+	display: none;
+}
 /*t4统计图end*/
+/*t5统计图start*/
+.t .t5 {
+	margin-top: 85px;
+}
+.t .t5 .w {
+	width: 145px;
+}
+.t .t5 .menu {
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #d1d5dc;
+	color: #213862;
+}
+.t .t5 .rank {
+	margin: 0;
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #e2e5e9;
+	color: #213862;
+	display: none;
+}
+.t .t5 .sac {
+	width: 1020px;
+	height: 400px;
+}
+.t .t5 .sac .search {
+	display: block;
+	width: 211px;
+	height: 28px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -202px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+.t .t5 .sac .search input {
+	display: block;
+	width: 175px;
+	height: 27px;
+	margin-left: 36px;
+	background-color: #033b66;
+	border-radius: 10px;
+	border: 0;
+	outline: none;
+	color: white;
+}
+.t .t5 .accident form {
+	margin-right: 64px;
+	width: 1020px;
+	height: 300px;
+}
+.t .t5 .accident form table {
+	width: 1020px;
+}
+.t .t5 .accident form table th {
+	border: 1px solid #b4b4b5;
+	border-collapse:collapse;
+	width: 80px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+.t .t5 .accident form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse:collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+.t .t5 .accident .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 17.4px;
+	margin: auto;
+}
+/*t5统计图end*/
+/*t6记录管理start*/
+.t .t6 {
+	margin-top: 85px;
+}
+.t .t6 .w {
+	width: 145px;
+}
+.t .t6 .sac {
+	width: 1170px;
+	height: 400px;
+}
+.t .t6 .sac .search {
+	display: block;
+	width: 211px;
+	height: 28px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -202px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+.t .t6 .sac .search input {
+	display: block;
+	width: 175px;
+	height: 27px;
+	margin-left: 36px;
+	background-color: #033b66;
+	border-radius: 10px;
+	border: 0;
+	outline: none;
+	color: white;
+}
+.t .t6 .accident form {
+	margin-right: 64px;
+	width: 1170px;
+	height: 300px;
+}
+.t .t6 .accident form table {
+	width: 1170px;
+}
+.t .t6 .accident .number {
+	border: 1px solid #b4b4b5;
+	border-collapse:collapse;
+	width: 80px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+.t .t6 .accident .manage {
+	border: 1px solid #b4b4b5;
+	border-collapse:collapse;
+	width: 1090px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+.t .t6 .accident form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse:collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+.t .t6 .accident .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 17.4px;
+	margin: auto;
+}
+/*t6记录管理end*/
 /*主内容end*/
 /*底部start*/
 footer {

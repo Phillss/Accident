@@ -18,12 +18,14 @@ public class FilterChainDefinitionBuilder {
 		map.put("/shiro/**", "anon");
 		map.put("/Accident/**", "authc");
 		map.put("/js/*", "anon");
-		map.put("/eChar.jsp", "anon");
+		
+		map.put("/adminlogin.jsp", "anon");
 		map.put("/logup.jsp", "anon");
 		map.put("/login.jsp", "anon");
-		map.put("/WEB-INF/**", "authc");
 		map.put("/index.jsp", "authc");
-		map.put("/list.jsp", "user");
+		
+		map.put("/WEB-INF/**", "authc");
+//		map.put("/list.jsp", "user");
 		map.put("/**", "authc");
 		
 		return map;

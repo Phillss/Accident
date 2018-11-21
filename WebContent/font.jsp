@@ -2,13 +2,11 @@
     pageEncoding="UTF-8"%>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>超管</title>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header.css" />
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base.css" />
-		<script type="text/javascript" src="${pageContext.request.contextPath}/js/switch.js"></script>
 		<script src="${pageContext.request.contextPath}/js/echarts.min.js"></script>
 		<script type="text/javascript">			
 //			$('#visit').click(function() {
@@ -52,32 +50,14 @@
 		</style>
 			</head>
 		<!--顶部S-->
-		<div class="head">
+
+
+			<div class="head">
 			<!--logo-->
-			<div class="im">
-
-			</div>
-
-			<!-- 个人中心和退出 -->
-			<div class="dropdown fr bu">
-			<!-- 按钮 -->
-			<div class="fr">
-					<button class="btn btn-info" data-toggle="dropdown">
-	            		<!-- Person -->
-	            		<span class="caret"></span>
-	            	</button>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="#">个人中心</a>
-						</li>
-						<li>
-							<a href="${pageContext.request.contextPath}/shiro/logout.action">退出</a>
-						</li>
-					</ul>
-				</div>
-				<div class="fr">
-					<img src="img/4.jpg" />
-				</div>
+			<div class="im"></div>
+			<!--退出-->
+			<div class="fr exit">
+				<input type="button" name="" id="" />
 			</div>
 
 		</div>

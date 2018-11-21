@@ -1,17 +1,21 @@
-<!DOCTYPE html>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
 	<head>
-		<meta charset="UTF-8">
-		<title>超管/管理课程/修改</title>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>课程</title>
+		<%@ include file="/font.jsp" %>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+		<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/header.css" />
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header.css" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base.css" />
 		<!--<script type="text/javascript" src="js/switch.js"></script>-->
-		<script src="js/echarts.min.js"></script>
+		<script src="${pageContext.request.contextPath}/js/echarts.min.js"></script>
 		<script type="text/javascript">	
-//			下拉框
+//			ä¸ææ¡
 			function ggle() {
 				$('.bu_tr_cd_co').slideToggle(500);
 			}
@@ -57,66 +61,68 @@
 		</script>
 	</head>
 	<body>
-		<!--顶部S-->
+		<!--é¡¶é¨S-->
 		<div class="head">
 			<!--logo-->
 			<div class="im"></div>
-			<!--退出-->
+			<!--éåº-->
 			<div class="fr exit">
 				<input type="button" name="" id="" />
 			</div>
 
 		</div>
-		<!--顶部E-->
+		<!--é¡¶é¨E-->
 
-		<!--导航栏S-->
+		<!--å¯¼èªæ S-->
 		<div class="topnav">
 			<table>
 				<tr>
 					<td>
 						<a href="#" onclick="table1()">
-							课程
+							è¯¾ç¨
 						</a>
 					</td>
 					<td>
 						<a href="#" onclick="table2()">
-							行业法规
+							è¡ä¸æ³è§
 						</a>
 					</td>
 					<td>
 						<a href="#" onclick="table3()">
-							事故报告管理
+							äºææ¥åç®¡ç
 						</a>
 					</td>
 					<td>
 						<a href="#" onclick="table4()">
-							管理分类
+							ç®¡çåç±»
 						</a>
 					</td>
 					<td id="chart">
 						<a href="#" onclick="table5()">
-							统计图
+							ç»è®¡å¾
 						</a>
 					</td>
 					<td>
 						<a href="#" onclick="table6()">
-							账户管理
+							è´¦æ·ç®¡ç
 						</a>
 					</td>
 					<td>
 						<a href="#" onclick="table7()">
-							记录管理
+							è®°å½ç®¡ç
 						</a>
 					</td>
 					<td>
 						<a href="#" onclick="table8()">
-							题库
+							é¢åº
 						</a>
 					</td>
 				</tr>
 			</table>
 		</div>
-		<!--导航栏E-->
+		<!--å¯¼èªæ E-->
+		
+		
 		<div class="t">
 			<div class="t0 main">
 				<div class="fl tle">
@@ -124,61 +130,50 @@
 						<tr id="visit">
 							<td>
 								<a href="#" onclick="course()">
-									管理课程
+									ç®¡çè¯¾ç¨
 								</a>
 							</td>
 						</tr>
 						<tr id="visit">
 							<td>
 								<a href="#" onclick="addcourse()">
-									添加课程
+									æ·»å è¯¾ç¨
 								</a>
 							</td>
 						</tr>
 						<tr id="visit">
 							<td>
 								<a href="#" onclick="theory()">
-									事故致因理论
+									äºæè´å çè®º
 								</a>
 							</td>
 						</tr>
 					</table>
 				</div>
-				<div class="fl modifycourse">
-					<form action="" method="post">
-						<div class="ch">
-							<span>课程编号：</span>
-							<input type="text" value="" style="width: 100px; height: 20px;" placeholder="课程编号" /><br /><br />
-							<span>课程名称：</span>
-							<input type="text" value="" style="width: 100px; height: 20px;" placeholder="课程名称" /><br /><br />
-							<span>所属行业：</span>
-							<select name="">
-								<option value="">建筑</option>
-								<option value="">化工</option>
-								<option value="">交通</option>
-								<option value="">煤矿</option>
-							</select><br /><br />
-							<span>课程属性：</span>
-							<select name="">
-								<option value="">必学</option>
-								<option value="">选学</option>
-							</select><br /><br />
-							<span>课程类型：</span>
-							<select name="">
-								<option value="">文本</option>
-								<option value="">图片</option>
-							</select><br /><br />
-						</div>
-						<div class="po">
-							<input type="button" name="" id="" value="提交" />
-						</div>
+				<div class="fl import">
+					<form>
+						<label for="audioFile" class="l1" style="text-align: center;">æ·»å è§é¢</label>&nbsp;
+
+						<input type="file" id="audioFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
+
+						<label for="xFile" class="l2">æ·»å å¹è®­åå®¹</label>&nbsp;
+
+						<input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
+
+						<label for="information" class="l3">æ·»å åºç¡ä¿¡æ¯</label>&nbsp;
+
+						<input type="file" id="information" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
+
+						<label for="test" class="l4">æ·»å è¯¾åé¢</label>&nbsp;
+
+						<input type="file" id="test" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
 					</form>
 				</div>
 			</div>
 		</div>
 		
-		<!--底部S-->
+		<!--åºé¨S-->
 		<footer></footer>
-		<!--底部E-->
+		<!--åºé¨E-->
 	</body>
 </html>

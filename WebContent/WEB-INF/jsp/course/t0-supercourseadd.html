@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>超管/添加课程</title>
+		<title>超管/管理课程/修改</title>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -69,56 +69,6 @@
 		</div>
 		<!--顶部E-->
 
-		<!--导航栏S-->
-		<div class="topnav">
-			<table>
-				<tr>
-					<td>
-						<a href="#" onclick="table1()">
-							课程
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table2()">
-							行业法规
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table3()">
-							事故报告管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table4()">
-							管理分类
-						</a>
-					</td>
-					<td id="chart">
-						<a href="#" onclick="table5()">
-							统计图
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table6()">
-							账户管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table7()">
-							记录管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table8()">
-							题库
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!--导航栏E-->
-		
-		
 		<div class="t">
 			<div class="t0 main">
 				<div class="fl tle">
@@ -146,23 +96,34 @@
 						</tr>
 					</table>
 				</div>
-				<div class="fl import">
-					<form>
-						<label for="audioFile" class="l1" style="text-align: center;">添加视频</label>&nbsp;
-
-						<input type="file" id="audioFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
-
-						<label for="xFile" class="l2">添加培训内容</label>&nbsp;
-
-						<input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
-
-						<label for="information" class="l3">添加基础信息</label>&nbsp;
-
-						<input type="file" id="information" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
-
-						<label for="test" class="l4">添加课后题</label>&nbsp;
-
-						<input type="file" id="test" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
+				<div class="fl modifycourse">
+					<form action="" method="post">
+						<div class="ch">
+							<span>课程编号：</span>
+							<input type="text" value="" style="width: 100px; height: 20px;" placeholder="课程编号" /><br /><br />
+							<span>课程名称：</span>
+							<input type="text" value="" style="width: 100px; height: 20px;" placeholder="课程名称" /><br /><br />
+							<span>所属行业：</span>
+							<select name="">
+								<option value="">建筑</option>
+								<option value="">化工</option>
+								<option value="">交通</option>
+								<option value="">煤矿</option>
+							</select><br /><br />
+							<span>课程属性：</span>
+							<select name="">
+								<option value="">必学</option>
+								<option value="">选学</option>
+							</select><br /><br />
+							<span>课程类型：</span>
+							<select name="">
+								<option value="">文本</option>
+								<option value="">图片</option>
+							</select><br /><br />
+						</div>
+						<div class="po">
+							<input type="button" name="" id="" value="提交" />
+						</div>
 					</form>
 				</div>
 			</div>

@@ -42,8 +42,8 @@
 					
 					<button type="submit" name="submit" id="login">登 录</button>
 					
-					<button type="button" name="submit" id="register" >注册</button>
-					
+					<!-- <button type="button" name="submit" id="register" >注册</button> -->
+					<a href="logup.jsp" id="register">注册</a>
 				</form>
 			</div>
 		</div>
@@ -91,28 +91,3 @@
 	</script>
 
 </html>
-<%-- <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>login</title>
-</head>
-<body>
-<center><h1>please login</h1>
-	<form action="${pageContext.request.contextPath}/shiro/login.action" method="post">
-	<table>
-		<tr>
-			<td>用户名：<input type="text" name="userid"></td>
-			<td>密码：<input type="password" name="pass"></td>
-		</tr>
-		<tr>
-			<td><a href="${pageContext.request.contextPath}/logup.jsp">注册</a></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input type="submit" value="登陆"></td>
-		</tr>
-	</table>
-	</form>
-</center>
-</body>
-</html> --%>

@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ssm.pojo.PageBean;
@@ -24,6 +26,21 @@ public class UserHandler {
 	
 	@Autowired
 	private UserService service;
+	
+	
+	
+	//验证用户名是否重复
+	@RequestMapping(value="/vertify",method= {RequestMethod.POST,RequestMethod.GET})
+	public @ResponseBody Boolean vertify(@RequestBody String us_account) throws Exception{
+			String newName=us_account.substring(us_account.indexOf("=")+1);
+			if(service.serviceFindUserByName(newName)!=null){
+				return false;
+			}else {
+				return true;
+			}
+		
+	}
+	
 	//查找所有用户
 	@RequestMapping("/findAllUsers")
 	public ModelAndView findAllUsers(@RequestParam(value="current",defaultValue="0")

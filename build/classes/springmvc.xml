@@ -18,9 +18,9 @@
         http://www.springframework.org/schema/mvc 
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
      <!--注解驱动  -->
-	<mvc:annotation-driven conversion-service="dataconverters">
-	</mvc:annotation-driven>
-	
+	<!-- <mvc:annotation-driven conversion-service="dataconverters">
+	</mvc:annotation-driven> -->
+	<mvc:annotation-driven></mvc:annotation-driven>
 	<!--默认处理器  -->
 	<mvc:default-servlet-handler/>
 

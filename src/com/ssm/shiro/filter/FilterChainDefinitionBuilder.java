@@ -19,6 +19,8 @@ public class FilterChainDefinitionBuilder {
 		map.put("/Accident/**", "authc");
 		map.put("/js/*", "anon");
 		
+		map.put("/userhandler/**","anon");
+		
 		map.put("/adminlogin.jsp", "anon");
 		map.put("/logup.jsp", "anon");
 		map.put("/login.jsp", "anon");

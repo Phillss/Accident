@@ -17,7 +17,6 @@
 	href="${pageContext.request.contextPath}/css/header.css" />
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/base.css" />
-<!--		<script type="text/javascript" src="js/switch.js"></script>-->
 <script src="${pageContext.request.contextPath}/js/echarts.min.js"></script>
 <%@ include file="/font.jsp"%>
 <script type="text/javascript">
@@ -102,12 +101,18 @@
 								<td>${item.cu_introduce}</td>
 								<td><fmt:formatDate value="${item.cu_uploadTime}"
 										pattern="yyyy-MM-dd" /></td>
-								<td><a
-									href="${pageContext.request.contextPath}
-			/course/updatecourse.action?us_id=${item.cu_id}">修改</a></td>
-								<td><a
-									href="${pageContext.request.contextPath}
-			/course/deletecourse.action?us_id=${item.cu_id}">删除</a></td>
+								<td>
+									<div class="rs">
+										<a href="${pageContext.request.contextPath}
+			/course/updatecourse.action?us_id=${item.cu_id}"></a>
+									</div>
+								</td>
+								<td>
+									<div class="de">
+										<a href="${pageContext.request.contextPath}
+			/course/deletecourse.action?us_id=${item.cu_id}"></a>
+									</div>
+								</td>
 							</tr>
 						</c:forEach>
 					</table>

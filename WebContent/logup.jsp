@@ -97,12 +97,11 @@
 		var workNumFlag = false;
 		 $("#workNum").blur(function(){
 		 	//此为工号失去焦点是触发，即异步表单验证工号是否重复
-		 	
 			 	$.ajax({
-					url: "",
+					url: "${pageContext.request.contextPath}/userhandler/vertify.action",
 					type: "post",
 					dataType: "json",
-					data: $("#workNum").val(),
+					data: {"us_account":$("#workNum").val()},
 					success: function(res) {
 						if(res!=true){
 							workNumFlag = false;
@@ -218,9 +217,9 @@
 				$("#wordW2").text("");
 			}
 			
-			if(!workNumFlag) {
+			/*if(!workNumFlag) {
 				return false;
-			}
+			}*/
 			
 			if(!passwordval) {
 				if($("#wordP").length == 0) {
@@ -263,10 +262,10 @@
 			}
 
 			$.ajax({
-				url: "",
+				url: "${pageContext.request.contextPath}/shiro/logup.action",
 				type: "post",
 				dataType: "json",
-				data: {},
+				data: {"a":123},
 				success: function() {
 
 				},

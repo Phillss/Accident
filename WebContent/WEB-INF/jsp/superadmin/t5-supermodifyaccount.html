@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<!--		<script type="text/javascript" src="js/switch.js"></script>-->
+		<script src="js/echarts.min.js"></script>
+		<script type="text/javascript">
+			//			下拉框
+			function ggle() {
+				$('.bu_tr_cd_co').slideToggle(500);
+			}
+
+			function ggl() {
+				$('.rank').slideToggle(500);
+			}
+
+			$(function() {
+				$('.menu').bind({
+					mouseover: function() {
+						$(this).css('background-color', '#213862');
+						$(this).css('color', 'white');
+					},
+					mouseout: function() {
+						$(this).css('background-color', '#d1d5dc');
+						$(this).css('color', '#213862');
+					}
+				});
+				$('.bu_tr_cd_co').bind({
+					mouseover: function() {
+						$(this).css('background-color', '#213862');
+						$(this).css('color', 'white');
+					},
+					mouseout: function() {
+						$(this).css('background-color', '#e2e5e9');
+						$(this).css('color', '#213862');
+					}
+				});
+				$('.rank').bind({
+					mouseover: function() {
+						$(this).css('background-color', '#213862');
+						$(this).css('color', 'white');
+					},
+					mouseout: function() {
+						$(this).css('background-color', '#e2e5e9');
+						$(this).css('color', '#213862');
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<div class="t">
+			<div class="t5 main">
+				<div class="fl w">
+					<div class="menu" onclick="">
+						政府
+					</div>
+					<div class="menu" onclick="">
+						企业
+					</div>
+					<div class="menu" onclick="">
+						分析人员
+					</div>
+					<div class="menu" onclick="">
+						审核人员
+					</div>
+				</div>
+
+				<div class="modify">
+					<form action="">
+						<table>
+							<tr>
+								<td>用户权限</td>
+								<td>
+									<select name="">
+										<option>企业员工</option>
+										<option>企业管理者</option>
+										<option>政府</option>
+										<option>分析人员</option>
+										<option>审核人员</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>用户账户admin</td>
+							</tr>
+							<tr>
+								<td>创建时间2018-11-12</td>
+							</tr>
+							<tr>
+								<td>审核</td>
+								<td>
+									<select name="">
+										<option>审核通过</option>
+										<option>审核未通过</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="po">
+									<input type="submit" value="提交" />
+								</td>
+								<td class="po">
+									<input type="button" value="返回" />
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

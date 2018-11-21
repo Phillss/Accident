@@ -3,18 +3,20 @@ body {
 	background-color: #e3edfc;
 }
 .head {
+	display: inline-block;
 	width: 100%;
 	height: 218px;
 	background: url(../img/header.jpg) no-repeat;
 	background-size: 100% auto;
 }
-.exit input {
-	position: relative;
-	width: 30px;
-	height: 16px;
-	border: 1px solid red;
-	top: 38px;
-	right: 58px;
+.head .exit {
+	margin-top: 2.5%;
+	margin-right: 3.8%;
+	width: 2%;
+}
+.head .exit input {
+	display: inline-block;
+	width: 100%;
 	background-color: rgba(0,0,0,0);
 }
 /*顶部end*/

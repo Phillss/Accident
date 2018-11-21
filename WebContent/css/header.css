@@ -755,6 +755,7 @@ body {
 /*t5统计图start*/
 .t .t5 {
 	margin-top: 85px;
+	position: relative;
 }
 .t .t5 .w {
 	width: 145px;
@@ -839,6 +840,67 @@ body {
 	margin-left: 17.4px;
 	margin: auto;
 }
+
+/*修改账户start*/
+.t .t5 .modify {
+	position: absolute;
+	left: 50%;
+	margin-top: 50px;
+}
+.t .t5 .modify table td {
+	height: 20px;
+}
+.t .t5 .modify .po input {
+	display: inline-block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+/*修改账户end*/
+/*增加账户start*/
+.t .t5 .add {
+	position: absolute;
+	left: 50%;
+	margin-top: 50px;
+}
+.t .t5 .add table td {
+	height: 25px;
+}
+.t .t5 .add table td input{
+	height: 20px;
+}
+.t .t5 .add .po input {
+	display: inline-block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: 0 auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+.t .t5 .add .return input {
+	display: inline-block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	margin-left: 44px;
+	border-radius: 5px;
+}
+/*增加账户end*/
 /*t5统计图end*/
 /*t6记录管理start*/
 .t .t6 {

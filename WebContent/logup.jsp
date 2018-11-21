@@ -100,8 +100,9 @@
 			 	$.ajax({
 					url: "${pageContext.request.contextPath}/userhandler/vertify.action",
 					type: "post",
-					dataType: "json",
-					data: {"us_account":$("#workNum").val()},
+					/* contentType:'application/json;charset=utf-8', */
+					/* dataType: "json", */
+					data: 'us_account='+$("#workNum").val(),
 					success: function(res) {
 						if(res!=true){
 							workNumFlag = false;

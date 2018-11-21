@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ssm.pojo.PageBean;
 import com.ssm.pojo.PageIndex;
+import com.ssm.pojo.user_t;
 import com.ssm.pojo.Vo.User_t_Vo;
 import com.ssm.service.user.UserService;
 
@@ -31,13 +32,12 @@ public class UserHandler {
 	
 	//验证用户名是否重复
 	@RequestMapping(value="/vertify",method= {RequestMethod.POST,RequestMethod.GET})
-	public @ResponseBody Boolean vertify(@RequestBody String us_account) throws Exception{
-			String newName=us_account.substring(us_account.indexOf("=")+1);
-			if(service.serviceFindUserByName(newName)!=null){
-				return false;
-			}else {
-				return true;
-			}
+	public @ResponseBody Boolean vertify(User_t_Vo user) throws Exception{
+		if(service.serviceFindUserByName(user.getUs_account())!=null) {
+			return false;
+		}else {
+			return true;
+		}
 		
 	}
 	

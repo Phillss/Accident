@@ -54,7 +54,9 @@
 	<div class="head">
 		<!--退出-->
 		<div class="fr exit">
-			<input type="button" name="" id="" />
+			<form action="${pageContext.request.contextPath}/shiro/logout.action">
+			<input type="submit" name="" id="" value=""/>
+			</form>
 		</div>
 	</div>
 	<!--顶部E-->

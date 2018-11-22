@@ -83,70 +83,85 @@
 			</div>
 
 
-			<div class="sac fr">
+			<div class="fl sac">
 				<div class="search fr">
-					<input type="text" name="" id="" value="" />
-				</div>
-				<div class="accident">
-<form action="">
-					<table>
-						<tr>
-							<th>角色</th>
-							<th>账户名</th>
-							<th>创建时间</th>
-							<th>审核信息</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<c:forEach items="${listuser.beanList}" var="item">
-							<tr>
-								<td><c:choose>
-										<c:when test="${item.us_roles==0}">企业员工</c:when>
-										<c:when test="${item.us_roles==1}">企业管理员</c:when>
-										<c:when test="${item.us_roles==2}">分析人员</c:when>
-										<c:when test="${item.us_roles==3}">审核人员</c:when>
-									</c:choose></td>
-								<td>${item.us_account}</td>
-								<td><fmt:formatDate value="${item.us_createTime}"
-										pattern="yyyy-MM-dd" /></td>
-								<td><c:choose>
-										<c:when test="${item.us_flag==0}">未过审</c:when>
-										<c:when test="${item.us_flag==1}">通过审核</c:when>
-									</c:choose></td>
-								<td><a
-									href="${pageContext.request.contextPath}
-			/userhandler/updatelist.action?us_id=${item.us_id}">修改</a></td>
-								<td><a
-									href="${pageContext.request.contextPath}
-			/userhandler/deleteUser.action?us_id=${item.us_id}">删除</a></td>
-							</tr>
-						</c:forEach>
-
-					</table>
+					<form action="">
+						<input type="text" name="" id="" value="" />
 					</form>
+				</div>
+				<div class="accident fl">
+					<form action="">
+						<table>
+							<tr>
+								<th>角色</th>
+								<th>账户名</th>
+								<th>创建时间</th>
+								<th>审核信息</th>
+								<th>修改</th>
+								<th>删除</th>
+							</tr>
+							<c:forEach items="${listuser.beanList}" var="item">
+								<tr>
+									<td><c:choose>
+											<c:when test="${item.us_roles==0}">企业员工</c:when>
+											<c:when test="${item.us_roles==1}">企业管理员</c:when>
+											<c:when test="${item.us_roles==2}">分析人员</c:when>
+											<c:when test="${item.us_roles==3}">审核人员</c:when>
+										</c:choose></td>
+									<td>${item.us_account}</td>
+									<td><fmt:formatDate value="${item.us_createTime}"
+											pattern="yyyy-MM-dd" /></td>
+									<td><c:choose>
+											<c:when test="${item.us_flag==0}">未过审</c:when>
+											<c:when test="${item.us_flag==1}">通过审核</c:when>
+										</c:choose></td>
+									<td>
+										<div class="po">
+											<a
+												href="${pageContext.request.contextPath}
+			/userhandler/updatelist.action?us_id=${item.us_id}"></a>
+										</div>
+									</td>
+
+									<td>
+										<div class="de">
+											<a
+												href="${pageContext.request.contextPath}
+			/userhandler/deleteUser.action?us_id=${item.us_id}"></a>
+										</div>
+									</td>
+								</tr>
+							</c:forEach>
+
+						</table>
+					</form>
+				</div>
+				<div class="skip main">
+					<h3>第${listuser.current+1}页 /共${listuser.total_pages}页</h3>
+					<br> <a 
+						href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
+					<c:if test="${listuser.current>0 }">
+						<a
+							href="${pageContext.request.contextPath}
+	/userhandler/findAllUsers.action?current=${listuser.current-1}">上一页</a>
+					</c:if>
+					<c:if test="${listuser.current+1<listuser.total_pages}">
+						<a
+							href="${pageContext.request.contextPath}
+	/userhandler/findAllUsers.action?current=${listuser.current+1}">下一页</a>
+
+						<a
+							href="${pageContext.request.contextPath}
+	/userhandler/findAllUsers.action?current=${listuser.total_pages-1}">尾页</a>
+					</c:if>
 				</div>
 			</div>
 		</div>
+
 	</div>
 
 
-	<h3>第${listuser.current+1}页 /共${listuser.total_pages}页</h3>
-	<a
-		href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
-	<c:if test="${listuser.current>0 }">
-		<a
-			href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listuser.current-1}">上一页</a>
-	</c:if>
-	<c:if test="${listuser.current+1<listuser.total_pages}">
-		<a
-			href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listuser.current+1}">下一页</a>
 
-		<a
-			href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listuser.total_pages-1}">尾页</a>
-	</c:if>
 
 
 	<!--底部S-->

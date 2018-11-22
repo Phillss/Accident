@@ -36,7 +36,6 @@ public class shiroHandler {
 	@RequestMapping(value="/login",method= {RequestMethod.POST,RequestMethod.GET})
 	public String login(@RequestParam("userid") String userid, @RequestParam("pass") String pass) {
 		Subject currentUser = SecurityUtils.getSubject();
-		System.out.println("执行认证");
 		if (!currentUser.isAuthenticated()) {
 			UsernamePasswordToken token = new UsernamePasswordToken(userid, pass);
 			token.setRememberMe(true);
@@ -64,7 +63,6 @@ public class shiroHandler {
 		user.setUs_roles(0);
 		String id = UUID.randomUUID().toString().replaceAll("-", "");
 		user.setUs_id(id);
-		System.out.println("用户角色为：员工");
 		String algorithmName = "MD5";
 		Object source = user.getUs_passwd();
 		Object salt = ByteSource.Util.bytes(user.getUs_account());

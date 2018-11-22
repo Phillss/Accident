@@ -7,7 +7,8 @@ body {
 	width: 100%;
 	height: 218px;
 	background: url(../img/header.jpg) no-repeat;
-	background-size: 100% auto;
+	/* background-size: 100% auto; */
+	background-size: cover;
 }
 .head .exit {
 	margin-top: 2.5%;
@@ -75,12 +76,11 @@ body {
 /*主内容start*/
 /*t0课程模块start*/
 .t {
-	width: 100%;
 	height: 600px;
+	width: 100%;
+	margin-top: 85px;
 }
 .t .t0 {
-	margin-top: 85px;
-	width: 1170px;
 	height: 300px;
 	position: absolute;
 }
@@ -110,10 +110,14 @@ body {
 .t .t0 table a:active {
 	
 }
+.t .t0 .cour {
+	width: 900px;
 
+}
 .t .t0 .cour form {
 	position: absolute;
-	left: 20%;
+	top: 0%;
+	left: 25%;
 }
 .t .t0 .cour form table th {
 	border: 1px solid #b4b4b5;
@@ -343,11 +347,11 @@ body {
 /*行业法规end*/
 /*t2事故报告管理start*/
 .t .t2 {
-	margin-top: 85px;
+	height: 500px;
 }
 .t .t2 .sac {
-	width: 100%;
 	height: 400px;
+	width: 100%;
 }
 .t .t2 .sac .search {
 	display: block;
@@ -355,7 +359,6 @@ body {
 	height: 28px;
 	background: url(../img/spirit/spirit.jpg);
 	background-position: 0 -202px;
-	margin-left: 959px;
 	margin-bottom: 10px;
 	border-radius: 10px;
 }
@@ -371,12 +374,10 @@ body {
 	color: white;
 }
 .t .t2 .accident form {
-	margin-right: 64px;
-	width: 1170px;
-	height: 300px;
+	width: 100%;
 }
 .t .t2 .accident form table {
-	width: 1170px;
+	width: 100%;
 }
 .t .t2 .accident form table th {
 	border: 1px solid #b4b4b5;
@@ -418,10 +419,13 @@ body {
 	margin: 0 auto;
 }
 
+.t .t2 .upload {
+	margin-top:10px;
+}
 .t .t2 .uploadad {
 	width: 400px;
 	height: 37px;
-	margin: auto;
+	margin: 0 auto;
 }
 .t .t2 .uploadad form {
 	width: 400px;
@@ -760,11 +764,12 @@ body {
 /*t4统计图end*/
 /*t5统计图start*/
 .t .t5 {
-	margin-top: 85px;
-	position: relative;
+	height: 500px;
+	position: absolute;
 }
 .t .t5 .w {
 	width: 145px;
+	height: 117px;
 }
 .t .t5 .menu {
 	width: 145px;
@@ -785,8 +790,13 @@ body {
 	display: none;
 }
 .t .t5 .sac {
-	width: 1020px;
-	height: 400px;
+	width: 800px;
+}
+.t .t5 .sac .accident form {
+	width: 754px;
+	position: absolute;
+	top: 10%;
+	left: 20%;
 }
 .t .t5 .sac .search {
 	display: block;
@@ -808,13 +818,14 @@ body {
 	outline: none;
 	color: white;
 }
-.t .t5 .accident form {
-	margin-right: 64px;
-	width: 1020px;
-	height: 300px;
+.t .t5 .accident {
+	width: 800px;
+	height: 500px;
 }
+	
 .t .t5 .accident form table {
-	width: 1020px;
+	width: 100%;
+	height: 300px;
 }
 .t .t5 .accident form table th {
 	border: 1px solid #b4b4b5;
@@ -846,7 +857,14 @@ body {
 	margin-left: 17.4px;
 	margin: auto;
 }
-
+.t .t5 .accident .po a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	margin-left: 17.4px;
+	margin: auto;
+}
 /*修改账户start*/
 .t .t5 .modify {
 	position: absolute;
@@ -989,6 +1007,14 @@ body {
 	margin: auto;
 }
 /*t6记录管理end*/
+/*翻页start*/
+.skip {
+	display: block;
+	height: 40px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+/*翻页end*/
 /*主内容end*/
 /*底部start*/
 footer {

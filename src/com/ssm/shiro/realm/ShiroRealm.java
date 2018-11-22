@@ -41,7 +41,6 @@ public class ShiroRealm extends AuthorizingRealm {
 		// 2、从UsernamePasswordToken中获取username
 		String username = uptoken.getUsername();
 		// 3、数据库查询对应的用户记录
-		System.out.println("验证" + username + "用户信息");
 		// 4、若用户不存在，则可以抛出UnknowAccountException异常
 		if ("unknow".equals(username)) {
 			throw new UnknownAccountException("用户不存在");

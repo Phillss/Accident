@@ -29,11 +29,9 @@
 	</select>
 	
 	<update id="updateCourse" parameterType="com.ssm.pojo.Vo.Course_t_Vo">
-		UPDATE course_t SET cu_industry =#{cu_industry}, cu_name = #{cu_name} ,
-		cu_introduce =#{cu_introduce},cu_save = #{cu_save} ,
-		cu_uploadTime = #{cu_uploadTime} ,cu_fileName = #{cu_fileName} ,
-		cu_industryName  = #{cu_industryName} 
-		WHERE cu_id =#{cu_id} 
+		UPDATE ssm_demo.course_t SET cu_industry = #{cu_industry}, cu_name = #{cu_name}, 
+		cu_introduce = #{cu_introduce}, cu_fileName = #{cu_fileName}
+		 WHERE cu_id =#{cu_id}
 	</update>
 	
 	<delete id="deleteCourse" parameterType="String" >

@@ -7,17 +7,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>课程列表</title>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/header.css" />
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/base.css" />
-<script src="${pageContext.request.contextPath}/js/echarts.min.js"></script>
 <%@ include file="/font.jsp"%>
 <script type="text/javascript">
 	//			下拉框
@@ -76,17 +65,18 @@
 						<td><a href="#" onclick="course()"> 管理课程 </a></td>
 					</tr>
 					<tr id="visit">
-						<td><a href="#" onclick="addcourse()"> 添加课程 </a></td>
+						<td><a href="${pageContext.request.contextPath}/course/addcourse.action" onclick="addcourse()"> 添加课程 </a></td>
 					</tr>
 					<tr id="visit">
-						<td><a href="#" onclick="theory()"> 事故致因理论 </a></td>
+						<td><a href="${pageContext.request.contextPath}/course/theory.action" onclick="theory()"> 事故致因理论 </a></td>
 					</tr>
 				</table>
 			</div>
-			<div class="fr cour">
+			<div class="fl cour">
 				<form action="" method="post">
 					<table>
 						<tr>
+							<th style="text-align: center;">课程编号</th>
 							<th style="text-align: center;">课程名称</th>
 							<th style="text-align: center;">所属行业</th>
 							<th style="text-align: center;">课程介绍</th>
@@ -96,6 +86,7 @@
 						</tr>
 						<c:forEach items="${listcourse.beanList}" var="item">
 							<tr>
+								<td>${item.cu_id}</td>
 								<td>${item.cu_name}</td>
 								<td>${item.cu_industry}</td>
 								<td>${item.cu_introduce}</td>
@@ -103,14 +94,16 @@
 										pattern="yyyy-MM-dd" /></td>
 								<td>
 									<div class="rs">
-										<a href="${pageContext.request.contextPath}
-			/course/updatecourse.action?us_id=${item.cu_id}"></a>
+										<a
+											href="${pageContext.request.contextPath}
+			/course/updatelist.action?cu_id=${item.cu_id}"></a>
 									</div>
 								</td>
 								<td>
 									<div class="de">
-										<a href="${pageContext.request.contextPath}
-			/course/deletecourse.action?us_id=${item.cu_id}"></a>
+										<a
+											href="${pageContext.request.contextPath}
+			/course/deletecourse.action?cu_id=${item.cu_id}"></a>
 									</div>
 								</td>
 							</tr>
@@ -119,29 +112,32 @@
 				</form>
 			</div>
 		</div>
-		</div>
-
-
-
-		<h3>第${listcourse.current+1}页 /共${listcourse.total_pages}页</h3>
-		<a
-			href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
-		<c:if test="${listcourse.current>0 }">
+		<div class="skip main">
+			<h3>第${listcourse.current+1}页 /共${listcourse.total_pages}页</h3><br>
 			<a
-				href="${pageContext.request.contextPath}
+				href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
+			<c:if test="${listcourse.current>0 }">
+				<a
+					href="${pageContext.request.contextPath}
 	/userhandler/findAllUsers.action?current=${listcourse.current-1}">上一页</a>
-		</c:if>
-		<c:if test="${listcourse.current+1<listcourse.total_pages}">
-			<a
-				href="${pageContext.request.contextPath}
+			</c:if>
+			<c:if test="${listcourse.current+1<listcourse.total_pages}">
+				<a
+					href="${pageContext.request.contextPath}
 	/userhandler/findAllUsers.action?current=${listuser.current+1}">下一页</a>
-			<a
-				href="${pageContext.request.contextPath}
+				<a
+					href="${pageContext.request.contextPath}
 	/userhandler/findAllUsers.action?current=${listcourse.total_pages-1}">尾页</a>
-		</c:if>
+			</c:if>
+		</div>
+	</div>
 
-		<!--底部S-->
-		<footer></footer>
-		<!--底部E-->
+
+
+
+
+	<!--底部S-->
+	<footer></footer>
+	<!--底部E-->
 </body>
 </html>

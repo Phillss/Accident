@@ -8,13 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>事故信息列表</title>
 <%@ include file="/font.jsp"%>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/header.css" />
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base.css" />
-<!--<script type="text/javascript" src="js/switch.js"></script>-->
-<script src="${pageContext.request.contextPath}/js/echarts.min.js"></script>
 <script type="text/javascript">
 	//			下拉框
 	function ggle() {
@@ -65,74 +58,75 @@
 	<div class="t">
 		<div class="t2 main">
 			<div class="sac">
-				<div class="search">
-					<input type="text" name="" id="" value="" />
+				<div class="fr search">
+					<form>
+						<input type="text" name="" id="" value="" />
+					</form>
 				</div>
 				<div class="accident">
-				<form action="">
-					<table>
-						<tr>
-							<td>事故等级</td>
-							<td>事故名称</td>
-							<td>发生时间</td>
-							<td>地点</td>
-
-							<td>死亡人数</td>
-							<td>受伤人数</td>
-							<td>财产损失</td>
-							<td>负责人</td>
-							<td>所属公司</td>
-							<td>事故报告</td>
-							<td>所属行业</td>
-
-							<td></td>
-							<td></td>
-						</tr>
-						<c:forEach items="${listaccident.beanList}" var="item">
+					<form action="">
+						<table>
 							<tr>
-								<td>${item.acc_level}</td>
-								<td>${item.acc_name}</td>
-								<td><fmt:formatDate value="${item.acc_time}"
-										pattern="yyyy-MM-dd" /></td>
-								<td>${item.acc_site}</td>
-								<td>${item.acc_deathSum}</td>
-								<td>${item.acc_injuredSum}</td>
-								<td>${item.acc_financial}</td>
-								<td>${item.acc_boss}</td>
-								<td>${item.acc_org}</td>
-								<td>${item.acc_fileName}</td>
-								<td>${item.acc_industryName}</td>
-								<td class="de"><a href="#" download="statute.txt"></a></td>
+								<td>事故等级</td>
+								<td>事故名称</td>
+								<td>发生时间</td>
+								<td>地点</td>
+								<td>死亡人数</td>
+								<td>受伤人数</td>
+								<td>财产损失</td>
+								<td>负责人</td>
+								<td>所属公司</td>
+								<td>事故报告</td>
+								<td>所属行业</td>
+								<td>删除</td>
 							</tr>
-						</c:forEach>
-
-					</table>
-</form>
+							<c:forEach items="${listaccident.beanList}" var="item">
+								<tr>
+									<td>${item.acc_level}</td>
+									<td>${item.acc_name}</td>
+									<td><fmt:formatDate value="${item.acc_time}"
+											pattern="yyyy-MM-dd" /></td>
+									<td>${item.acc_site}</td>
+									<td>${item.acc_deathSum}</td>
+									<td>${item.acc_injuredSum}</td>
+									<td>${item.acc_financial}</td>
+									<td>${item.acc_boss}</td>
+									<td>${item.acc_org}</td>
+									<td>${item.acc_fileName}</td>
+									<td>${item.acc_industryName}</td>
+									<td class="de"><a href="${pageContext.request.contextPath}/accident/delete.action?acc_id=${item.acc_id}"></a></td>
+								</tr>
+							</c:forEach>
+						</table>
+					</form>
 					<div class="upload">
-						<a href="#" onclick="addaccidents()"></a>
+						<a href="${pageContext.request.contextPath}/accident/showadd.action" onclick="addaccidents()"></a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="skip main">
+			<h3>第${listaccident.current+1}页 /共${listaccident.total_pages}页</h3><br>
+			<a
+				href="${pageContext.request.contextPath}/accident/findall.action?current=0">首页</a>
+			<c:if test="${listaccident.current>0 }">
+				<a
+					href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
+			</c:if>
+			<c:if test="${listaccident.current+1<listaccident.total_pages}">
+				<a
+					href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
+				<a
+					href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
+			</c:if>
+		</div>
 	</div>
 
 
-	<h3>第${listaccident.current+1}页 /共${listaccident.total_pages}页</h3>
-	<a
-		href="${pageContext.request.contextPath}/accident/findall.action?current=0">首页</a>
-	<c:if test="${listaccident.current>0 }">
-		<a
-			href="${pageContext.request.contextPath}
-	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
-	</c:if>
-	<c:if test="${listaccident.current+1<listaccident.total_pages}">
-		<a
-			href="${pageContext.request.contextPath}
-	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
-		<a
-			href="${pageContext.request.contextPath}
-	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
-	</c:if>
+
 
 	<!--底部S-->
 	<footer></footer>

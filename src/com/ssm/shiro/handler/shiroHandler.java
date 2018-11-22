@@ -14,7 +14,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.ssm.mapper.employee.EmployeeMapper;
+import com.ssm.pojo.Vo.Employeecourse_t_Vo;
+import com.ssm.pojo.Vo.Employeeinfo_t_Vo;
 import com.ssm.pojo.Vo.User_t_Vo;
+import com.ssm.service.employeeinfo.ServiceEmployeeinfo;
 import com.ssm.service.user.UserService;
 
 @Controller
@@ -23,6 +27,9 @@ public class shiroHandler {
 
 	@Autowired
 	private UserService service;
+	
+	@Autowired
+	private ServiceEmployeeinfo serviceEmpl;
 
 	// 登陆认证
 	@RequestMapping("/login")
@@ -49,7 +56,10 @@ public class shiroHandler {
 	}
 
 	@RequestMapping("/logup")
-	public String logup(User_t_Vo user) throws Exception {
+	public String logup(Employeeinfo_t_Vo employee) throws Exception {
+		User_t_Vo user=new User_t_Vo();
+		user.setUs_account(employee.getUs_account());
+		user.setUs_passwd(employee.getUs_passwd());
 		user.setUs_roles(0);
 		String id = UUID.randomUUID().toString().replaceAll("-", "");
 		user.setUs_id(id);
@@ -64,6 +74,15 @@ public class shiroHandler {
 		user.setUs_flag(0);
 		user.setUs_createTime(new Date());
 		service.serviceInsert(user);
+		
+		System.out.println(employee.getEm_name());
+		System.out.println(employee.getEm_sex());
+		System.out.println(employee.getEm_age());
+		System.out.println(employee.getEm_idCard());
+		System.out.println(employee.getEm_companyName());
+		System.out.println(employee.getEm_positionName());
+		System.out.println(employee.getUs_account());
+		System.out.println(employee.getUs_passwd());
 		return "redirect:/login.jsp";
 	}
 }

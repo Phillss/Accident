@@ -10,7 +10,7 @@ import com.ssm.pojo.Vo.User_t_Vo;
 public interface UserService {
 	
 	//根据用户名查询用户
-	public User_t_Vo serviceFindUserByName(String name) throws Exception;
+	public List<User_t_Vo> serviceFindUserByName(String name) throws Exception;
 	
 	//根据用户名模糊查找用户
 	public List<User_t_Vo> serviceLikeUserByName(PageIndex pageindex) throws Exception;

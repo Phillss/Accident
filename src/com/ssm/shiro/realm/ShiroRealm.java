@@ -58,7 +58,7 @@ public class ShiroRealm extends AuthorizingRealm {
 		Object principal = username;
 		Object credentials = null;
 		try {
-			User_t_Vo user = service.serviceFindUserByName(username);
+			User_t_Vo user = service.serviceFindUserByName(username).get(0);
 			credentials = user.getUs_passwd();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -82,7 +82,7 @@ public class ShiroRealm extends AuthorizingRealm {
 		// 查询数据库 获取用户角色信息
 		Integer role = null;
 		try {
-			role = service.serviceFindUserByName(principals.toString()).getUs_roles();
+			role = service.serviceFindUserByName(principals.toString()).get(0).getUs_roles();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

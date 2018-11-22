@@ -3,11 +3,17 @@ public class Employeeinfo_t {
 	String em_id;// 员工的唯一标识符
 	String em_name;// 员工的名称
 
-	//String em_company;// 员工的所属公司
-	String em_department;// 员工的部门
 	String em_position;// 员工的岗位
-
 	String em_number;// 员工工号
+	String em_sex;// 员工的性别
+	String em_companyName;// 员工的所属公司
+	String em_departmentName;
+//	String em_department;// 员工的部门
+
+	String em_positionName;
+	String em_age;
+	String em_phoneNumber;
+	String em_idCard;
 	public String getEm_departmentName() {
 		return em_departmentName;
 	}
@@ -48,12 +54,7 @@ public class Employeeinfo_t {
 		this.em_idCard = em_idCard;
 	}
 
-	String em_sex;// 员工的性别
-	String em_departmentName;
-	String em_positionName;
-	String em_age;
-	String em_phoneNumber;
-	String em_idCard;
+	
 	public String getEm_id() {
 		return em_id;
 	}
@@ -70,12 +71,12 @@ public class Employeeinfo_t {
 		this.em_name = em_name;
 	}
 
-	public String getEm_department() {
-		return em_department;
+	public String getEm_companyName() {
+		return em_companyName;
 	}
 
-	public void setEm_department(String em_department) {
-		this.em_department = em_department;
+	public void setEm_companyName(String em_companyName) {
+		this.em_companyName = em_companyName;
 	}
 
 	public String getEm_position() {

@@ -26,5 +26,5 @@
 		<bean id="servicelaws" class="com.ssm.service.laws.LawsServiceImpl"></bean>
 		<bean id="servicelog" class="com.ssm.service.log.LogServiceImpl"></bean>
 		<bean id="serviceresult" class="com.ssm.service.result.ResultServiceImpl"></bean>
-		
+		<bean id="serviceemployee" class="com.ssm.service.employeeinfo.ServiceEmployeeinfo"></bean>
 </beans>

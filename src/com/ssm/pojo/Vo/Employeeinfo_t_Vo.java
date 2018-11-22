@@ -4,6 +4,37 @@ import com.ssm.pojo.Employeeinfo_t;
 
 public class Employeeinfo_t_Vo extends Employeeinfo_t {
 
+	private String us_account;
+	private String us_passwd;
+	
+	public String getUs_account() {
+		return us_account;
+	}
+
+	@Override
+	public String getEm_companyName() {
+		// TODO Auto-generated method stub
+		return super.getEm_companyName();
+	}
+
+	@Override
+	public void setEm_companyName(String em_companyName) {
+		// TODO Auto-generated method stub
+		super.setEm_companyName(em_companyName);
+	}
+
+	public void setUs_account(String us_account) {
+		this.us_account = us_account;
+	}
+
+	public String getUs_passwd() {
+		return us_passwd;
+	}
+
+	public void setUs_passwd(String us_passwd) {
+		this.us_passwd = us_passwd;
+	}
+
 	@Override
 	public String getEm_id() {
 		// TODO Auto-generated method stub
@@ -86,18 +117,6 @@ public class Employeeinfo_t_Vo extends Employeeinfo_t {
 	public void setEm_idCard(String em_idCard) {
 		// TODO Auto-generated method stub
 		super.setEm_idCard(em_idCard);
-	}
-
-	@Override
-	public String getEm_department() {
-		// TODO Auto-generated method stub
-		return super.getEm_department();
-	}
-
-	@Override
-	public void setEm_department(String em_department) {
-		// TODO Auto-generated method stub
-		super.setEm_department(em_department);
 	}
 
 	@Override

@@ -33,7 +33,8 @@ public class UserHandler {
 	//验证用户名是否重复
 	@RequestMapping(value="/vertify",method= {RequestMethod.POST,RequestMethod.GET})
 	public @ResponseBody Boolean vertify(User_t_Vo user) throws Exception{
-		if(service.serviceFindUserByName(user.getUs_account())!=null) {
+		System.out.println(service.serviceFindUserByName(user.getUs_account()).size());
+		if(service.serviceFindUserByName(user.getUs_account()).size()>0) {
 			return false;
 		}else {
 			return true;

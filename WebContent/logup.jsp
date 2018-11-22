@@ -26,26 +26,26 @@
 		<div class="re">
 			<h3>Register</h3>
 			<div class="rg">
-				<form action="${pageContext.request.contextPath}/shiro/logup.action" method="post">
+				<form action="${pageContext.request.contextPath}/shiro/logup.action" method="post" id="information">
 					<table>
 						<tr>
 							<td class="cl">
 								<span>姓&nbsp;&nbsp;名:</span>
-								<input type="text" placeholder="  Name" id="username" name="username" autofocus="autofocus" maxlength="20" />
+								<input type="text" placeholder="  Name" id="username" name="em_name" autofocus="autofocus" maxlength="20" />
 							</td>
 							<td class="cl">
 								<span>公&nbsp;&nbsp;司:</span>
-								<input type="text" placeholder="  Company" id="company" name="username" autofocus="autofocus" maxlength="20" />
+								<input type="text" placeholder="  Company" id="company" name="em_companyName" autofocus="autofocus" maxlength="20" />
 							</td>
 						</tr>
 						<tr>
 							<td class="cl">
 								<span>年&nbsp;&nbsp;龄:</span>
-								<input type="text" placeholder="  Age" id="age" name="username" autofocus="autofocus" maxlength="20" />
+								<input type="text" placeholder="  Age" id="age" name="em_age" autofocus="autofocus" maxlength="20" />
 							</td>
 							<td class="cl">
 								<span>职&nbsp;&nbsp;位:</span>
-								<input type="text" placeholder="  Work" id="post" name="password" maxlength="8" />
+								<input type="text" placeholder="  Work" id="post" name="em_positionName" maxlength="8" />
 							</td>
 
 						</tr>
@@ -53,8 +53,8 @@
 							<td class="cl">
 								<div class="rw">
 									<p style="display: inline-block; margin-left: -66px;">性&nbsp;&nbsp;别:</p>
-									<input type="radio" name="1" value="man" class="sx" checked="checked"><span>男</span>
-									<input type="radio" name="1" value="women" class="sx"><span>女</span>
+									<input type="radio" name="em_sex" value="man" class="sx" checked="checked"><span>男</span>
+									<input type="radio" name="em_sex" value="women" class="sx"><span>女</span>
 								</div>
 							</td>
 							<td class="cl">
@@ -65,7 +65,7 @@
 						<tr>
 							<td class="cl">
 								<span>身份证号:</span>
-								<input type="text" placeholder="  ID-Card" id="idCard" name="username" autofocus="autofocus" maxlength="20" />
+								<input type="text" placeholder="  ID-Card" id="idCard" name="em_idCard" autofocus="autofocus" maxlength="20" />
 							</td>
 							<td class="cl">
 								<span>密&nbsp;&nbsp;码:</span>
@@ -265,8 +265,8 @@
 			$.ajax({
 				url: "${pageContext.request.contextPath}/shiro/logup.action",
 				type: "post",
-				dataType: "json",
-				data: {"a":123},
+				 dataType: "json",
+				data: $("#information").serializeArray(),
 				success: function() {
 
 				},

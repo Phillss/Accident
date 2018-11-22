@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
 
 	//根据用户名查询用户信息
 	@Override
-	public User_t_Vo serviceFindUserByName(String name) throws Exception {
+	public List<User_t_Vo> serviceFindUserByName(String name) throws Exception {
 		// TODO Auto-generated method stub
 		return usermapper.findUserByName(name);
 	}

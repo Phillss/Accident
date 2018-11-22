@@ -14,7 +14,7 @@ public interface UserMapper {
 	
 	/*根据用户名查找用户
 	 * */
-	public User_t_Vo findUserByName(String name) throws Exception;
+	public List<User_t_Vo> findUserByName(String name) throws Exception;
 	
 	/***
 	 * 查询所有记录数

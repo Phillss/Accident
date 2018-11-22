@@ -80,9 +80,11 @@ body {
 }
 .t .t0 {
 	margin-top: 85px;
+	width: 1170px;
+	height: 300px;
+	position: absolute;
 }
 .t .t0 .tle {
-	display: inline-block;
 	width: 145px;
 	height: 117px;
 }
@@ -110,9 +112,11 @@ body {
 }
 
 .t .t0 .cour form {
-	margin-right: 64px;
+	position: absolute;
 	width: 808px;
 	height: 37px;
+	left: 20%;
+	
 }
 .t .t0 .cour form table th {
 	border: 1px solid #b4b4b5;
@@ -154,8 +158,10 @@ body {
 	font: normal normal 18px/28px "微软雅黑";
 }
 .t .t0 .import form {
-	margin: 0 auto;
-	margin-left: 200px;
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	left: 20%;
 }
 .t .t0 .import label {
 	color: white;
@@ -172,10 +178,12 @@ body {
 
 .t .t0 .modifycourse {
 	width: 300px;
-	height: 37px;
-	margin-left: 300px;
+	height: 220px;
+	left: 20%;
+	position: absolute;
 }
 .t .t0 .modifycourse form {
+	text-align: center;
 	border: 1px solid #b4b4b5;
 	padding: 10px;
 }
@@ -198,9 +206,10 @@ body {
 }
 
 .t .t0 .Causationtheory form {
-	margin-right: 64px;
-	width: 808px;
+	position: absolute;
+	width: 706px;
 	height: 37px;
+	left: 20%;
 }
 .t .t0 .Causationtheory  form table td {
 	border: 1px solid #b4b4b5;

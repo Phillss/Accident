@@ -140,7 +140,7 @@ public class Employeeinfo_t_Vo extends Employeeinfo_t {
 	@Override
 	public void setEm_number(String em_number) {
 		// TODO Auto-generated method stub
-		super.setEm_number(em_number);
+		super.setEm_number(this.us_account);
 	}
 
 	@Override

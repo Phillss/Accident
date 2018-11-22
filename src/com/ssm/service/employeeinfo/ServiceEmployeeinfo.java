@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.ssm.mapper.employee.EmployeeMapper;
 import com.ssm.pojo.PageIndex;
@@ -13,6 +14,7 @@ import com.ssm.pojo.Vo.Employeecourse_t_Vo;
 import com.ssm.pojo.Vo.Employeeinfo_t_Vo;
 import com.ssm.pojo.Vo.Position_t_Vo;
 
+
 public class ServiceEmployeeinfo {
 	
 	@Autowired
@@ -20,22 +22,8 @@ public class ServiceEmployeeinfo {
 	
 	//针对员工的信息
 	public void serviceinsertEmployee(Employeeinfo_t_Vo vo) throws Exception{
-		String posiname=vo.getEm_positionName();  //获取职位名称
-		String companyName=vo.getEm_companyName();//获取公司名称
-		//如果没有公司就添加一个
-		
-		if(mapper.selectCompanyByName(companyName)==null) {
-			
-		}
-		//如果没有职位就添加一个职位
-		if(mapper.selectPositionByName(posiname)==null) {
-			Position_t_Vo posi=new Position_t_Vo();
-			posi.setPo_name(posiname);
-			posi.setPo_id(UUID.randomUUID().toString().replaceAll("-", ""));
-			//添加一个部门信息（部门名称暂时与职位名称相同）
-			Departmentinfo_t_Vo depart=new Departmentinfo_t_Vo();
-			mapper.addPosition(posi);
-		}
+		String em_position=mapper.selectPositionByName(vo.getEm_positionName()).get(0).getPo_id();
+		vo.setEm_position(em_position);
 		mapper.insertEmployee(vo);
 	}
 	public Employeecourse_t_Vo serviceemployeeFindById(String id) throws Exception{
@@ -62,7 +50,7 @@ public class ServiceEmployeeinfo {
 	public Position_t_Vo serviceselectPositionById(String id) throws Exception{
 		return mapper.selectPositionById(id);
 	}
-	public Position_t_Vo servicselectPositionByName(String name) throws Exception{
+	public List<Position_t_Vo> servicselectPositionByName(String name) throws Exception{
 		return mapper.selectPositionByName(name);
 	}
 	public void servicaddPosition(Position_t_Vo vo) throws Exception{
@@ -77,7 +65,7 @@ public class ServiceEmployeeinfo {
 	public Departmentinfo_t_Vo serviceselectDepartById(String id) throws Exception{
 		return mapper.selectDepartById(id);
 	}
-	public Departmentinfo_t_Vo serviceselectDepartByName(String name) throws Exception{
+	public List<Departmentinfo_t_Vo> serviceselectDepartByName(String name) throws Exception{
 		return mapper.selectDepartByName(name);
 	}
 	public void serviceaddDepart(Departmentinfo_t_Vo vo) throws Exception{
@@ -94,7 +82,7 @@ public class ServiceEmployeeinfo {
 	public Companyinfo_t_Vo serviceselectCompanyById(String id) throws Exception{
 		return mapper.selectCompanyById(id);
 	}
-	public Companyinfo_t_Vo serviceselectCompanyByName(String name) throws Exception{
+	public List<Companyinfo_t_Vo> serviceselectCompanyByName(String name) throws Exception{
 		return mapper.selectCompanyByName(name);
 	}
 	public void serviceaddCompany(Companyinfo_t_Vo vo) throws Exception{

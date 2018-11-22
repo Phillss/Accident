@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,8 +14,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.ssm.pojo.PageBean;
 import com.ssm.pojo.PageIndex;
-import com.ssm.pojo.user_t;
 import com.ssm.pojo.Vo.User_t_Vo;
+import com.ssm.service.employeeinfo.ServiceEmployeeinfo;
 import com.ssm.service.user.UserService;
 
 @Controller
@@ -28,18 +27,47 @@ public class UserHandler {
 	@Autowired
 	private UserService service;
 	
+	@Autowired
+	private ServiceEmployeeinfo emService;
 	
+	//验证公司是否被收录
+		@RequestMapping(value="/vertifycompany",method= {RequestMethod.POST,RequestMethod.GET})
+		public @ResponseBody Boolean vertifycompany(String em_companyName) throws Exception{
+			if(emService.serviceselectCompanyByName(em_companyName).size()>0) {
+				return true;
+			}else {
+				return false;
+			}
+		}
+		
+		//验证部门是否存在
+		@RequestMapping(value="/vertifydepart",method= {RequestMethod.POST,RequestMethod.GET})
+		public @ResponseBody Boolean vertifydepart(String em_departmentName) throws Exception{
+			if(emService.serviceselectDepartByName(em_departmentName).size()>0) {
+				return true;
+			}else {
+				return false;
+			}
+		}
+		
+		//验证职位是否存在
+		@RequestMapping(value="/vertifyposi",method= {RequestMethod.POST,RequestMethod.GET})
+		public @ResponseBody Boolean vertifyposi(String em_positionName) throws Exception{
+			if(emService.servicselectPositionByName(em_positionName).size()>0) {
+				return true;
+			}else {
+				return false;
+			}
+		}
 	
 	//验证用户名是否重复
 	@RequestMapping(value="/vertify",method= {RequestMethod.POST,RequestMethod.GET})
 	public @ResponseBody Boolean vertify(User_t_Vo user) throws Exception{
-		System.out.println(service.serviceFindUserByName(user.getUs_account()).size());
 		if(service.serviceFindUserByName(user.getUs_account()).size()>0) {
 			return false;
 		}else {
 			return true;
 		}
-		
 	}
 	
 	//查找所有用户

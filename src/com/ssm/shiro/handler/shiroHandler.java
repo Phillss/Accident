@@ -12,6 +12,7 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ssm.mapper.employee.EmployeeMapper;
@@ -32,7 +33,7 @@ public class shiroHandler {
 	private ServiceEmployeeinfo serviceEmpl;
 
 	// 登陆认证
-	@RequestMapping("/login")
+	@RequestMapping(value="/login",method= {RequestMethod.POST,RequestMethod.GET})
 	public String login(@RequestParam("userid") String userid, @RequestParam("pass") String pass) {
 		Subject currentUser = SecurityUtils.getSubject();
 		System.out.println("执行认证");
@@ -55,7 +56,7 @@ public class shiroHandler {
 		return "redirect:/login.jsp";
 	}
 
-	@RequestMapping("/logup")
+	@RequestMapping(value="/logup",method= {RequestMethod.POST,RequestMethod.GET})
 	public String logup(Employeeinfo_t_Vo employee) throws Exception {
 		User_t_Vo user=new User_t_Vo();
 		user.setUs_account(employee.getUs_account());
@@ -63,7 +64,6 @@ public class shiroHandler {
 		user.setUs_roles(0);
 		String id = UUID.randomUUID().toString().replaceAll("-", "");
 		user.setUs_id(id);
-		System.out.println(user.getUs_account() + "正在注册");
 		System.out.println("用户角色为：员工");
 		String algorithmName = "MD5";
 		Object source = user.getUs_passwd();
@@ -74,15 +74,9 @@ public class shiroHandler {
 		user.setUs_flag(0);
 		user.setUs_createTime(new Date());
 		service.serviceInsert(user);
-		
-		System.out.println(employee.getEm_name());
-		System.out.println(employee.getEm_sex());
-		System.out.println(employee.getEm_age());
-		System.out.println(employee.getEm_idCard());
-		System.out.println(employee.getEm_companyName());
-		System.out.println(employee.getEm_positionName());
-		System.out.println(employee.getUs_account());
-		System.out.println(employee.getUs_passwd());
+		employee.setEm_number(employee.getUs_account());
+		employee.setEm_id(id);
+		serviceEmpl.serviceinsertEmployee(employee);
 		return "redirect:/login.jsp";
 	}
 }

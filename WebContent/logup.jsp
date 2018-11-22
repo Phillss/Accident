@@ -34,8 +34,8 @@
 								<input type="text" placeholder="  Name" id="username" name="em_name" autofocus="autofocus" maxlength="20" />
 							</td>
 							<td class="cl">
-								<span>公&nbsp;&nbsp;司:</span>
-								<input type="text" placeholder="  Company" id="company" name="em_companyName" autofocus="autofocus" maxlength="20" />
+								<span>部&nbsp;&nbsp;门:</span>
+								<input type="text" placeholder="  Department" id="department" name="em_departmentName" autofocus="autofocus" maxlength="20" />
 							</td>
 						</tr>
 						<tr>
@@ -73,7 +73,10 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="cl"></td>
+							<td class="cl">
+								<span>公&nbsp;&nbsp;司:</span>
+								<input type="text" placeholder="  Company" id="company" name="em_companyName" autofocus="autofocus" maxlength="20" />
+							</td>
 							<td class="cl">
 								<span>确认密码:</span>
 								<input type="password" placeholder="  Passwd" id="surePassword" name="username" autofocus="autofocus" maxlength="20" />
@@ -117,6 +120,78 @@
 					}
 				});
 		 });
+		 
+		 //公司异步验证
+		 $("#company").blur(function(){
+			 	//此为工号失去焦点是触发，即异步表单验证工号是否重复
+				 	$.ajax({
+						url: "${pageContext.request.contextPath}/userhandler/vertifycompany.action",
+						type: "post",
+						/* contentType:'application/json;charset=utf-8', */
+						/* dataType: "json", */
+						data: 'em_companyName='+$("#company").val(),
+						success: function(res) {
+							if(res!=true){
+								workNumFlag = false;
+								$("#company").after('<p class ="warnning" id="wordWcom">该公司未收录在本网站，或公司名称有误</p>');
+							}else{
+								workNumFlag = true;
+								$("#wordWcom").text("");
+							}
+						},
+						error: function() {
+
+						}
+					});
+			 });
+		 
+		 //部门异步验证
+		 $("#department").blur(function(){
+			 	//此为工号失去焦点是触发，即异步表单验证工号是否重复
+				 	$.ajax({
+						url: "${pageContext.request.contextPath}/userhandler/vertifydepart.action",
+						type: "post",
+						/* contentType:'application/json;charset=utf-8', */
+						/* dataType: "json", */
+						data: 'em_departmentName='+$("#department").val(),
+						success: function(res) {
+							if(res!=true){
+								workNumFlag = false;
+								$("#department").after('<p class ="warnning" id="wordWdepar">部门不存在，或输入有误</p>');
+							}else{
+								workNumFlag = true;
+								$("#wordWdepar").text("");
+							}
+						},
+						error: function() {
+
+						}
+					});
+			 });
+		 
+		 //职位异步验证
+		 $("#post").blur(function(){
+			 	//此为工号失去焦点是触发，即异步表单验证工号是否重复
+				 	$.ajax({
+						url: "${pageContext.request.contextPath}/userhandler/vertifyposi.action",
+						type: "post",
+						/* contentType:'application/json;charset=utf-8', */
+						/* dataType: "json", */
+						data: 'em_positionName='+$("#post").val(),
+						success: function(res) {
+							if(res!=true){
+								workNumFlag = false;
+								$("#post").after('<p class ="warnning" id="wordWposi">职位不存在，或输入有误</p>');
+							}else{
+								workNumFlag = true;
+								$("#wordWposi").text("");
+							}
+						},
+						error: function() {
+
+						}
+					});
+			 });
 		
 
 		$("#register").click(function() {
@@ -172,7 +247,7 @@
 			
 			if(idCardval.length != 18) {
 				if($("#wordI2").length == 0) {
-					$("#idCard").after('<p class ="warnning" id="wordI2">身份证格式不正确</p>');
+					$("#idCard").after('<p class ="warnning" id="wordI2">身份证长度不正确</p>');
 				}
 				return false;
 			} else {
@@ -261,6 +336,8 @@
 				$("#wordSP2").text("");
 				
 			}
+			
+			
 
 			$.ajax({
 				url: "${pageContext.request.contextPath}/shiro/logup.action",

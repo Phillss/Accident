@@ -30,7 +30,7 @@ public interface EmployeeMapper {
 	//针对职位信息
 	public Position_t_Vo selectPositionById(String id) throws Exception;
 	
-	public Position_t_Vo selectPositionByName(String name) throws Exception;
+	public List<Position_t_Vo> selectPositionByName(String name) throws Exception;
 	
 	public void addPosition(Position_t_Vo vo) throws Exception;
 	
@@ -42,7 +42,7 @@ public interface EmployeeMapper {
 	//针对部门基本信息
 	public Departmentinfo_t_Vo selectDepartById(String id) throws Exception;
 	
-	public Departmentinfo_t_Vo selectDepartByName(String name) throws Exception;
+	public List<Departmentinfo_t_Vo> selectDepartByName(String name) throws Exception;
 	
 	public void addDepart(Departmentinfo_t_Vo vo) throws Exception;
 	
@@ -54,7 +54,7 @@ public interface EmployeeMapper {
 	//针对公司信息
 	public Companyinfo_t_Vo selectCompanyById(String id) throws Exception;
 	
-	public Companyinfo_t_Vo selectCompanyByName(String name) throws Exception;
+	public List<Companyinfo_t_Vo> selectCompanyByName(String name) throws Exception;
 	
 	public void addCompany(Companyinfo_t_Vo vo) throws Exception;
 	

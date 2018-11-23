@@ -115,19 +115,20 @@
 		<div class="skip main">
 			<h3>第${listcourse.current+1}页 /共${listcourse.total_pages}页</h3><br>
 			<a
-				href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
+				href="${pageContext.request.contextPath}
+						/course/findAll.action?current=0">首页</a>
 			<c:if test="${listcourse.current>0 }">
 				<a
 					href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listcourse.current-1}">上一页</a>
+	/course/findAll.action?current=${listcourse.current-1}">上一页</a>
 			</c:if>
 			<c:if test="${listcourse.current+1<listcourse.total_pages}">
 				<a
 					href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listuser.current+1}">下一页</a>
+	/course/findAll.action?current=${listuser.current+1}">下一页</a>
 				<a
 					href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listcourse.total_pages-1}">尾页</a>
+	/course/findAll.action?current=${listcourse.total_pages-1}">尾页</a>
 			</c:if>
 		</div>
 	</div>

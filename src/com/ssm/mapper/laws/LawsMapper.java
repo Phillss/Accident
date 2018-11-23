@@ -2,13 +2,16 @@ package com.ssm.mapper.laws;
 
 import java.util.List;
 
+import com.ssm.pojo.PageIndex;
 import com.ssm.pojo.Vo.Laws_t_Vo;
 
 public interface LawsMapper {
 
 	public Laws_t_Vo lawsFindById(String id) throws Exception;
 	
-	public List<Laws_t_Vo> findall() throws Exception;
+	public List<Laws_t_Vo> findall(PageIndex pageindex) throws Exception;
+	
+	public Integer findCounts() throws Exception;
 	
 	public void insertLaws(Laws_t_Vo laws) throws Exception;
 	

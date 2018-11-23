@@ -80,23 +80,23 @@
 								</a>
 							</td>
 						</tr>
-					</table>
+					</table> 
 				</div>
 				<div class="fl import">
 					<form>
-						<label for="audioFile" class="l1" style="text-align: center;">æ·»å è§é¢</label>&nbsp;
+						<label for="audioFile" class="l1" style="text-align: center;">添加视频</label>&nbsp;
 
 						<input type="file" id="audioFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
 
-						<label for="xFile" class="l2">æ·»å å¹è®­åå®¹</label>&nbsp;
+						<label for="xFile" class="l2">添加培训内容</label>&nbsp;
 
 						<input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
 
-						<label for="information" class="l3">æ·»å åºç¡ä¿¡æ¯</label>&nbsp;
+						<label for="information" class="l3">添加基础信息</label>&nbsp;
 
 						<input type="file" id="information" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
 
-						<label for="test" class="l4">æ·»å è¯¾åé¢</label>&nbsp;
+						<label for="test" class="l4">添加课后题</label>&nbsp;
 
 						<input type="file" id="test" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
 					</form>

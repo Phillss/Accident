@@ -7,8 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
+import com.ssm.pojo.PageBean;
+import com.ssm.pojo.PageIndex;
 import com.ssm.pojo.Vo.Laws_t_Vo;
+import com.ssm.pojo.Vo.User_t_Vo;
 import com.ssm.service.laws.LawsServiceImpl;
 
 @Controller
@@ -26,12 +30,21 @@ public class LawsHandler {
 		return "";
 	}
 	
+	
+	//法规列表（分页）
 	@RequestMapping("/findall")
-	public String findall(Model mdoel) throws Exception{
-		System.out.println("hhah");
-		List<Laws_t_Vo> list=service.servicefindall();
-		mdoel.addAttribute("", "");
-		return "";
+	public ModelAndView findall(@RequestParam(value = "current", defaultValue = "0") int current) throws Exception{
+		PageIndex pageindex = new PageIndex();
+		pageindex.setCurrent(current * 10);
+		List<Laws_t_Vo> list = service.servicefindall(pageindex);
+		PageBean pagebean = new PageBean();
+		pagebean.setCurrent(current);
+		pagebean.setTotal_record(service.servicefindcounts());
+		pagebean.setBeanList(list);
+		ModelAndView view = new ModelAndView();
+		view.addObject("listlaws", pagebean);
+		view.setViewName("WEB-INF/jsp/regulations/lawslist");
+		return view;
 	}
 	
 	@RequestMapping("/insert")

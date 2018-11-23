@@ -32,6 +32,22 @@ public class AccidentinfoController {
 		;
 	}
 
+	// 等级统计图页面
+	@RequestMapping("/cartogram")
+	public ModelAndView cartogram() throws Exception {
+		ModelAndView view = new ModelAndView();
+		view.setViewName("WEB-INF/jsp/cartogram/rankcart");
+		return view;
+	}
+
+	// 事故图页面
+	@RequestMapping("/accidentrank")
+	public ModelAndView accidentrank() throws Exception {
+		ModelAndView view = new ModelAndView();
+		view.setViewName("WEB-INF/jsp/cartogram/accidentcart");
+		return view;
+	}
+
 	// 跳转添加事故页面
 	@RequestMapping("/showadd")
 	public ModelAndView showadd() throws Exception {

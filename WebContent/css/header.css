@@ -82,7 +82,7 @@ body {
 }
 .t .t0 {
 	height: 300px;
-	position: absolute;
+	position: relative;
 }
 .t .t0 .tle {
 	width: 145px;
@@ -162,7 +162,7 @@ body {
 	position: absolute;
 	width: 400px;
 	height: 500px;
-	left: 20%;
+	left: 30%;
 }
 .t .t0 .import label {
 	color: white;
@@ -259,12 +259,10 @@ body {
 	margin-top: 85px;
 }
 .t .t1 .regulation form {
-	margin-right: 64px;
-	width: 1170px;
 	height: 300px;
 }
 .t .t1 .regulation form table {
-	width: 1170px;
+	margin: auto;
 }
 .t .t1 .regulation form table th {
 	border: 1px solid #b4b4b5;
@@ -292,7 +290,7 @@ body {
 	height: 22px;
 	background: url(../img/spirit/spirit.jpg);
 	background-position: 0 -142px;
-	margin-left: 28.2px;
+	margin: auto;
 }
 .t .t1 .regulation .de a {
 	display: block;
@@ -300,7 +298,7 @@ body {
 	height: 22px;
 	background: url(../img/spirit/spirit.jpg);
 	background-position: 0 -24px;
-	margin-left: 28.2px;
+	margin: auto;
 }
 .t .t1 .regulation .upload a {
 	display: block;
@@ -765,7 +763,7 @@ body {
 /*t5统计图start*/
 .t .t5 {
 	height: 500px;
-	position: absolute;
+	position: relative;
 }
 .t .t5 .w {
 	width: 145px;
@@ -791,12 +789,11 @@ body {
 }
 .t .t5 .sac {
 	width: 800px;
+	height: 500px;
 }
 .t .t5 .sac .accident form {
 	width: 754px;
-	position: absolute;
-	top: 10%;
-	left: 20%;
+	height: 500px;
 }
 .t .t5 .sac .search {
 	display: block;
@@ -806,6 +803,9 @@ body {
 	background-position: 0 -202px;
 	margin-bottom: 10px;
 	border-radius: 10px;
+	position: absolute;
+	top: 0%;
+	left: 75.5%;
 }
 .t .t5 .sac .search input {
 	display: block;
@@ -819,10 +819,11 @@ body {
 	color: white;
 }
 .t .t5 .accident {
-	width: 800px;
-	height: 500px;
+	height: 400px;
+	position: absolute;
+	top: 10%;
+	left: 20%;
 }
-	
 .t .t5 .accident form table {
 	width: 100%;
 	height: 300px;
@@ -1011,17 +1012,20 @@ body {
 .skip {
 	display: block;
 	height: 40px;
-	text-align: center;
 	margin-bottom: 10px;
+	text-align: center;
+	margin: auto;
+	margin-top: 10px;
 }
 /*翻页end*/
 /*主内容end*/
 /*底部start*/
 footer {
 	width: 100%;
-	height: 200px;
+	height: 100px;
 	background: url(../img/foot.jpg) no-repeat;
 	background-size: 100% auto;
 	margin-bottom: 0;
+	
 }
 /*底部end*/

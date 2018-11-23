@@ -9,9 +9,15 @@
 		#{la_number},#{la_time},#{la_info})
 	</insert>
 	
-	<select id="findall" resultType="com.ssm.pojo.Vo.Laws_t_Vo">
-		SELECT * FROM laws_t
+	<!--法规列表  -->
+	<select id="findall" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Laws_t_Vo">
+		SELECT * FROM laws_t LIMIT #{current},#{per_record}
 	</select>
+	
+	<!--查询所有记录数  -->
+ 	<select id="findCounts" resultType="Integer">
+ 		SELECT COUNT(*) FROM laws_t
+ 	</select>
 	
 	<select id="lawsFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Laws_t_Vo">
 		SELECT * FROM laws_t WHERE la_id =#{value}

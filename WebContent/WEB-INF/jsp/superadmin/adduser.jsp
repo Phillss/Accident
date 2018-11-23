@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
-	<head>
-		<script type="text/javascript">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>增加用戶</title>
+<%@ include file="/font.jsp"%>
+<script type="text/javascript">
 			//			下拉框
 			function ggle() {
 				$('.bu_tr_cd_co').slideToggle(500);
@@ -45,10 +49,12 @@
 				});
 			});
 		</script>
-	</head>
+</head>
+<body>
 
-	<body>
-		<div class="t">
+
+
+<div class="t">
 			<div class="t5 main">
 				<div class="fl w">
 					<div class="menu" onclick="">
@@ -65,41 +71,43 @@
 					</div>
 				</div>
 
-				<div class="modify">
-					<form action="">
+				<div class="add">
+					<form action="${pageContext.request.contextPath}/userhandler/" method="post">
 						<table>
 							<tr>
 								<td>用户权限</td>
-								<td>
-									<select name="">
-										<option>企业员工</option>
-										<option>企业管理者</option>
-										<option>政府</option>
-										<option>分析人员</option>
-										<option>审核人员</option>
-									</select>
+								<td><select name="us_roles" id="selectRoles">
+									<option value="0" id="0">企业员工</option>
+									<option value="1" id="1">企业管理员</option>
+									<option value="2" id="2">分析人员</option>
+									<option value="3" id="3">审核人员</option>
+									<option value="4" id="4">政府人员</option>
+							</select></td>
+							</tr>
+							<tr>
+							<td>审核</td>
+							<td><select name="us_flag" id="flag">
+									<option value="0" id="AuF">审核未通过</option>
+							<option value="1" id="AuT">通过审核</option>
+							</select></td>
+						</tr>
+							<tr>
+								<td>用户账户</td>
+								<td class="p">
+									<input type="text" name="us_account" placeholder="    账户名"/>
 								</td>
 							</tr>
 							<tr>
-								<td>用户账户admin</td>
-							</tr>
-							<tr>
-								<td>创建时间2018-11-12</td>
-							</tr>
-							<tr>
-								<td>审核</td>
-								<td>
-									<select name="">
-										<option>审核通过</option>
-										<option>审核未通过</option>
-									</select>
+								<td>密码</td>
+								<td class="p">
+									<input type="text" name="us_passwd" placeholder="    密码"/>
 								</td>
 							</tr>
 							<tr>
 								<td class="po">
 									<input type="submit" value="提交" />
 								</td>
-								<td class="po">
+								<td class="return">
 									<input type="button" value="返回" />
 								</td>
 							</tr>
@@ -109,6 +117,6 @@
 			</div>
 		</div>
 
-	</body>
 
+</body>
 </html>

@@ -72,8 +72,8 @@
 					</a>
 				</td>
 				<td>
-					<a href="#">
-						行业法规(建设中……)
+					<a href="${pageContext.request.contextPath}/laws/findall.action">
+						行业法规
 					</a>
 				</td>
 				<td>
@@ -89,7 +89,7 @@
 				</td>
 				<td id="chart">
 					<a href="${pageContext.request.contextPath}
-					/eChar.jsp">
+					/accident/cartogram.action">
 						统计图
 					</a>
 				</td>

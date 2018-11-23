@@ -11,7 +11,6 @@
 </head>
 <body>
 <center>
-<h1 style="color: red">${message}</h1>
 <form action="${pageContext.request.contextPath}/userhandler/findLikeUsers.action">
 <input name="us_account" type="text">
 <input type="submit" value="查找">			

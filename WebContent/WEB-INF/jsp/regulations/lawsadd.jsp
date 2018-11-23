@@ -1,17 +1,12 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
-	<head>
-		<meta charset="UTF-8">
-		<title>超管</title>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/header.css" />
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-<!--		<script type="text/javascript" src="js/switch.js"></script>-->
-		<script src="js/echarts.min.js"></script>
-		<script type="text/javascript">	
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加法规</title>
+<%@ include file="/font.jsp" %>
+<script type="text/javascript">	
 //			下拉框
 			function ggle() {
 				$('.bu_tr_cd_co').slideToggle(500);
@@ -56,66 +51,12 @@
 				});
 			});
 		</script>
-	</head>
-
-	<body>
-		<!--顶部S-->
-		
-		<!--顶部E-->
-
-		<!--导航栏S-->
-		<div class="topnav">
-			<table>
-				<tr>
-					<td>
-						<a href="#" onclick="table1()">
-							课程
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table2()">
-							行业法规
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table3()">
-							事故报告管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table4()">
-							管理分类
-						</a>
-					</td>
-					<td id="chart">
-						<a href="#" onclick="table5()">
-							统计图
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table6()">
-							账户管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table7()">
-							记录管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table8()">
-							题库
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!--导航栏E-->
-		
-		<div class="t">
+</head>
+<body>
+<div class="t">
 			<div class="t1 main">
 				<div class="industry">
-					<form action="" method="post">
+					<form action="${pageContext.request.contextPath}/laws/insert.action" method="post">
 						<div class="ch">
 							<span>法律法规名称：</span>
 							<input type="text" value="" style="width: 150px; height: 20px;" placeholder="法律法规名称" /><br /><br />
@@ -148,7 +89,7 @@
 							<input type="radio" name="" id="" value="工矿商贸" />工矿商贸
 						</div>
 						<div class="po">
-							<input type="button" name="" id="" value="提交" />
+							<input type="submit" name="" id="" value="提交" />
 						</div>
 					</form>
 				</div>
@@ -158,5 +99,5 @@
 		<!--底部S-->
 		<footer></footer>
 		<!--底部E-->
-	</body>
+</body>
 </html>

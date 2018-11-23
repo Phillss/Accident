@@ -7,17 +7,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%@ include file="/font.jsp"%>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script type="text/javascript"
-	src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/header.css" />
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/css/base.css" />
-<script src="${pageContext.request.contextPath}/js/echarts.min.js"></script>
 <script type="text/javascript">
 	//			下拉框
 	function ggle() {
@@ -26,10 +15,6 @@
 	function ggl() {
 		$('.rank').slideToggle(500);
 	}
-	function gg() {
-		$('.rank').slideToggle(500);
-	}
-	//			238
 	$(function() {
 		$('.menu').bind({
 			mouseover : function() {
@@ -72,17 +57,10 @@
 		<div class="t5 main">
 			<div class="fl w">
 				<div class="menu" onclick="">政府</div>
-				<div class="menu" onclick="gg()">企业</div>
-				<div class="chc">
-					<ul>
-						<li id="builder" class="rank">**企业</li>
-					</ul>
-				</div>
+				<div class="menu" onclick="">企业</div>
 				<div class="menu" onclick="">分析人员</div>
 				<div class="menu" onclick="">审核人员</div>
 			</div>
-
-
 			<div class="fl sac">
 				<div class="search fr">
 					<form action="">
@@ -136,28 +114,29 @@
 						</table>
 					</form>
 				</div>
-				<div class="skip main">
-					<h3>第${listuser.current+1}页 /共${listuser.total_pages}页</h3>
-					<br> <a 
-						href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
-					<c:if test="${listuser.current>0 }">
-						<a
-							href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listuser.current-1}">上一页</a>
-					</c:if>
-					<c:if test="${listuser.current+1<listuser.total_pages}">
-						<a
-							href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listuser.current+1}">下一页</a>
-
-						<a
-							href="${pageContext.request.contextPath}
-	/userhandler/findAllUsers.action?current=${listuser.total_pages-1}">尾页</a>
-					</c:if>
-				</div>
 			</div>
 		</div>
+		<div class="skip main">
 
+			<h3>第${listuser.current+1}页 /共${listuser.total_pages}页</h3>
+
+			<a
+				href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
+			<c:if test="${listuser.current>0 }">
+				<a
+					href="${pageContext.request.contextPath}
+	/userhandler/findAllUsers.action?current=${listuser.current-1}">上一页</a>
+			</c:if>
+			<c:if test="${listuser.current+1<listuser.total_pages}">
+				<a
+					href="${pageContext.request.contextPath}
+	/userhandler/findAllUsers.action?current=${listuser.current+1}">下一页</a>
+
+				<a
+					href="${pageContext.request.contextPath}
+	/userhandler/findAllUsers.action?current=${listuser.total_pages-1}">尾页</a>
+			</c:if>
+		</div>
 	</div>
 
 

@@ -85,6 +85,7 @@
 											<c:when test="${item.us_roles==1}">企业管理员</c:when>
 											<c:when test="${item.us_roles==2}">分析人员</c:when>
 											<c:when test="${item.us_roles==3}">审核人员</c:when>
+											<c:when test="${item.us_roles==4}">政府人员</c:when>
 										</c:choose></td>
 									<td>${item.us_account}</td>
 									<td><fmt:formatDate value="${item.us_createTime}"

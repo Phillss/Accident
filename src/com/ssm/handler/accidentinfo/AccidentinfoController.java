@@ -48,6 +48,12 @@ public class AccidentinfoController {
 		return view;
 	}
 
+	// 跳转事故图页面
+	@RequestMapping("/jumpaccidentrank")
+	public String jumpaccidentrank() throws Exception {
+		return "redirect:/accident/accidentrank.action";
+	}
+
 	// 跳转添加事故页面
 	@RequestMapping("/showadd")
 	public ModelAndView showadd() throws Exception {

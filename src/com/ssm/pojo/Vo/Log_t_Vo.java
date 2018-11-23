@@ -6,6 +6,18 @@ import com.ssm.pojo.Log_t;
 
 public class Log_t_Vo extends Log_t {
 
+	
+	private String user_account;
+	
+	
+	public String getUser_account() {
+		return user_account;
+	}
+
+	public void setUser_account(String user_account) {
+		this.user_account = user_account;
+	}
+
 	@Override
 	public String getLo_id() {
 		// TODO Auto-generated method stub

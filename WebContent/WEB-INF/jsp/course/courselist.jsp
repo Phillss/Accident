@@ -125,7 +125,7 @@
 			<c:if test="${listcourse.current+1<listcourse.total_pages}">
 				<a
 					href="${pageContext.request.contextPath}
-	/course/findAll.action?current=${listuser.current+1}">下一页</a>
+	/course/findAll.action?current=${listcourse.current+1}">下一页</a>
 				<a
 					href="${pageContext.request.contextPath}
 	/course/findAll.action?current=${listcourse.total_pages-1}">尾页</a>

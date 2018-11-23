@@ -1,6 +1,9 @@
 package com.ssm.handler.user;
 
+import java.util.Enumeration;
 import java.util.List;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -110,7 +113,8 @@ public class UserHandler {
 
 	// 人员添加提交页面
 	@RequestMapping("/submitadduser")
-	public ModelAndView submitadduser() throws Exception {
+	public ModelAndView submitadduser(HttpSession session) throws Exception {
+		
 		ModelAndView model = new ModelAndView();
 		model.setViewName("WEB-INF/jsp/superadmin/adduser");
 		return null;
@@ -128,8 +132,9 @@ public class UserHandler {
 	}
 
 	// 提交数据
-	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public String update(String us_id, Integer us_roles, Integer us_flag, Model model) throws Exception {
+	@RequestMapping(value = "/userupdate", method = RequestMethod.POST)
+	public String update(String us_id, Integer us_roles, Integer us_flag, Model model,HttpSession session) throws Exception {
+		session.setAttribute("userupdate", us_id);   //暂时用被操作者的id
 		User_t_Vo user = new User_t_Vo();
 		user.setUs_id(us_id);
 		user.setUs_roles(us_roles);

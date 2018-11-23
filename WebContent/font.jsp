@@ -100,8 +100,8 @@
 					</a>
 				</td>
 				<td>
-					<a href="#">
-						记录管理(建设中……)
+					<a href="${pageContext.request.contextPath}/log/loglist.action">
+						记录管理
 					</a>
 				</td>
 				<td>

@@ -82,7 +82,7 @@
 
 			<div class="modify">
 				<form
-					action="${pageContext.request.contextPath}/userhandler/update.action"
+					action="${pageContext.request.contextPath}/userhandler/userupdate.action"
 					method="post">
 					<input type="hidden" name="us_id" value="${showuser.us_id}">
 					<table>

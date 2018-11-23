@@ -80,9 +80,18 @@
 					</div>
 				</div>
 				<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-				<div id="main" style="width: 500px;height:500px;" class="fr"></div>
-				
-				<div onclick="a()" id="main2" style="width: 500px;height:500px;" class="fr"></div>
+				<div>
+					<div id="main0" name ="pie0"style="width: 350px;height:350px;" class="fr"></div>
+					<p>死亡人数</p>
+				</div>
+				<div>
+					<div onclick="a()" id="main1" name ="pie1" style="width: 350px;height:350px;" class="fr"></div>
+					<p>伤亡人数</p>
+				</div>
+				<div>
+					<div onclick="a()" id="main2" name ="pie2" style="width: 350px;height:350px;" class="fr"></div>
+					<p>损失钱数</p>
+				</div>
 			</div>
 		</div>
 		
@@ -91,117 +100,73 @@
 		<!--底部E-->
 		</body>
 	<script type="text/javascript">
-		//假数据后台写完后应将来要清掉这四行
-		var general = 1;
-		var larger = 2;
-		var great = 3;
-		var especially = 4;
-		var dieNum = [1, 3, 1, 1, 9, 2, 2, 1, 1, 9, 2, 20];
-		var hurtNum = [220, 182, 191, 234, 290, 330, 191, 234, 290, 330, 310, 300];
-		var loss = [150, 232, 201, 154, 190, 330, 410, 232, 201, 190, 330, 410];
-		var pieOption = {
-			series: {
-				type: 'pie',
-				data: [{
-						name: '一般',
-						value: general 
-					},
-					{
-						name: '较大',
-						value: larger 
-					},
-					{
-						name: '重大',
-						value: great 
-					},
-					{
-						name: '特大',
-						value: especially 
-					}
-				]
-			}
-		}
-		// 绘制图表
-		echarts.init(document.getElementById('main2')).setOption(pieOption);					
-		// 基于准备好的dom，初始化echarts实例
-		var myChart = echarts.init(document.getElementById('main'));
-		// 指定图表的配置项和数据
-		var option = {
-			tooltip: {
-				trigger: 'axis'
-			},
-			legend: {
-				data: ['死亡人数', '伤亡人数', '损失钱数']
-			},
-			toolbox: {
-				show: true,
-				feature: {
-					mark: {
-						show: true
-					},
-					dataView: {
-						show: true,
-						readOnly: false
-					},
-					magicType: {
-						show: true,
-						type: ['line', 'bar', 'stack', 'tiled']
-					},
-					restore: {
-						show: true
-					},
-					saveAsImage: {
-						show: true
-					}
+		var pieOption0;
+		var pieOption1;
+		var pieOption2;
+		var pieOption3;
+		var trade = "";
+		$(function(){
+			pieOption0 = {
+				series: {
+					type: 'pie',
+					data: [{
+							name: '建筑',
+							value: 1 
+						},
+						{
+							name: '化工',
+							value: 2 
+						},
+						{
+							name: '交通',
+							value: 3 
+						},
+						{
+							name: '煤矿',
+							value: 4 
+						}
+					]
 				}
-			},
-			calculable: true,
-			xAxis: [{
-				type: 'category',
-				boundaryGap: false,
-				data: ['一', '二', '三', '四', '五', '六', '七', '九', '十', '十一', '十二']
-			}],
-			yAxis: [{
-				type: 'value'
-			}],
-			series: [{
-					name: '死亡人数',
-					type: 'line',
-					stack: '总量',
-					data: dieNum //后期改为charData.dieNum
-				},
-				{
-					name: '伤亡人数',
-					type: 'line',
-					stack: '总量',
-					data: hurtNum //后期改为charData.hurtNum
-				},
-				{
-					name: '损失钱数',
-					type: 'line',
-					stack: '总量',
-					data: loss //后期改为charData。loss
-				},
-			]
-		};
-		// 使用刚指定的配置项和数据显示图表。
-		myChart.setOption(option);
+			}
+		pieOption1 = pieOption0;
+		pieOption2 = pieOption0;
+		// 绘制图表
+		echarts.init(document.getElementById('main0')).setOption(pieOption0);
+		echarts.init(document.getElementById('main1')).setOption(pieOption1)
+		echarts.init(document.getElementById('main2')).setOption(pieOption2);
+		$.ajax({
+		 	url:"",//值为：请求页名？ChartData=dataIndex
+		 	type :"post",
+		 	dataType:"json",
+		 	success:function(ret){
+		 		//ret中的数据类型与上方开始时一致
+		 		var newPieData0 = ret.dileNum;
+		 		var newPieData1 = ret.hurtNum;
+		 		var newPieData2 = ret.loss;
+		 		setpieData(newPieData0,option0);
+		 		setpieData(newPieData1,option0);
+		 		setpieData(newPieData2,option2);
+		 	},
+		 	error:function(err){
+		 		// alert("点击失败，请重试");
+		 		console.log(err);
+		 	}
+		 });
+		});
 		//点击导航栏中的“统计图调用该方法”
 		$("#chart").click(function() {
 			$.ajax({
-				rul: "", //c请求表格数据数,据格式为json 分两个属性第一个为event下有属性 属性为'死亡人数'(dieNum), '伤亡人数'(hurtNum), '损失钱数(loss)'且每个属性下都为数组，长度为12
-				type: "post",
-				dataType: "json",
-				seccess: function(ret) {
-					charData = ret.chartData;
-					pieData = ret.pieData;
-					setpieData(pieData,option);
-					setChartData(newChartData,option);
-				},
-				error: function() {
-					alert("点击统计图，请求失败，请重试");
-				}
-			});
+ 			 	url:"",//值为：请求页名？getChartData=byTrade
+ 			 	type :"post",
+ 			 	dataType:"json",
+ 			 	success:function(ret){
+ 			 		//ret中的数据类型与上方开始时一致
+ 			 	},
+ 			 	error:function(err){
+ 			 		alert("点击失败，请重试");
+ 			 		console.log(err);
+ 			 	}
+ 			 });
 		});
 		//点击等级后应跳转到三个饼状图的页
 		$(".rank").bind({
@@ -210,34 +175,37 @@
 				//postUrl +="tradeId="+trade;
 				//alert(postUrl);
 				$.ajax({
-     			 	url:"",//值为：请求页名？ChartData=dataIndex
-     			 	type :"post",
-     			 	dataType:"json",
-     			 	success:function(ret){
-     			 		//ret中的数据类型与上方开始时一致
-     			 		
-     			 	},
-     			 	error:function(err){
-     			 		alert("点击失败，请重试");
-     			 		console.log(err);
-     			 	}
-     			 });  
+				 	url:"",//值为：请求页名？getChartData=byGrade&grande = trade且trede为变量（点击的等级的id）
+				 	type :"post",
+				 	dataType:"json",
+				 	success:function(ret){
+				 		//ret中的数据类型与上方开始时一致
+				 		var newPieData0 = ret.dileNum;
+				 		var newPieData1 = ret.hurtNum;
+				 		var newPieData2 = ret.loss;
+				 		setpieData(newPieData0,option0);
+				 		setpieData(newPieData1,option1);
+				 		setpieData(newPieData2,option2);
+				 	},
+				 	error:function(err){
+				 		alert("点击失败，请重试");
+				 		console.log(err);
+				 	}
+		 		});
 			}
 		});
 		//点击行业后调用该方法
 		$(".bu_tr_cd_co").bind({
 			click:function(){
-				trade = $(this).attr("id");
+				// trade = $(this).attr("id");
 				//postUrl +="tradeId="+trade;
 				//alert(postUrl);
 				$.ajax({
-     			 	url:"",//值为：请求页名？ChartData=dataIndex
+     			 	url:"",//值为：请求页名？getChartData=ByGrade
      			 	type :"post",
      			 	dataType:"json",
      			 	success:function(ret){
      			 		//ret中的数据类型与上方开始时一致
-     			 		var newPieData = ret.chartData;
-     			 		setpieData(newPieData,option);
      			 	},
      			 	error:function(err){
      			 		alert("点击失败，请重试");
@@ -246,37 +214,11 @@
      			 });  
 			}
 		});
-		//饼状图扇形区的点击事件，点击后获取图表数据并返回返回视图
-		echarts.init(document.getElementById('main2')).on('click', function (params) {
-			 //dataIndex 饼状图中被点击的扇形区   以0开始
-			 var dataIndex = params.dataIndex;  
-			 alert("点击了了第"+dataIndex+"扇形区"); 
-			 $.ajax({
-			 	url:"",//值为：请求页名？ChartData=dataIndex
-			 	type :"post",
-			 	dataType:"json",
-			 	success:function(ret){
-			 				var newChartData = ret.chartData;
-     			 		setChartData(newChartData,option);
-			 	},
-			 	error:function(){
-			 		alert("获取图表数据失败，请重试");
-			 	}
-			 });  
-		})
-
-		var setChartData = function(data,option){
-			option.series[0].data = data.dieNum;
-			option.series[1].data = data.hurtNum;
-			option.series[2].data = data.loss;
-			myChart.setOption(option);
-		}
-		var setPieData = function(data,option){
-				option.series.data[0].value = data.general;
-				option.series.data[1].value = data.larger;
-				option.series.data[2].value = data.great;
-				option.series.data[3].value = data.especially;   
-				echarts.init(document.getElementById('main2')).setOption(pieOption);   
+		var setPieData = function(datas,pieOption){
+				for(var i =0;i<datas.length;i++){
+					pieOption.series.data[i].value = datas[i].data;
+					echarts.init($("#main"+i+"")).setOption(pieOption); 
+				}  
 		}
 		
 	</script>

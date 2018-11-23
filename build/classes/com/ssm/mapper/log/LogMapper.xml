@@ -12,4 +12,15 @@
 	<select id="logFindById" parameterType="String" resultType="com.ssm.pojo.Vo.Log_t_Vo">
 		SELECT * FROM log_t WHERE lo_id =#{value}
 	</select>
+	
+	<!--查询所有记录数  -->
+ 	<select id="findCounts" resultType="Integer">
+ 		SELECT COUNT(*) FROM log_t
+ 	</select>
+ 	
+ 	<!--查询所有记录  -->
+ 	<select id="findAlllog" parameterType="com.ssm.pojo.PageIndex" 
+ 	resultType="com.ssm.pojo.Vo.Log_t_Vo">
+ 		SELECT * from ssm_demo.log_t LIMIT #{current},#{per_record}
+ 	</select>
 </mapper>

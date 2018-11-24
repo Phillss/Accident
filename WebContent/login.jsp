@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>login</title>
+		<title>用户登陆页面</title>
 		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css"/>
@@ -30,7 +30,7 @@
 			<h3>Login form</h3>
 			<div class="g">
 				<form action="${pageContext.request.contextPath}/shiro/login.action" method="post">
-					<input type="text" placeholder="    Username" id="username" name="userid" autofocus="autofocus" maxlength="20"  />
+					<input type="text" placeholder="    Username" id="username" name=username autofocus="autofocus" maxlength="20"  />
 
 					<p class="warnning" id="warnning1"></p>
 

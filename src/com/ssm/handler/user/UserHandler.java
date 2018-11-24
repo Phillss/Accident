@@ -134,7 +134,7 @@ public class UserHandler {
 	// 提交数据
 	@RequestMapping(value = "/userupdate", method = RequestMethod.POST)
 	public String update(String us_id, Integer us_roles, Integer us_flag, Model model,HttpSession session) throws Exception {
-		session.setAttribute("userupdate", us_id);   //暂时用被操作者的id
+		session.setAttribute("userupdate", session.getAttribute(session.getId()));   //使用当前登陆用户的id
 		User_t_Vo user = new User_t_Vo();
 		user.setUs_id(us_id);
 		user.setUs_roles(us_roles);

@@ -86,7 +86,6 @@ public class ShiroRealm extends AuthorizingRealm {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("用户角色是：" + role);
 		Set<String> roles = new HashSet<String>();
 		if (role == 0) {
 			roles.add("user");

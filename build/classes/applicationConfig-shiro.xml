@@ -85,7 +85,7 @@ depends-on="lifecycleBeanPostProcessor"/>
 	<property name="securityManager" ref="securityManager"/>
 	<property name="loginUrl" value="/login.jsp"/>
 	<property name="successUrl" value="/index.jsp"/>
-	<property name="unauthorizedUrl" value="/login.jsp"/>
+	<property name="unauthorizedUrl" value="/index.jsp"/>
 	<!--配置从数据表中初始化资源和权限  -->
 	<property name="filterChainDefinitionMap" ref="filterChainDefinitionMap"></property>
 	<!--配置哪些页面需要受保护 以及访问这些页面需要的权限 -->

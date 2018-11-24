@@ -28,7 +28,7 @@
 		<div class="lo">
 			<h3>事故预防学习系统</h3>
 			<div class="g">
-				<form action="" method="post">
+				<form action="${pageContext.request.contextPath}/shiro/login.action" method="post">
 					<div class="wd">
 						<img src="img/spirit/wd.jpg"/>
 						<input type="text" placeholder="用户名" id="username" name="username" autofocus="autofocus" maxlength="20" />
@@ -37,11 +37,11 @@
 					<div class="padding"></div>
 					<div class="ps">
 						<img src="img/spirit/wd.jpg"/>
-						<input type="password" placeholder="密码" id="password" name="password" maxlength="8" />
+						<input type="password" placeholder="密码" id="password" name="pass" maxlength="8" />
 					</div>
 					<p class="warnning" id="warnning2"></p>
 					
-					<button type="button" name="submit" id="login">登 录</button>
+					<button type="submit" name="submit" id="login">登 录</button>
 					
 				</form>
 			</div>
@@ -75,7 +75,7 @@
 			}
 
 			$.ajax({
-				url: "", //通过ajax舔砖后端
+				url: "", //通过ajax后端
 				type: "post",
 				dataType: "json",
 				data: {
@@ -86,7 +86,7 @@
 
 				},
 				error: function(err) {
-					alert("ajax跳转错误");
+					//alert("ajax跳转错误");
 				}
 			});
 		});

@@ -3,6 +3,8 @@ package com.ssm.shiro.handler;
 import java.util.Date;
 import java.util.UUID;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -15,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ssm.mapper.employee.EmployeeMapper;
-import com.ssm.pojo.Vo.Employeecourse_t_Vo;
 import com.ssm.pojo.Vo.Employeeinfo_t_Vo;
 import com.ssm.pojo.Vo.User_t_Vo;
 import com.ssm.service.employeeinfo.ServiceEmployeeinfo;
@@ -34,10 +34,12 @@ public class shiroHandler {
 
 	// 登陆认证
 	@RequestMapping(value="/login",method= {RequestMethod.POST,RequestMethod.GET})
-	public String login(@RequestParam("userid") String userid, @RequestParam("pass") String pass) {
+	public String login(@RequestParam("username") String username, @RequestParam("pass") String pass,HttpSession session) throws Exception {
+		String us_id=service.serviceFindUserByName(username).get(0).getUs_id();
+		session.setAttribute(session.getId(), us_id);  //保存当前用户的id到session中
 		Subject currentUser = SecurityUtils.getSubject();
 		if (!currentUser.isAuthenticated()) {
-			UsernamePasswordToken token = new UsernamePasswordToken(userid, pass);
+			UsernamePasswordToken token = new UsernamePasswordToken(username, pass);
 			token.setRememberMe(true);
 			try {
 				currentUser.login(token);

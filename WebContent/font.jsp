@@ -83,8 +83,8 @@
 					</a>
 				</td>
 				<td>
-					<a href="#">
-						管理分类(建设中……)
+					<a href="${pageContext.request.contextPath}/assort/industrylist.action">
+						管理分类
 					</a>
 				</td>
 				<td id="chart">

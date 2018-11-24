@@ -1,17 +1,12 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
-	<head>
-		<meta charset="UTF-8">
-		<title>超管</title>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/header.css" />
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-<!--		<script type="text/javascript" src="js/switch.js"></script>-->
-		<script src="js/echarts.min.js"></script>
-		<script type="text/javascript">	
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>添加行业</title>
+<%@ include file="/font.jsp"%>
+<script type="text/javascript">	
 //			下拉框
 			function ggle() {
 				$('.bu_tr_cd_co').slideToggle(500);
@@ -56,54 +51,39 @@
 				});
 			});
 		</script>
-	</head>
-
-	<body>
-		<!--顶部S-->
-		<div class="head">
-			<!--logo-->
-			<div class="im"></div>
-			<!--退出-->
-			<div class="fr exit">
-				<input type="button" name="" id="" />
-			</div>
-
-		</div>
-		<!--顶部E-->
-		
-		<div class="t">
+</head>
+<body>
+<div class="t">
 			<div class="t3 main">
 				<div class="fl incause">
 					<table>
 						<tr id="visit">
 							<td>
-								<a href="#" onclick="industry()">
+								<a href="${pageContext.request.contextPath}/assort/industrylist.action" onclick="industry()">
 									行业
 								</a>
 							</td>
 						</tr>
 						<tr id="visit">
 							<td>
-								<a href="#" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/causelist.action" onclick="course()">
 									原因
 								</a>
 							</td>
 						</tr>
 					</table>
 				</div>
-				<div class="addinca">
+				<div class="addin">
 					<form action="">
 						<div class="ch">
 							<span>类别：</span>
-							<select name="">
-								<option value="">行业</option>
-								<option value="">原因</option>
-							</select><br /><br />
+							<span style="width: 28px;">行业</span>
+							<br /><br />
 							<span>名称：</span>	
 							<input type="text" name="" id="" value="" />
 						</div>
 						<div class="po">
-							<input type="button" name="" id="" value="提交" />
+							<input type="button" name="" id="" value="修改" />
 						</div>
 					</form>
 				</div>
@@ -113,5 +93,5 @@
 		<!--底部S-->
 		<footer></footer>
 		<!--底部E-->
-	</body>
+</body>
 </html>

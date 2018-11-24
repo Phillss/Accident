@@ -1,17 +1,12 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
-	<head>
-		<meta charset="UTF-8">
-		<title>超管</title>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/header.css" />
-		<link rel="stylesheet" type="text/css" href="css/base.css" />
-<!--		<script type="text/javascript" src="js/switch.js"></script>-->
-		<script src="js/echarts.min.js"></script>
-		<script type="text/javascript">	
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>行业列表</title>
+<%@ include file="/font.jsp"%>
+<script type="text/javascript">	
 //			下拉框
 			function ggle() {
 				$('.bu_tr_cd_co').slideToggle(500);
@@ -56,95 +51,33 @@
 				});
 			});
 		</script>
-	</head>
-
-	<body>
-		<!--顶部S-->
-		<div class="head">
-			<!--logo-->
-			<div class="im"></div>
-			<!--退出-->
-			<div class="fr exit">
-				<input type="button" name="" id="" />
-			</div>
-
-		</div>
-		<!--顶部E-->
-
-		<!--导航栏S-->
-		<div class="topnav">
-			<table>
-				<tr>
-					<td>
-						<a href="#" onclick="table1()">
-							课程
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table2()">
-							行业法规
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table3()">
-							事故报告管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table4()">
-							管理分类
-						</a>
-					</td>
-					<td id="chart">
-						<a href="#" onclick="table5()">
-							统计图
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table6()">
-							账户管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table7()">
-							记录管理
-						</a>
-					</td>
-					<td>
-						<a href="#" onclick="table8()">
-							题库
-						</a>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!--导航栏E-->
-		
-		<div class="t">
+</head>
+<body>
+<div class="t">
 			<div class="t3 main">
 				<div class="fl incause">
 					<table>
 						<tr id="visit">
 							<td>
-								<a href="#" onclick="industry()">
+								<a href="${pageContext.request.contextPath}/assort/industrylist.action" onclick="industry()">
 									行业
 								</a>
 							</td>
 						</tr>
 						<tr id="visit">
 							<td>
-								<a href="#" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/causelist.action" onclick="course()">
 									原因
 								</a>
 							</td>
 						</tr>
 					</table>
 				</div>
-				<div class="cause">
+				<div class="ind">
 					<form action="" method="post">
 						<table>
 							<tr>
-								<th style="text-align: center;" class="indu">原因</th>
+								<th style="text-align: center;" class="indu">行业</th>
 								<th style="text-align: center;" class="re_de">修改</th>
 								<th style="text-align: center;" class="re_de">删除</th>
 							</tr>
@@ -152,7 +85,7 @@
 								<td>123</td>
 								<td>
 									<div class="rs">
-										<a href="#" onclick="modifycause()"></a>
+										<a href="${pageContext.request.contextPath}/assort/modifyindustry.action" onclick="modifyind()"></a>
 									</div>
 								</td>
 								<td>
@@ -164,15 +97,14 @@
 						</table>
 					</form>	
 					<div class="upload_in_du">
-						<a href="#" onclick="add_in_ca()"></a>
+						<a href="${pageContext.request.contextPath}/assort/addindustryorcause.action" onclick="add_in_ca()"></a>
 					</div>
 				</div>
-				
 			</div>
 		</div>
 		
 		<!--底部S-->
 		<footer></footer>
 		<!--底部E-->
-	</body>
+</body>
 </html>

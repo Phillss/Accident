@@ -76,7 +76,22 @@
 									<td>${item.lo_createId}</td>
 									<td><fmt:formatDate value="${item.lo_createTime}"
 											pattern="yyyy-MM-dd HH:mm:ss" /></td>
-									<td>${item.lo_class}</td>
+									<td>
+										<c:choose>
+											<c:when test="${item.lo_class==0}">员工管理记录</c:when>
+											<c:when test="${item.lo_class==1}">课程更改记录</c:when>
+											<c:when test="${item.lo_class==2}">岗位管理记录</c:when>
+											<c:when test="${item.lo_class==3}">分析人员提交记录</c:when>
+											<c:when test="${item.lo_class==4}">分析人员未通过记录</c:when>
+											<c:when test="${item.lo_class==5}">分析人员通过记录</c:when>
+											<c:when test="${item.lo_class==6}">审核人员未通过记录</c:when>
+											<c:when test="${item.lo_class==7}">审核人员通过记录</c:when>
+											<c:when test="${item.lo_class==8}">账户管理记录</c:when>
+											<c:when test="${item.lo_class==9}">课程管理记录</c:when>
+											<c:when test="${item.lo_class==10}">事故管理记录</c:when>
+											<c:when test="${item.lo_class==11}">分类管理记录</c:when>
+										</c:choose>
+									</td>
 								</tr>
 								</c:forEach>
 							</table>

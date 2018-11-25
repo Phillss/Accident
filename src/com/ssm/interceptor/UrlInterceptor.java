@@ -43,7 +43,7 @@ public class UrlInterceptor implements HandlerInterceptor {
 			log.setLo_createTime(new Date());
 			String logid = UUID.randomUUID().toString().replaceAll("-", "");
 			log.setLo_id(logid);
-			log.setLo_class(00);
+			log.setLo_class(8);
 			log.setLo_text("修改用户信息");
 			logservice.serviceinsertlog(log);
 		}

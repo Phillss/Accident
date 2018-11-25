@@ -1,21 +1,19 @@
 package com.ssm.handler.accidentinfo;
 
+import java.util.Date;
 import java.util.List;
 
-import javax.annotation.Resource;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ssm.pojo.PageBean;
 import com.ssm.pojo.PageIndex;
 import com.ssm.pojo.Vo.Accidentinfo_t_Vo;
-import com.ssm.pojo.Vo.User_t_Vo;
 import com.ssm.service.accidentinfo.AccidentinfoServiceImpl;
 
 @Controller
@@ -63,11 +61,16 @@ public class AccidentinfoController {
 	}
 
 	// 增加事故信息
-	@RequestMapping("/insert")
+	@RequestMapping(value="/insert",method=RequestMethod.POST)
 	public String insert(Accidentinfo_t_Vo accident, Model model) throws Exception {
+		accident.setAcc_uploadTime(new Date());
+		accident.setAcc_injuredSum(0);
+		accident.setAcc_boss("hello");
+		accident.setAcc_save("123");
+		accident.setAcc_fileName("123");
+		accident.setAcc_org("123");
 		service.serviceinsert(accident);
-		model.addAttribute("", "");
-		return "";
+		return "redirect:/accident/findall.action";
 	}
 
 	@RequestMapping("/update")

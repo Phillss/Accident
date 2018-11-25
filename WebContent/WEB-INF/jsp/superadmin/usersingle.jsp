@@ -10,14 +10,8 @@
 <%@ include file="/font.jsp"%>
 <script type="text/javascript">
 	window.onload = function() {
-		var role = $
-		{
-			showuser.us_roles
-		}
-		var AU = $
-		{
-			showuser.us_flag
-		}
+		var role = ${showuser.us_roles}
+		var AU = ${showuser.us_flag}
 		var selectR = document.getElementById("selectRoles");
 		var selectF = document.getElementById("flag");
 		var arr = selectR.getElementsByTagName("option");

@@ -56,7 +56,7 @@
 <div class="t">
 			<div class="t2 main">
 				<div class="uploadad">
-					<form action="${pageContext.request.contextPath}/accident/accident.action" method="post">
+					<form action="${pageContext.request.contextPath}/accident/insert.action" method="post">
 						<div class="ch">
 							<span>事故编号：</span>
 							<input type="text" value="" name="acc_id" style="width: 150px; height: 20px;" placeholder="事故编号" /><br /><br />
@@ -64,10 +64,10 @@
 							<input type="text" value="" name="acc_name" style="width: 150px; height: 20px;" placeholder="事故名称" /><br /><br />
 							<span>事故等级：</span>
 							<select name="acc_level">
-								<option value="">一般事故</option>
-								<option value="">普通事故</option>
-								<option value="">重大事故</option>
-								<option value="">特别重大事故</option>
+								<option value="000">一般事故</option>
+								<option value="001">普通事故</option>
+								<option value="010">重大事故</option>
+								<option value="011">特别重大事故</option>
 							</select><br /><br />
 							<span>发生时间：</span>
 							<input type="text" value="" name="acc_time" style="width: 150px; height: 20px;" placeholder="发生时间" /><br /><br />
@@ -78,10 +78,10 @@
 							<span>财产损失：</span>
 							<input type="text" value="" name="acc_financial" style="width: 150px; height: 20px;" placeholder="财产损失" /><br /><br />
 							<span>所属行业：</span>
-							<input type="radio" name="acc_industryId" id="" value="建筑" />建筑
-							<input type="radio" name="acc_industryId" id="" value="化工" />化工
-							<input type="radio" name="acc_industryId" id="" value="交通" />交通
-							<input type="radio" name="acc_industryId" id="" value="工矿商贸" />工矿商贸
+							<input type="radio" name="acc_industryId" id="" value="000" />建筑
+							<input type="radio" name="acc_industryId" id="" value="001" />化工
+							<input type="radio" name="acc_industryId" id="" value="010" />交通
+							<input type="radio" name="acc_industryId" id="" value="011" />工矿商贸
 						</div>
 						<div class="po">
 							<input type="submit" name="" id="" value="提交" />

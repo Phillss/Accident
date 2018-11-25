@@ -62,7 +62,8 @@
 			<div class="fl tle">
 				<table>
 					<tr id="visit">
-						<td><a href="#" onclick="course()"> 管理课程 </a></td>
+						<td><a href="${pageContext.request.contextPath}
+						/course/findAll.action" onclick="course()"> 管理课程 </a></td>
 					</tr>
 					<tr id="visit">
 						<td><a href="${pageContext.request.contextPath}/course/addcourse.action" onclick="addcourse()"> 添加课程 </a></td>
@@ -88,8 +89,20 @@
 							<tr>
 								<td>${item.cu_id}</td>
 								<td>${item.cu_name}</td>
-								<td>${item.cu_industry}</td>
-								<td>${item.cu_introduce}</td>
+								<td>
+									<c:choose>
+										<c:when test="${item.cu_industry==0}">建筑</c:when>
+										<c:when test="${item.cu_industry==1}">化工</c:when>
+										<c:when test="${item.cu_industry==2}">交通</c:when>
+										<c:when test="${item.cu_industry==3}">煤矿</c:when>
+									</c:choose>
+								</td>
+								<td>
+									<c:choose>
+										<c:when test="${item.cu_introduce==0}">必学</c:when>
+										<c:when test="${item.cu_introduce==1}">选学</c:when>
+									</c:choose>
+								</td>
 								<td><fmt:formatDate value="${item.cu_uploadTime}"
 										pattern="yyyy-MM-dd" /></td>
 								<td>

@@ -7,6 +7,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%@ include file="/font.jsp"%>
 <script type="text/javascript">
+window.onload = function() {
+	var indus = ${updatelist.cu_industry};
+	var intro=${updatelist.cu_introduce};
+	var file=${updatelist.cu_fileName};
+	var industry=document.getElementById("industry");
+	var introduce=document.getElementById("introduce");
+	var fileName=document.getElementById("fileName");
+	var arr=industry.getElementsByTagName("option");
+	var ar=introduce.getElementsByTagName("option");
+	var a=fileName.getElementsByTagName("option");
+	arr[indus].selected="selected";
+	ar[intro].selected="selected";
+	a[file].selected="selected";
+}
+</script>
+<script type="text/javascript">
 	//			下拉框
 	function ggle() {
 		$('.bu_tr_cd_co').slideToggle(500);
@@ -51,22 +67,7 @@
 		});
 	});
 </script>
-<script type="text/javascript">
-window.onload = function() {
-	var indus = ${updatelist.cu_industry};
-	var intro=${updatelist.cu_introduce};
-	var file=${updatelist.cu_fileName};
-	var industry=document.getElementById("industry");
-	var introduce=document.getElementById("introduce");
-	var fileName=document.getElementById("fileName");
-	var arr=industry.getElementsByTagName("option");
-	var ar=introduce.getElementsByTagName("option");
-	var ar=fileName.getElementsByTagName("option");
-	arr[indus].selected="selected";
-	ar[intro].selected="selected";
-	ar[file].selected="selected";
-}
-</script>
+
 </head>
 <body>
 	<div class="t">
@@ -74,13 +75,14 @@ window.onload = function() {
 			<div class="fl tle">
 				<table>
 					<tr id="visit">
-						<td><a href="#" onclick="course()"> 管理课程 </a></td>
+						<td><a href="${pageContext.request.contextPath}
+						/course/findAll.action" onclick="course()"> 管理课程 </a></td>
 					</tr>
 					<tr id="visit">
-						<td><a href="#" onclick="addcourse()"> 添加课程 </a></td>
+						<td><a href="${pageContext.request.contextPath}/course/addcourse.action" onclick="addcourse()"> 添加课程 </a></td>
 					</tr>
 					<tr id="visit">
-						<td><a href="#" onclick="theory()"> 事故致因理论 </a></td>
+						<td><a href="${pageContext.request.contextPath}/course/theory.action" onclick="theory()"> 事故致因理论 </a></td>
 					</tr>
 				</table>
 			</div>

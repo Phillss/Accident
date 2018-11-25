@@ -58,13 +58,14 @@
 			<div class="fl tle">
 				<table>
 					<tr id="visit">
-						<td><a href="#" onclick="course()"> 管理课程 </a></td>
+						<td><a href="${pageContext.request.contextPath}
+						/course/findAll.action" onclick="course()"> 管理课程 </a></td>
 					</tr>
 					<tr id="visit">
 						<td><a href="${pageContext.request.contextPath}/course/addcourse.action" onclick="addcourse()"> 添加课程 </a></td>
 					</tr>
 					<tr id="visit">
-						<td><a href="${pageContext.request.contextPath}/course" onclick="theory()"> 事故致因理论 </a></td>
+						<td><a href="${pageContext.request.contextPath}/course/theory.action" onclick="theory()"> 事故致因理论 </a></td>
 					</tr>
 				</table>
 			</div>

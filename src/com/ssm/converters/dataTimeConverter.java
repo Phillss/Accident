@@ -12,7 +12,7 @@ public class dataTimeConverter implements Converter<String, Date> {
 	public Date convert(String date) {
 		// TODO Auto-generated method stub
 		Date newDate=null;
-		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+		SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		try {
 			newDate=sdf.parse(date);
 		} catch (ParseException e) {

@@ -61,7 +61,8 @@
 					<table>
 						<tr id="visit">
 							<td>
-								<a href="#" onclick="course()">
+								<a href="${pageContext.request.contextPath}
+						/course/findAll.action" onclick="course()">
 								管理课程
 								</a>
 							</td>
@@ -75,7 +76,7 @@
 						</tr>
 						<tr id="visit">
 							<td>
-								<a href="#" onclick="theory()">
+								<a href="${pageContext.request.contextPath}/course/theory.action" onclick="theory()">
 									事故致因理论
 								</a>
 							</td>

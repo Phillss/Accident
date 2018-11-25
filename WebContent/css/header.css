@@ -741,14 +741,6 @@ body {
 	color: #213862;
 	display: none;
 }
-.t .t4 .men {
-	width: 145px;
-	height: 39px;
-	line-height: 39px;
-	text-align: center;
-	background-color: #d1d5dc;
-	color: #213862;
-}
 .t .t4 .rank {
 	margin: 0;
 	width: 145px;
@@ -758,6 +750,15 @@ body {
 	background-color: #e2e5e9;
 	color: #213862;
 	display: none;
+}
+.t .t4 .charts {
+	width: 340px;
+	height: 300px;
+}
+.t .t4 p {
+	display: inline-block;
+	width: 340px;
+	text-align: center;
 }
 /*t4统计图end*/
 /*t5统计图start*/

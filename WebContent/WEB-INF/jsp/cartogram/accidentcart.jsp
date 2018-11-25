@@ -79,18 +79,19 @@
 						</ul>
 					</div>
 				</div>
-				<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-				<div>
-					<div id="main0" name ="pie0"style="width: 350px;height:350px;" class="fr"></div>
-					<p>死亡人数</p>
-				</div>
-				<div>
-					<div onclick="a()" id="main1" name ="pie1" style="width: 350px;height:350px;" class="fr"></div>
-					<p>伤亡人数</p>
-				</div>
-				<div>
-					<div onclick="a()" id="main2" name ="pie2" style="width: 350px;height:350px;" class="fr"></div>
-					<p>损失钱数</p>
+				<div class="fl" style="width: 1040px;height: 350px;">
+					<div class="fl charts">
+						<div id="main0" name="pie0" style="width: 340px;height:300px;" class="fl"></div>
+						<p>死亡人数</p>
+					</div>
+					<div class="fl charts">
+						<div onclick="a()" id="main1" name="pie1" style="width: 340px;height:300px;" class="fl"></div>
+						<p>伤亡人数</p>
+					</div>
+					<div class="fl charts">
+						<div onclick="a()" id="main2" name="pie2" style="width: 340px;height:300px;" class="fl"></div>
+						<p>损失钱数</p>
+					</div>
 				</div>
 			</div>
 		</div>

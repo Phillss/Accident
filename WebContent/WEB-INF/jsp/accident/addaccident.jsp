@@ -62,33 +62,81 @@
 				<div class="uploadad">
 					<form action="${pageContext.request.contextPath}/accident/insert.action" method="post">
 						<div class="ch">
-							<span>事故编号：</span>
-							<input type="text" value="" name="acc_id" style="width: 150px; height: 20px;" placeholder="事故编号" /><br /><br />
-							<span>事故名称：</span>
-							<input type="text" value="" name="acc_name" style="width: 150px; height: 20px;" placeholder="事故名称" /><br /><br />
-							<span>事故等级：</span>
-							<select name="acc_level">
-								<option value="000">一般事故</option>
-								<option value="001">普通事故</option>
-								<option value="010">重大事故</option>
-								<option value="011">特别重大事故</option>
-							</select><br /><br />
-							<span>发生时间：</span>
-							<input type="text" value="" name="acc_time" style="width: 150px; height: 20px;" placeholder="发生时间" /><br /><br />
-							<span>发生地点：</span>
-							<input type="text" value="" name="acc_site" style="width: 150px; height: 20px;" placeholder="发生地点" /><br /><br />
-							<span>人员伤亡：</span>
-							<input type="text" value="" name="acc_deathSum" style="width: 150px; height: 20px;" placeholder="人员伤亡" /><br /><br />
-							<span>财产损失：</span>
-							<input type="text" value="" name="acc_financial" style="width: 150px; height: 20px;" placeholder="财产损失" /><br /><br />
-							<span>所属行业：</span>
-							<input type="radio" name="acc_industryId" id="" value="000" />建筑
-							<input type="radio" name="acc_industryId" id="" value="001" />化工
-							<input type="radio" name="acc_industryId" id="" value="010" />交通
-							<input type="radio" name="acc_industryId" id="" value="011" />工矿商贸
+							<div class="ku">
+								<span>序号：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="序号" />
+							</div>
+							<div class="ku">
+								<span>事故编号：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故编号" />
+							</div>
+							<div class="ku">
+								<span>事故等级：</span>
+								<select name="">
+									<option value="">一般事故</option>
+									<option value="">普通事故</option>
+									<option value="">重大事故</option>
+									<option value="">特别重大事故</option>
+								</select>
+							</div>
+							<div class="ku">
+								<span>事故名称：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故名称" />
+							</div>
+							<div class="ku">
+								<span>发生时间：</span>
+								<input type="datetime-local" value="" style="width: 150px; height: 20px;" />
+							</div>
+							<div class="ku">
+								<span>发生地点：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="发生地点" />
+							</div>
+							<div class="ku">
+								<span>死亡人员：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="死亡人员" />
+							</div>
+							<div class="ku">
+								<span>人员伤亡：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="人员伤亡" />
+							</div>
+							<div class="ku">
+								<span>财产损失：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="财产损失" />
+							</div>
+							<div class="ku">
+								<span>负责人：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="负责人" />
+							</div>
+							<div class="ku">
+								<span>公司名称：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="公司名称" />
+							</div>
+							<div class="ku">
+								<span>事故文档名称：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故文档名称" />
+							</div>
+							<div class="ku">
+								<span>存储位置：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="存储位置" />
+							</div>
+							<div class="ku">
+								<span>上传时间：</span>
+								<input type="datetime-local" value="" style="width: 150px; height: 20px;"/>
+							</div>
+							<div class="ku">
+								<span>所属行业：</span>
+								<select name="">
+									<option value="">矿工行业</option>
+									<option value="">电子行业</option>
+								</select>
+							</div>
+							<div class="ku">
+								<span>事故等级：</span>
+								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故等级" />
+							</div>
 						</div>
 						<div class="po">
-							<input type="submit" name="" id="" value="提交" />
+							<input type="button" name="" id="" value="提交" />
 						</div>
 					</form>
 				</div>

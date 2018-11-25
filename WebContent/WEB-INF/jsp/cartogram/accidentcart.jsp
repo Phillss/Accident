@@ -79,16 +79,16 @@
 						</ul>
 					</div>
 				</div>
-				<div class="fl" style="width: 1040px;height: 350px;">
-					<div class="fl charts">
+				<div class="char fl" style="width: 1040px;height: 350px;">
+					<div class="charts">
 						<div id="main0" name="pie0" style="width: 340px;height:300px;" class="fl"></div>
 						<p>死亡人数</p>
 					</div>
-					<div class="fl charts">
+					<div class="charts">
 						<div onclick="a()" id="main1" name="pie1" style="width: 340px;height:300px;" class="fl"></div>
 						<p>伤亡人数</p>
 					</div>
-					<div class="fl charts">
+					<div class="charts">
 						<div onclick="a()" id="main2" name="pie2" style="width: 340px;height:300px;" class="fl"></div>
 						<p>损失钱数</p>
 					</div>

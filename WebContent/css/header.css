@@ -417,18 +417,21 @@ body {
 	margin: 0 auto;
 }
 
-.t .t2 .upload {
-	margin-top:10px;
-}
+
 .t .t2 .uploadad {
-	width: 400px;
-	height: 37px;
-	margin: 0 auto;
+	width: 800px;
+	height: 352px;
+	margin: auto;
 }
 .t .t2 .uploadad form {
 	width: 400px;
 	border: 1px solid #b4b4b5;
 	padding: 10px;
+}
+.t .t2 .uploadad .ch .ku {
+	display: inline-block;
+	width: 386px;
+	height: 37px;
 }
 .t .t2 .uploadad .ch span {
 	display: inline-block;
@@ -751,7 +754,13 @@ body {
 	color: #213862;
 	display: none;
 }
+.t .t4 .char {
+	display: inline-block;
+	width: 1040px;
+	height: 350px;
+}
 .t .t4 .charts {
+	display: inline-block;
 	width: 340px;
 	height: 300px;
 }

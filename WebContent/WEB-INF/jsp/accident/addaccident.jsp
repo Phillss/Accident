@@ -2,58 +2,62 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>事故上传</title>
-<%@ include file="/font.jsp"%>
-<script type="text/javascript">	
-//			下拉框
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>事故上传</title>
+		<%@ include file="/font.jsp"%>
+		<script type="text/javascript">
+			//			下拉框
 			function ggle() {
 				$('.bu_tr_cd_co').slideToggle(500);
 			}
+
 			function ggl() {
 				$('.rank').slideToggle(500);
 			}
+
 			function gg() {
 				$('.rank').slideToggle(500);
 			}
-//			238
-			$(function(){
+			//			238
+			$(function() {
 				$('.menu').bind({
-					mouseover:function(){
-						$(this).css('background-color','#213862');
-						$(this).css('color','white');
+					mouseover: function() {
+						$(this).css('background-color', '#213862');
+						$(this).css('color', 'white');
 					},
-					mouseout:function(){
-						$(this).css('background-color','#d1d5dc');
-						$(this).css('color','#213862');
+					mouseout: function() {
+						$(this).css('background-color', '#d1d5dc');
+						$(this).css('color', '#213862');
 					}
 				});
 				$('.bu_tr_cd_co').bind({
-					mouseover:function(){
-						$(this).css('background-color','#213862');
-						$(this).css('color','white');
+					mouseover: function() {
+						$(this).css('background-color', '#213862');
+						$(this).css('color', 'white');
 					},
-					mouseout:function(){
-						$(this).css('background-color','#e2e5e9');
-						$(this).css('color','#213862');
+					mouseout: function() {
+						$(this).css('background-color', '#e2e5e9');
+						$(this).css('color', '#213862');
 					}
 				});
 				$('.rank').bind({
-					mouseover:function(){
-						$(this).css('background-color','#213862');
-						$(this).css('color','white');
+					mouseover: function() {
+						$(this).css('background-color', '#213862');
+						$(this).css('color', 'white');
 					},
-					mouseout:function(){
-						$(this).css('background-color','#e2e5e9');
-						$(this).css('color','#213862');
+					mouseout: function() {
+						$(this).css('background-color', '#e2e5e9');
+						$(this).css('color', '#213862');
 					}
 				});
 			});
 		</script>
-</head>
-<body>
-<div class="t">
+	</head>
+
+	<body>
+		<div class="t">
 			<div class="t2 main">
 				<div class="uploadad">
 					<form action="${pageContext.request.contextPath}/accident/insert.action" method="post">
@@ -90,9 +94,10 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!--底部S-->
 		<footer></footer>
 		<!--底部E-->
-</body>
+	</body>
+
 </html>

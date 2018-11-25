@@ -77,11 +77,11 @@
 					</ul>
 				</div>
 			</div>
-			<div class="fl" style="width: 1000px;height:500px;">
-				<div onclick="a()" id="main2" style="width: 500px;height:500px;" class="fl"></div>
+			<div class="fl" style="width: 800px;height:500px;">
+				<div onclick="a()" id="main2" style="width: 400px;height:400px;" class="fl"></div>
 
 				<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-				<div id="main" style="width: 500px;height:500px;" class="fl"></div>
+				<div id="main" style="width: 400px;height:400px;" class="fl"></div>
 			</div>
 		</div>
 	</div>

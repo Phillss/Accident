@@ -84,11 +84,12 @@
 					</table> 
 				</div>
 				<div class="fl import">
-					<form>
+						<form>
+						
 						<label for="audioFile" class="l1" style="text-align: center;">添加视频</label>&nbsp;
 
 						<input type="file" id="audioFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />
-
+						
 						<label for="xFile" class="l2">添加培训内容</label>&nbsp;
 
 						<input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"><br /><br />

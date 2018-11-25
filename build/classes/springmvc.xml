@@ -72,6 +72,14 @@
 			</list>
 		</property>
 	</bean> -->
+	
+	<!--配置上传图片的解析器（最大上传大小5MB）  -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize">
+			<value>5242880</value>
+		</property>
+	</bean>
+	
 
 	<!--配置视图解析器 -->
 	<bean

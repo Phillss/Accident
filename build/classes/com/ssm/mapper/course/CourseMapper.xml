@@ -3,10 +3,10 @@
 <mapper namespace="com.ssm.mapper.course.CourseMapper" >
 
 	<insert id="insertCourse" parameterType="com.ssm.pojo.Vo.Course_t_Vo">
-		INSERT INTO course_t(cu_id,cu_industry,cu_name,cu_introduce,
-		cu_save,cu_uploadTime,cu_fileName,cu_industryName)
+		INSERT INTO ssm_demo.course_t(cu_id, cu_industry, cu_name, 
+		cu_introduce, cu_save, cu_uploadTime, cu_fileName, cu_industryName)
 		VALUES(#{cu_id},#{cu_industry},#{cu_name},#{cu_introduce},#{cu_save},
-		#{cu_uploadTime},#{cu_fileName})
+		#{cu_uploadTime},#{cu_fileName},#{cu_industryName})
 	</insert>
 	
 	<!--查询所有信息  -->

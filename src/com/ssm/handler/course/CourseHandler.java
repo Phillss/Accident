@@ -1,8 +1,9 @@
 package com.ssm.handler.course;
 
+import java.io.File;
+import java.util.Date;
 import java.util.List;
-
-import javax.annotation.Resource;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,12 +11,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.ssm.pojo.PageBean;
 import com.ssm.pojo.PageIndex;
 import com.ssm.pojo.Vo.Course_t_Vo;
-import com.ssm.pojo.Vo.User_t_Vo;
 import com.ssm.service.course.CourseServiceImpl;
 
 @Controller
@@ -73,8 +74,19 @@ public class CourseHandler {
 	}
 
 	// 添加课程提交页面
-	@RequestMapping("submitadd")
-	public ModelAndView submitadd(Course_t_Vo course) throws Exception {
+	@RequestMapping(value="submitadd",method=RequestMethod.POST)
+	public ModelAndView submitadd(Course_t_Vo course,MultipartFile image) throws Exception {
+		String pic_path="C:\\Users\\woota\\Pictures\\Saved Pictures\\SingStreet\\";  //暂时图片保存路径
+		if(image!=null) {
+			String originName=image.getOriginalFilename();
+			String newFileName=UUID.randomUUID().toString()+originName.substring(originName.indexOf("."));
+			File newfile=new File(pic_path+newFileName);
+			image.transferTo(newfile);
+			course.setCu_save(newFileName);
+			course.setCu_uploadTime(new Date());
+			service.serviceinsert(course);
+		}
+		
 		return null;
 	}
 

@@ -722,9 +722,12 @@ body {
 /*t4统计图start*/
 .t .t4 {
 	margin-top: 85px;
+	height: 500px;
+	width: 1185px;
 }
 .t .t4 .w {
 	width: 145px;
+	display: inline-block;
 }
 .t .t4 .menu {
 	width: 145px;

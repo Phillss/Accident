@@ -2,24 +2,88 @@
 body {
 	background-color: #e3edfc;
 }
-.head {
-	display: inline-block;
+#header {
 	width: 100%;
-	height: 218px;
-	background: url(../img/header.jpg) no-repeat;
+	height: 235px;
+	position: relative;
+	clear: both;
+	background: url("../img/head.jpg") no-repeat;
 	background-size: cover;
 }
-.head .exit {
-	margin-top: 2.5%;
-	margin-right: 3.8%;
-	width: 2%;
+#header .boy {
+	width: 224px;
+	height: 24px;
+	float: right;
+	padding-top: 23px;
 }
-.head .exit input {
-	display: inline-block;
+#header .boy ul li {
+	float: left;
+	color: #ffffff;
+	padding-left: 43px;
+}
+#header .boy ul li a {
+	color: #ffffff;
+}
+#header .boy ul li a:hover {
+	color: #213862;
+}
+.a {
+	background: url("../img/boy.jpg") no-repeat 5px 0;
+	background-size: 14px 14px;
+}
+.b {
+	background: url("../img/b.jpg") no-repeat 21px 1px;
+}
+.mainl {
 	width: 100%;
-	background-color: rgba(0,0,0,0);
+	height: 47px;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.6);
+	top: 188px;
+	right: 0;
+}
+.mainl .word {
+	width: 1046px;
+	height: 47px;
+	margin: auto;
+}
+.mainl .word ul span {
+	display: none;
+	width: 40px;
+	height: 47px;
+	float: left;
+}
+.mainl .word ul span img {
+	padding-left: 20px;
+}
+.mainl .word ul li {
+	float: left;
+	line-height: 47px;
+	font-size: 14px;
+	padding-right: 40px;
+	padding-left: 40px;
+	background: url("../img/line.jpg") no-repeat right;
+}
+.mainl .word ul li a {
+	color: #213862;
+}
+.mainl .word ul li a:link {
+	text-decoration: none;
+}
+
+.mainl .word ul li a:visited {
+	text-decoration: none;
+}
+
+.mainl .word ul li a:hover {
+}
+.mainl .word ul li a:active {}
+.mainl .word ul li.bg {
+	background: none;
 }
 /*顶部end*/
+
+
 /*导航栏start*/
 .topnav {
 	display: block;
@@ -28,49 +92,55 @@ body {
 	height: 48px;
 	background-color: #a6afc0;
 	text-align: center;
-	position: relative;
 }
+
 .topnav table {
-	margin: 0 auto;   
-	width:1300px;   
-    height:48px; 
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -650px;
-    margin-top: -24px;
+	display: inline-block;
+	width: 78%;
+	height: 48px;
 }
+
+.topnav .main tr {
+	height: 48px;
+}
+
 .topnav td {
 	color: #213862;
 	display: inline-block;
 	height: 28px;
-	width: 162.5px;
+	width: 148px;
 	text-align: center;
 	line-height: 28px;
-	border-right: 1px solid #213862;	
+	border-right: 1px solid #213862;
 	margin-top: 10px;
 }
+
 .topnav td:last-child {
-	border: 0;
+	border-right: 0;
 }
+
 .topnav td a {
 	display: inline-block;
-	width: 162.5px;
+	width: 100%;
 	height: 28px;
 	font-size: 16px;
 }
+
 .topnav a:link {
 	text-decoration: none;
 }
+
 .topnav a:visited {
 	text-decoration: none;
 }
+
 .topnav a:hover {
 	font-weight: bold;
 }
-.topnav a:active {
-	
-}
+
+.topnav a:active {}
+
+
 /*导航栏end*/
 /*主内容start*/
 /*t0课程模块start*/

@@ -49,7 +49,8 @@
         		   com.ssm.mapper.log
         		   com.ssm.mapper.result
         		   com.ssm.mapper.course
-        		   com.ssm.mapper.employee"></property>
+        		   com.ssm.mapper.employee
+        		   com.ssm.mapper.causeclass"></property>
         	<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
         </bean>
 </beans>

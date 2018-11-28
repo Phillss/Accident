@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -83,25 +85,45 @@
 								<th style="text-align: center;" class="re_de">删除</th>
 							</tr>
 							<tr>
-								<td>123</td>
+							<c:forEach items="${causelist.beanList}" var="item">
+							<tr>
+							<td>${item.ca_name}</td>
 								<td>
 									<div class="rs">
-										<a href="${pageContext.request.contextPath}/assort/modifycause.action" onclick="modifycause()"></a>
+										<a href="${pageContext.request.contextPath}/assort/modifycause.action?ca_id=${item.ca_id}" onclick="modifyind()"></a>
 									</div>
 								</td>
 								<td>
 									<div class="de">
-										<a href="#"></a>
+										<a href="${pageContext.request.contextPath}/assort/deletecause.action?ca_id=${item.ca_id}"></a>
 									</div>
 								</td>
 							</tr>
+							</c:forEach>
 						</table>
 					</form>	
 					<div class="upload_in_du">
 						<a href="${pageContext.request.contextPath}/assort/addindustryorcause.action" onclick="add_in_ca()"></a>
 					</div>
 				</div>
-				
+				<h3>第${causelist.current+1}页 /共${causelist.total_pages}页</h3>
+
+			<a
+				href="${pageContext.request.contextPath}/assort/causelist.action?current=0">首页</a>
+			<c:if test="${causelist.current>0 }">
+				<a
+					href="${pageContext.request.contextPath}
+	/assort/causelist.action?current=${causelist.current-1}">上一页</a>
+			</c:if>
+			<c:if test="${causelist.current+1<causelist.total_pages}">
+				<a
+					href="${pageContext.request.contextPath}
+	/assort/causelist.action?current=${causelist.current+1}">下一页</a>
+
+				<a
+					href="${pageContext.request.contextPath}
+	/assort/causelist.action?current=${causelist.total_pages-1}">尾页</a>
+			</c:if>
 			</div>
 		</div>
 		

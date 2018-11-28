@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.mapper.causeclass.CauseMapper">
+
+	<insert
+		id="insertCause"
+		parameterType="com.ssm.pojo.Vo.Causeclass_t_Vo">
+		INSERT INTO ssm_demo.causeclass_t
+		(ca_id, ca_name, ca_createTime, ca_flag)
+		VALUES (, #{ca_name}, #{ca_createTime}, #{ca_flag})
+	</insert>
+
+	<delete
+		id="deleteCause"
+		parameterType="String">
+		DELETE FROM ssm_demo.causeclass_t
+		WHERE ca_id = #{value}
+	</delete>
+
+	<select
+		id="findcount"
+		resultType="Integer">
+		SELECT COUNT(*) FROM causeclass_t
+	</select>
+
+	<select
+		id="findCauseById"
+		parameterType="String"
+		resultType="com.ssm.pojo.Vo.Causeclass_t_Vo">
+		SELECT * FROM causeclass_t WHERE ca_id=#{value}
+	</select>
+
+	<select
+		id="findAllCause"
+		parameterType="com.ssm.pojo.PageIndex"
+		resultType="com.ssm.pojo.Vo.Causeclass_t_Vo">
+		SELECT * FROM causeclass_t LIMIT #{current},#{per_record}
+	</select>
+	
+	<update id="updateCause" parameterType="com.ssm.pojo.Vo.Causeclass_t_Vo">
+		UPDATE ssm_demo.causeclass_t SET ca_name = #{ca_name}
+		 WHERE ca_id =#{ca_id}
+	</update>
+
+</mapper>

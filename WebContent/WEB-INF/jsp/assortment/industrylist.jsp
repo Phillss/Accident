@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -81,19 +83,21 @@
 								<th style="text-align: center;" class="re_de">修改</th>
 								<th style="text-align: center;" class="re_de">删除</th>
 							</tr>
+							<c:forEach items="${industrylist}" var="item">
 							<tr>
-								<td>123</td>
+								<td>${item.in_name}</td>
 								<td>
 									<div class="rs">
-										<a href="${pageContext.request.contextPath}/assort/modifyindustry.action" onclick="modifyind()"></a>
+										<a href="${pageContext.request.contextPath}/assort/modifyindustry.action?in_id=${item.in_id}" onclick="modifyind()"></a>
 									</div>
 								</td>
 								<td>
 									<div class="de">
-										<a href="#"></a>
+										<a href="${pageContext.request.contextPath}/assort/deleteindus.action?in_id=${item.in_id}"></a>
 									</div>
 								</td>
 							</tr>
+							</c:forEach>
 						</table>
 					</form>	
 					<div class="upload_in_du">

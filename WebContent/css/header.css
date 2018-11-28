@@ -7,7 +7,6 @@ body {
 	width: 100%;
 	height: 218px;
 	background: url(../img/header.jpg) no-repeat;
-	/* background-size: 100% auto; */
 	background-size: cover;
 }
 .head .exit {
@@ -79,10 +78,12 @@ body {
 	height: 600px;
 	width: 100%;
 	margin-top: 85px;
+	text-align: center;
 }
 .t .t0 {
-	height: 300px;
+	height: 600px;
 	position: relative;
+	text-align: center;
 }
 .t .t0 .tle {
 	width: 145px;
@@ -112,7 +113,7 @@ body {
 }
 .t .t0 .cour {
 	width: 900px;
-
+	height: 600px;
 }
 .t .t0 .cour form {
 	position: absolute;
@@ -259,7 +260,7 @@ body {
 	margin-top: 85px;
 }
 .t .t1 .regulation form {
-	height: 300px;
+	height: 500px;
 }
 .t .t1 .regulation form table {
 	margin: auto;
@@ -1023,12 +1024,12 @@ body {
 /*t6记录管理end*/
 /*翻页start*/
 .skip {
-	display: block;
-	height: 40px;
-	margin-bottom: 10px;
-	text-align: center;
+	width: 919px;
+	height: 100px;
+	position: absolute;
+	left: 340px;
+	top: 795px;
 	margin: auto;
-	margin-top: 10px;
 }
 /*翻页end*/
 /*主内容end*/
@@ -1037,8 +1038,8 @@ footer {
 	width: 100%;
 	height: 100px;
 	background: url(../img/foot.jpg) no-repeat;
-	background-size: 100% auto;
-	margin-bottom: 0;
+	background-size: cover;
+	position: absolute;
 	
 }
 /*底部end*/

@@ -125,7 +125,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="skip main">
+		<div class="skip">
 			<h3>第${listcourse.current+1}页 /共${listcourse.total_pages}页</h3><br>
 			<a
 				href="${pageContext.request.contextPath}

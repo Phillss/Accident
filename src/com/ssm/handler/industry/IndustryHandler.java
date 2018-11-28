@@ -23,6 +23,8 @@ public class IndustryHandler {
 		return "";
 	}
 	
+	
+	
 	@RequestMapping("/update")
 	public String update(Industry_t_Vo industry,Model model) throws Exception{
 		service.serviceupdate(industry);;

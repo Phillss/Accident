@@ -74,16 +74,17 @@
 					</table>
 				</div>
 				<div class="addca">
-					<form action="">
+					<form action="${pageContext.request.contextPath}/assort/subcause.action" method="post">
+					<input type="hidden" name="ca_id" value="${cause.ca_id}">
 						<div class="ch">
 							<span>类别：</span>
 							<span style="width: 28px;">原因</span>
 							<br /><br />
 							<span>名称：</span>	
-							<input type="text" name="" id="" value="" />
+							<input type="text" name="ca_name" id="" value="${cause.ca_name}" />
 						</div>
 						<div class="po">
-							<input type="button" name="" id="" value="修改" />
+							<input type="submit"  value="修改" />
 						</div>
 					</form>
 				</div>

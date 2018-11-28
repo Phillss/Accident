@@ -74,16 +74,17 @@
 					</table>
 				</div>
 				<div class="addin">
-					<form action="">
+					<form action="${pageContext.request.contextPath}/assort/subindustry.action" method="post">
+					<input type="hidden" name="in_id" value="${industry.in_id}">
 						<div class="ch">
 							<span>类别：</span>
 							<span style="width: 28px;">行业</span>
 							<br /><br />
 							<span>名称：</span>	
-							<input type="text" name="" id="" value="" />
+							<input type="text" name="in_name" id="" value="${industry.in_name}" />
 						</div>
 						<div class="po">
-							<input type="button" name="" id="" value="修改" />
+							<input type="submit"  value="修改" />
 						</div>
 					</form>
 				</div>

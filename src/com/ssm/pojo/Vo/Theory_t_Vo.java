@@ -5,6 +5,56 @@ import java.util.Date;
 import com.ssm.pojo.Theory_t;
 
 public class Theory_t_Vo extends Theory_t {
+	
+	
+
+	@Override
+	public String getTh_auther() {
+		// TODO Auto-generated method stub
+		return super.getTh_auther();
+	}
+
+	@Override
+	public void setTh_auther(String th_auther) {
+		// TODO Auto-generated method stub
+		super.setTh_auther(th_auther);
+	}
+
+	@Override
+	public String getTh_year() {
+		// TODO Auto-generated method stub
+		return super.getTh_year();
+	}
+
+	@Override
+	public void setTh_year(String th_year) {
+		// TODO Auto-generated method stub
+		super.setTh_year(th_year);
+	}
+
+	@Override
+	public String getTh_position() {
+		// TODO Auto-generated method stub
+		return super.getTh_position();
+	}
+
+	@Override
+	public void setTh_position(String th_position) {
+		// TODO Auto-generated method stub
+		super.setTh_position(th_position);
+	}
+
+	@Override
+	public String getTh_summary() {
+		// TODO Auto-generated method stub
+		return super.getTh_summary();
+	}
+
+	@Override
+	public void setTh_summary(String th_summary) {
+		// TODO Auto-generated method stub
+		super.setTh_summary(th_summary);
+	}
 
 	@Override
 	public String getTh_id() {

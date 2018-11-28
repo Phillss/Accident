@@ -7,6 +7,42 @@ public class Theory_t {
 	String th_save;// 文件存储的路径
 	Date th_uploadTime;// 上传的时间
 	String th_fileName;// 文件的名称
+	String th_auther;
+	String th_year;
+	String th_position;
+	String th_summary;
+
+	public String getTh_auther() {
+		return th_auther;
+	}
+
+	public void setTh_auther(String th_auther) {
+		this.th_auther = th_auther;
+	}
+
+	public String getTh_year() {
+		return th_year;
+	}
+
+	public void setTh_year(String th_year) {
+		this.th_year = th_year;
+	}
+
+	public String getTh_position() {
+		return th_position;
+	}
+
+	public void setTh_position(String th_position) {
+		this.th_position = th_position;
+	}
+
+	public String getTh_summary() {
+		return th_summary;
+	}
+
+	public void setTh_summary(String th_summary) {
+		this.th_summary = th_summary;
+	}
 
 	public String getTh_id() {
 		return th_id;

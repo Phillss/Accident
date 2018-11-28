@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -69,33 +71,55 @@
 							<th style="width: 60px; text-align: center;">查看</th>
 							<th style="width: 60px; text-align: center;">删除</th>
 						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+						<c:forEach items="${listlaws.beanList}" var="item">
+							<tr>
+							<td>${item.la_name}</td>
+							<td><fmt:formatDate value="${item.la_time}"
+											pattern="yyyy-MM-dd" /></td>
+							<td>${item.la_revise}</td>
+							<td>${item.la_number}</td>
+							<td>${item.la_agency}</td>
+							<td>${item.la_class}</td>
+							<td>${item.la_industryId}</td>
 							<td>
 								<div class="rs">
-									<a href=".txt" download=""></a>
+									<a href="" download=""></a>
 								</div>
 
 							</td>
 							<td>
 								<div class="de">
-									<a href="${pageContext.request.contextPath}/laws/delete.action"></a>
+									<a href="${pageContext.request.contextPath}/laws/delete.action?la_id=${item.la_id}"></a>
 								</div>
 							</td>
 						</tr>
+						</c:forEach>
+						
 					</table>
 				</form>
 				<div class="upload">
-					<a href="${pageContext.request.contextPath}/laws/findall.action"
+					<a href="${pageContext.request.contextPath}/laws/insert.action"
 						onclick="addregulations()"></a>
 				</div>
-			</div>
+			</div class="skip">
+			<h3>第${listlaws.current+1}页 /共${listlaws.total_pages}页</h3>
+
+			<a
+				href="${pageContext.request.contextPath}/laws/findall.action?current=0">首页</a>
+			<c:if test="${listlaws.current>0 }">
+				<a
+					href="${pageContext.request.contextPath}
+	/laws/findall.action?current=${listlaws.current-1}">上一页</a>
+			</c:if>
+			<c:if test="${listlaws.current+1<listlaws.total_pages}">
+				<a
+					href="${pageContext.request.contextPath}
+	/laws/findall.action?current=${listlaws.current+1}">下一页</a>
+
+				<a
+					href="${pageContext.request.contextPath}
+	/laws/findall.action?current=${listlaws.total_pages-1}">尾页</a>
+			</c:if>
 		</div>
 	</div>
 

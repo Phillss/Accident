@@ -79,6 +79,7 @@
 								<td>事故报告</td>
 								<td>所属行业</td>
 								<td>删除</td>
+								<td></td>
 							</tr>
 							<c:forEach items="${listaccident.beanList}" var="item">
 								<tr>
@@ -95,6 +96,7 @@
 									<td>${item.acc_fileName}</td>
 									<td>${item.acc_industryName}</td>
 									<td class="de"><a href="${pageContext.request.contextPath}/accident/delete.action?acc_id=${item.acc_id}"></a></td>
+									<td><a href="${pageContext.request.contextPath}/accident/downloadfile.action?id=${item.acc_id}">下载</a></td>
 								</tr>
 							</c:forEach>
 						</table>
@@ -105,7 +107,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="skip main">
+		<div class="skip">
 			<h3>第${listaccident.current+1}页 /共${listaccident.total_pages}页</h3><br>
 			<a
 				href="${pageContext.request.contextPath}/accident/findall.action?current=0">首页</a>

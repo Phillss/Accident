@@ -27,4 +27,5 @@
 		<bean id="servicelog" class="com.ssm.service.log.LogServiceImpl"></bean>
 		<bean id="serviceresult" class="com.ssm.service.result.ResultServiceImpl"></bean>
 		<bean id="serviceemployee" class="com.ssm.service.employeeinfo.ServiceEmployeeinfo"></bean>
+		<bean id="servicecause" class="com.ssm.service.cause.CauseService"></bean>
 </beans>

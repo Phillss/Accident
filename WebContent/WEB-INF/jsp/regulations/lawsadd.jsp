@@ -56,37 +56,37 @@
 <div class="t">
 			<div class="t1 main">
 				<div class="industry">
-					<form action="${pageContext.request.contextPath}/laws/insert.action" method="post">
+					<form action="${pageContext.request.contextPath}/laws/subinsert.action" method="post">
 						<div class="ch">
 							<span>法律法规名称：</span>
-							<input type="text" value="" style="width: 150px; height: 20px;" placeholder="法律法规名称" /><br /><br />
+							<input type="text" value="" name="la_name" style="width: 150px; height: 20px;" placeholder="法律法规名称" /><br /><br />
 							<span>制定修订(生效)日期：</span>
-							<input type="text" value="" style="width: 150px; height: 20px;" placeholder="制定修订(生效)日期" /><br /><br />
+							<input type="text" value="" name="la_time" style="width: 150px; height: 20px;" placeholder="制定修订(生效)日期" /><br /><br />
 							<span>修订次数：</span>
-							<input type="text" value="" style="width: 150px; height: 20px;" placeholder="修订次数" /><br /><br />
+							<input type="text" value="" name="la_revise" style="width: 150px; height: 20px;" placeholder="修订次数" /><br /><br />
 							<span>编号：</span>
-							<input type="text" value="" style="width: 150px; height: 20px;" placeholder="编号" /><br /><br />
+							<input type="text" value="" name="la_number" style="width: 150px; height: 20px;" placeholder="编号" /><br /><br />
 							<span>颁发机关：</span>
-							<input type="text" value="" style="width: 150px; height: 20px;" placeholder="颁发机关" /><br /><br />
+							<input type="text" value="" name="la_agency" style="width: 150px; height: 20px;" placeholder="颁发机关" /><br /><br />
 							<span>类别：</span>
-							<select name="">
-								<option value="">安全标志</option>
-								<option value="">安全管理</option>
-								<option value="">安全消防设施</option>
-								<option value="">劳动防护</option>
-								<option value="">设计</option>
-								<option value="">危险化学品分类</option>
-								<option value="">危险作业</option>
-								<option value="">职业卫生</option>
-								<option value="">法律</option>
-								<option value="">法规</option>
-								<option value="">规章</option>
+							<select name="la_class">
+								<option value="安全标志">安全标志</option>
+								<option value="安全管理">安全管理</option>
+								<option value="安全消防设施">安全消防设施</option>
+								<option value="劳动防护">劳动防护</option>
+								<option value="设计">设计</option>
+								<option value="危险化学品分类">危险化学品分类</option>
+								<option value="危险作业">危险作业</option>
+								<option value="职业卫生">职业卫生</option>
+								<option value="法律">法律</option>
+								<option value="法规">法规</option>
+								<option value="规章">规章</option>
 							</select><br /><br />
 							<span>适用行业：</span>
-							<input type="radio" name="" id="" value="建筑" />建筑
-							<input type="radio" name="" id="" value="化工" />化工
-							<input type="radio" name="" id="" value="交通" />交通
-							<input type="radio" name="" id="" value="工矿商贸" />工矿商贸
+							<input type="radio" name="la_industryId" id="" value="建筑" />建筑
+							<input type="radio" name="la_industryId" id="" value="化工" />化工
+							<input type="radio" name="la_industryId" id="" value="交通" />交通
+							<input type="radio" name="la_industryId" id="" value="工矿商贸" />工矿商贸
 						</div>
 						<div class="po">
 							<input type="submit" name="" id="" value="提交" />

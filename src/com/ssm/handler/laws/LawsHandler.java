@@ -1,11 +1,13 @@
 package com.ssm.handler.laws;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -48,10 +50,19 @@ public class LawsHandler {
 	}
 	
 	@RequestMapping("/insert")
-	public String insert(Laws_t_Vo laws,Model model) throws Exception{
+	public ModelAndView insert() throws Exception{
+		ModelAndView view=new ModelAndView();
+		view.setViewName("WEB-INF/jsp/regulations/lawsadd");
+		return view;
+	}
+	
+	@RequestMapping(value="/subinsert",method=RequestMethod.POST)
+	public String subinsert(Laws_t_Vo laws) throws Exception{
+		laws.setLa_id(UUID.randomUUID().toString().replaceAll("-", ""));
+		laws.setLa_fileName("123");  //暂时保留
+		laws.setLa_save("http://");
 		service.serviceinsert(laws);
-		model.addAttribute("", "");
-		return "";
+		return "redirect:/laws/findall.action";
 	}
 	
 	@RequestMapping("/update")
@@ -62,10 +73,9 @@ public class LawsHandler {
 	}
 	
 	@RequestMapping("/delete")
-	public String delete(@RequestParam(value="id") String id,Model mdoel) throws Exception{
-		service.servicedelete(id);
-		mdoel.addAttribute("", "");
-		return "";
+	public String delete(String la_id) throws Exception{
+		service.servicedelete(la_id);
+		return "redirect:/laws/findall.action";
 	}
 	
 }

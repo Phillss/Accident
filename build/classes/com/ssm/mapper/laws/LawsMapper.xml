@@ -4,9 +4,9 @@
 
 	<insert id="insertLaws" parameterType="com.ssm.pojo.Vo.Laws_t_Vo">
 		INSERT INTO laws_t(la_id,la_industryId,la_name,la_save,la_fileName,
-		la_number,la_time,la_info)
+		la_number,la_time,la_revise,la_agency,la_class)
 		VALUES(#{la_id},#{la_industryId},#{la_name},#{la_save},#{la_fileName},
-		#{la_number},#{la_time},#{la_info})
+		#{la_number},#{la_time},#{la_revise},#{la_agency},la_class)
 	</insert>
 	
 	<!--法规列表  -->
@@ -26,7 +26,8 @@
 	<update id="updateLaws" parameterType="com.ssm.pojo.Vo.Laws_t_Vo">
 		UPDATE laws_t SET la_industryId =#{la_industryId}, la_name = #{la_name} ,
 		la_save =#{la_save} ,la_save =#{la_save}, la_fileName = #{la_fileName} ,
-		la_number =#{la_number}, la_time =#{la_time}, la_info =#{la_info} 
+		la_number =#{la_number}, la_time =#{la_time}, la_revise =#{la_revise},
+		la_agency =#{la_agency} 
 		WHERE la_id =#{la_id} 
 	</update>
 	

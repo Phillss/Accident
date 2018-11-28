@@ -60,83 +60,65 @@
 		<div class="t">
 			<div class="t2 main">
 				<div class="uploadad">
-					<form action="${pageContext.request.contextPath}/accident/insert.action" method="post">
+					<form action="${pageContext.request.contextPath}/accident/insert.action" method="post" enctype="multipart/form-data">
 						<div class="ch">
-							<div class="ku">
-								<span>序号：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="序号" />
-							</div>
-							<div class="ku">
-								<span>事故编号：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故编号" />
-							</div>
+							
 							<div class="ku">
 								<span>事故等级：</span>
-								<select name="">
-									<option value="">一般事故</option>
-									<option value="">普通事故</option>
-									<option value="">重大事故</option>
-									<option value="">特别重大事故</option>
+								<select name="acc_level">
+									<option value="000">一般事故</option>
+									<option value="001">普通事故</option>
+									<option value="010">重大事故</option>
+									<option value="011">特别重大事故</option>
 								</select>
 							</div>
 							<div class="ku">
 								<span>事故名称：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故名称" />
+								<input type="text" value="" name="acc_name" style="width: 150px; height: 20px;" placeholder="事故名称" />
 							</div>
 							<div class="ku">
 								<span>发生时间：</span>
-								<input type="datetime-local" value="" style="width: 150px; height: 20px;" />
+								<input type="datetime-local" value="" name="acc_time" style="width: 150px; height: 20px;" />
 							</div>
 							<div class="ku">
 								<span>发生地点：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="发生地点" />
+								<input type="text" value="" name="acc_site" style="width: 150px; height: 20px;" placeholder="发生地点" />
 							</div>
 							<div class="ku">
 								<span>死亡人员：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="死亡人员" />
+								<input type="text" value="" name="acc_deathSum" style="width: 150px; height: 20px;" placeholder="死亡人员" />
 							</div>
 							<div class="ku">
 								<span>人员伤亡：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="人员伤亡" />
+								<input type="text" value="" name="acc_injuredSum" style="width: 150px; height: 20px;" placeholder="人员伤亡" />
 							</div>
 							<div class="ku">
 								<span>财产损失：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="财产损失" />
+								<input type="text" value="" name="acc_financial" style="width: 150px; height: 20px;" placeholder="财产损失" />
 							</div>
 							<div class="ku">
 								<span>负责人：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="负责人" />
+								<input type="text" value="" name="acc_boss" style="width: 150px; height: 20px;" placeholder="负责人" />
 							</div>
 							<div class="ku">
 								<span>公司名称：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="公司名称" />
+								<input type="text" value="" name="acc_org" style="width: 150px; height: 20px;" placeholder="公司名称" />
 							</div>
 							<div class="ku">
 								<span>事故文档名称：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故文档名称" />
+								<input type="file" value="" name="acc_file" style="width: 150px; height: 20px;" placeholder="事故文档名称" />
 							</div>
-							<div class="ku">
-								<span>存储位置：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="存储位置" />
-							</div>
-							<div class="ku">
-								<span>上传时间：</span>
-								<input type="datetime-local" value="" style="width: 150px; height: 20px;"/>
-							</div>
+			
 							<div class="ku">
 								<span>所属行业：</span>
-								<select name="">
-									<option value="">矿工行业</option>
-									<option value="">电子行业</option>
+								<select name="acc_industryName">
+									<option value="矿工行业">矿工行业</option>
+									<option value="电子行业">电子行业</option>
 								</select>
-							</div>
-							<div class="ku">
-								<span>事故等级：</span>
-								<input type="text" value="" style="width: 150px; height: 20px;" placeholder="事故等级" />
 							</div>
 						</div>
 						<div class="po">
-							<input type="button" name="" id="" value="提交" />
+							<input type="submit" value="提交" />
 						</div>
 					</form>
 				</div>

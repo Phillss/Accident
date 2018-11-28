@@ -7,6 +7,42 @@ import com.ssm.pojo.Laws_t;
 public class Laws_t_Vo extends Laws_t {
 
 	@Override
+	public Integer getLa_revise() {
+		// TODO Auto-generated method stub
+		return super.getLa_revise();
+	}
+
+	@Override
+	public void setLa_revise(Integer la_revise) {
+		// TODO Auto-generated method stub
+		super.setLa_revise(la_revise);
+	}
+
+	@Override
+	public String getLa_agency() {
+		// TODO Auto-generated method stub
+		return super.getLa_agency();
+	}
+
+	@Override
+	public void setLa_agency(String la_agency) {
+		// TODO Auto-generated method stub
+		super.setLa_agency(la_agency);
+	}
+
+	@Override
+	public String getLa_class() {
+		// TODO Auto-generated method stub
+		return super.getLa_class();
+	}
+
+	@Override
+	public void setLa_class(String la_class) {
+		// TODO Auto-generated method stub
+		super.setLa_class(la_class);
+	}
+
+	@Override
 	public String getLa_id() {
 		// TODO Auto-generated method stub
 		return super.getLa_id();
@@ -40,18 +76,6 @@ public class Laws_t_Vo extends Laws_t {
 	public void setLa_time(Date la_time) {
 		// TODO Auto-generated method stub
 		super.setLa_time(la_time);
-	}
-
-	@Override
-	public String getLa_info() {
-		// TODO Auto-generated method stub
-		return super.getLa_info();
-	}
-
-	@Override
-	public void setLa_info(String la_info) {
-		// TODO Auto-generated method stub
-		super.setLa_info(la_info);
 	}
 
 	@Override

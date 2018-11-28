@@ -4,13 +4,39 @@ import java.util.Date;
 
 public class Laws_t {
 	String la_id;// 行业法规的唯一标识
-	String la_industryId;// 行业法规的所属行业
 	String la_name;// 行业法规文件的名称
 	String la_save;// 行业法规在服务器的存储位置
 	String la_fileName;// 行业法规文件的名称
 	String la_number;
 	Date la_time;
-	String la_info;
+	Integer la_revise;
+	String la_agency;
+	public Integer getLa_revise() {
+		return la_revise;
+	}
+
+	public void setLa_revise(Integer la_revise) {
+		this.la_revise = la_revise;
+	}
+
+	public String getLa_agency() {
+		return la_agency;
+	}
+
+	public void setLa_agency(String la_agency) {
+		this.la_agency = la_agency;
+	}
+
+	public String getLa_class() {
+		return la_class;
+	}
+
+	public void setLa_class(String la_class) {
+		this.la_class = la_class;
+	}
+
+	String la_class;
+	String la_industryId;// 行业法规的所属行业
 	
 	public String getLa_id() {
 		return la_id;
@@ -30,14 +56,6 @@ public class Laws_t {
 
 	public void setLa_time(Date la_time) {
 		this.la_time = la_time;
-	}
-
-	public String getLa_info() {
-		return la_info;
-	}
-
-	public void setLa_info(String la_info) {
-		this.la_info = la_info;
 	}
 
 	public void setLa_id(String la_id) {

@@ -1,0 +1,1277 @@
+/*顶部start*/
+body {
+	background-color: #e3edfc;
+}
+#header {
+	width: 100%;
+	height: 235px;
+	position: relative;
+	clear: both;
+	background: url("../img/head.jpg") no-repeat;
+	background-size: cover;
+}
+#header .boy {
+	width: 224px;
+	height: 24px;
+	float: right;
+	padding-top: 23px;
+}
+#header .boy ul li {
+	float: left;
+	color: #ffffff;
+	padding-left: 43px;
+}
+#header .boy ul li a {
+	color: #ffffff;
+}
+#header .boy ul li a:hover {
+	color: #213862;
+}
+.a {
+	background: url("../img/boy.jpg") no-repeat 5px 0;
+	background-size: 14px 14px;
+}
+.b {
+	background: url("../img/b.jpg") no-repeat 21px 1px;
+}
+.mainl {
+	width: 100%;
+	height: 47px;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.6);
+	top: 188px;
+	right: 0;
+}
+.mainl .word {
+	width: 1046px;
+	height: 47px;
+	margin: auto;
+}
+.mainl .word ul span {
+	display: none;
+	width: 40px;
+	height: 47px;
+	float: left;
+}
+.mainl .word ul span img {
+	padding-left: 20px;
+}
+.mainl .word ul li {
+	float: left;
+	line-height: 47px;
+	font-size: 14px;
+	padding-right: 40px;
+	padding-left: 40px;
+	background: url("../img/line.jpg") no-repeat right;
+}
+.mainl .word ul li a {
+	color: #213862;
+}
+.mainl .word ul li a:link {
+	text-decoration: none;
+}
+
+.mainl .word ul li a:visited {
+	text-decoration: none;
+}
+
+.mainl .word ul li a:hover {
+}
+.mainl .word ul li a:active {}
+.mainl .word ul li.bg {
+	background: none;
+}
+/*顶部end*/
+
+
+/*导航栏start*/
+.topnav {
+	display: block;
+	color: #213862;
+	width: 100%;
+	height: 48px;
+	background-color: #a6afc0;
+	text-align: center;
+}
+
+.topnav table {
+	display: inline-block;
+	width: 78%;
+	height: 48px;
+}
+
+.topnav .main tr {
+	height: 48px;
+}
+
+.topnav td {
+	color: #213862;
+	display: inline-block;
+	height: 28px;
+	width: 148px;
+	text-align: center;
+	line-height: 28px;
+	border-right: 1px solid #213862;
+	margin-top: 10px;
+}
+
+.topnav td:last-child {
+	border-right: 0;
+}
+
+.topnav td a {
+	display: inline-block;
+	width: 100%;
+	height: 28px;
+	font-size: 16px;
+}
+
+.topnav a:link {
+	text-decoration: none;
+}
+
+.topnav a:visited {
+	text-decoration: none;
+}
+
+.topnav a:hover {
+	font-weight: bold;
+}
+
+.topnav a:active {}
+
+
+/*导航栏end*/
+
+
+/*主内容start*/
+
+
+/*t0课程模块start*/
+
+.t {
+	width: 100%;
+	height: 600px;
+}
+
+.t .t0 {
+	margin-top: 85px;
+	width: 1170px;
+	height: 300px;
+	position: absolute;
+}
+
+.t .t0 .tle {
+	width: 145px;
+	height: 117px;
+}
+
+.t .t0 .tle table a {
+	display: block;
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #d1d5dc;
+}
+
+.t .t0 table a:link {
+	text-decoration: none;
+}
+
+.t .t0 table a:visited {
+	text-decoration: none;
+}
+
+.t .t0 table a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #213862;
+}
+
+.t .t0 table a:active {}
+
+.t .t0 .cour {
+	position: absolute;
+	top: 0%;
+	left: 20%;
+}
+
+.t .t0 .cour form table th {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 109.5px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t0 .cour form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+.t .t0 .cour .rs a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	margin-left: 17.4px;
+}
+
+.t .t0 .cour .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 17.4px;
+}
+
+.t .t0 .import {
+	font: normal normal 18px/28px "微软雅黑";
+}
+
+.t .t0 .import form {
+	position: absolute;
+	width: 400px;
+	height: 500px;
+	left: 20%;
+}
+
+.t .t0 .import {
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.t .t0 .import .po {
+	display: block;
+	color: white;
+	width: 317px;
+	height: 56px;
+	line-height: 56px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -85px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 15px;
+}
+
+.t .t0 .modifycourse {
+	width: 300px;
+	height: 220px;
+	left: 20%;
+	position: absolute;
+}
+
+.t .t0 .modifycourse form {
+	text-align: center;
+	border: 1px solid #b4b4b5;
+	padding: 10px;
+}
+
+.t .t0 .modifycourse .ch span {
+	font-size: 14px;
+}
+
+.t .t0 .modifycourse .ch input {
+	background-color: #e2e9f3;
+	border: 1px solid black;
+}
+
+.t .t0 .modifycourse .po input {
+	display: block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -48px;
+	border: 1px solid #d1d5dc;
+}
+
+.t .t0 .Causationtheory form {
+	position: absolute;
+	width: 706px;
+	height: 37px;
+	left: 20%;
+}
+
+.t .t0 .Causationtheory form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+}
+
+.t .t0 .Causationtheory form table th {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 109.5px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t0 .Causationtheory form table td {
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+	padding: 0;
+}
+
+.t .t0 .Causationtheory label {
+	display: inline-block;
+	width: 43px;
+	height: 22px;
+	line-height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: -61px 0;
+	margin-left: 17.4px;
+	vertical-align: middle;
+}
+
+.t .t0 .Causationtheory .de a {
+	display: block;
+	width: 42px;
+	height: 23px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 17.4px;
+}
+
+
+/*课程模块end*/
+
+
+/*t1行业法规start*/
+
+.t .t1 {
+	margin-top: 85px;
+}
+
+.t .t1 .regulation form {
+	margin-right: 64px;
+	width: 1170px;
+	height: 300px;
+}
+
+.t .t1 .regulation form table {
+	width: 1170px;
+}
+
+.t .t1 .regulation form table th {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 109.5px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t1 .regulation form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+.t .t1 .regulation .rs a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -142px;
+	margin-left: 28.2px;
+}
+
+.t .t1 .regulation .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 28.2px;
+}
+
+.t .t1 .regulation .upload a {
+	display: block;
+	width: 113px;
+	height: 26px;
+	border-radius: 15px;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -167px;
+	margin: 0 auto;
+}
+
+.t .t1 .industry {
+	width: 400px;
+	height: 37px;
+	margin: auto;
+}
+
+.t .t1 .industry form {
+	width: 400px;
+	border: 1px solid #b4b4b5;
+	padding: 10px;
+}
+
+.t .t1 .industry .ch span {
+	display: inline-block;
+	width: 150px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.t .t1 .industry .ch input {
+	background-color: #e2e9f3;
+	border: 1px solid black;
+}
+
+.t .t1 .industry .po input {
+	display: block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+
+
+/*行业法规end*/
+
+
+/*t2事故报告管理start*/
+
+.t .t2 {
+	margin-top: 85px;
+}
+
+.t .t2 .sac {
+	width: 100%;
+	height: 400px;
+}
+
+.t .t2 .sac .search {
+	display: block;
+	width: 211px;
+	height: 28px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -202px;
+	margin-left: 959px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.t .t2 .sac .search input {
+	display: block;
+	width: 175px;
+	height: 27px;
+	margin-left: 36px;
+	background-color: #033b66;
+	border-radius: 10px;
+	border: 0;
+	outline: none;
+	color: white;
+}
+
+.t .t2 .accident form {
+	margin-right: 64px;
+	width: 1170px;
+	height: 300px;
+}
+
+.t .t2 .accident form table {
+	width: 1170px;
+}
+
+.t .t2 .accident form table th {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 109.5px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t2 .accident form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+.t .t2 .accident .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 17.4px;
+	margin: auto;
+}
+
+.t .t2 .accident .upload a {
+	display: block;
+	width: 113px;
+	height: 26px;
+	border-radius: 15px;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -167px;
+	margin: 0 auto;
+}
+
+.t .t2 .uploadad {
+	width: 800px;
+	height: 352px;
+	margin: auto;
+}
+
+.t .t2 .uploadad form {
+	width: 800px;
+	border: 1px solid #b4b4b5;
+	padding: 10px;
+}
+
+.t .t2 .uploadad .ch .ku {
+	display: inline-block;
+	width: 386px;
+	height: 37px;
+}
+
+.t .t2 .uploadad .ch span {
+	display: inline-block;
+	width: 150px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.t .t2 .uploadad .ch input {
+	background-color: #e2e9f3;
+	border: 1px solid black;
+}
+
+.t .t2 .uploadad .po input {
+	display: block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+
+
+/*事故报告管理end*/
+
+
+/*t3管理分类start*/
+
+.t .t3 {
+	margin-top: 85px;
+}
+
+.t .t3 .incause {
+	display: inline-block;
+	width: 145px;
+	height: 117px;
+}
+
+.t .t3 .incause table a {
+	display: block;
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #d1d5dc;
+}
+
+.t .t3 .incause table a:link {
+	text-decoration: none;
+}
+
+.t .t3 .incause table a:visited {
+	text-decoration: none;
+}
+
+.t .t3 .incause table a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	background-color: #213862;
+}
+
+.t .t3 .incause table a:active {}
+
+.t .t3 .ind {
+	margin-left: 270px;
+}
+
+.t .t3 .ind form {
+	width: 808px;
+	height: 300px;
+}
+
+.t .t3 .ind form table {
+	margin: auto;
+}
+
+.t .t3 .ind form table .indu {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 507px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t3 .ind form table .re_de {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 73px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t3 .ind form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+.t .t3 .ind .rs a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	margin: auto;
+}
+
+.t .t3 .ind .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin: auto;
+}
+
+.t .t3 .ind .upload_in_du {
+	width: 808px;
+}
+
+.t .t3 .ind .upload_in_du a {
+	display: block;
+	width: 113px;
+	height: 26px;
+	border-radius: 15px;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -167px;
+	margin: 0 auto;
+}
+
+.t .t3 .cause {
+	margin-left: 270px;
+}
+
+.t .t3 .cause form {
+	width: 808px;
+	height: 300px;
+}
+
+.t .t3 .cause form table {
+	margin: auto;
+}
+
+.t .t3 .cause form table .indu {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 507px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t3 .cause form table .re_de {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 73px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t3 .cause form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+.t .t3 .cause .rs a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	margin: auto;
+}
+
+.t .t3 .cause .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin: auto;
+}
+
+.t .t3 .cause .upload_in_du {
+	width: 808px;
+}
+
+.t .t3 .cause .upload_in_du a {
+	display: block;
+	width: 113px;
+	height: 26px;
+	border-radius: 15px;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -167px;
+	margin: 0 auto;
+}
+
+.t .t3 .addinca {
+	width: 400px;
+	height: 37px;
+	margin: auto;
+}
+
+.t .t3 .addinca form {
+	width: 400px;
+	border: 1px solid #b4b4b5;
+	padding: 10px;
+}
+
+.t .t3 .addinca .ch span {
+	display: inline-block;
+	width: 150px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.t .t3 .addinca .ch input {
+	background-color: #e2e9f3;
+	border: 1px solid black;
+}
+
+.t .t3 .addinca .po input {
+	display: block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+
+.t .t3 .addin {
+	width: 400px;
+	height: 37px;
+	margin: auto;
+}
+
+.t .t3 .addin form {
+	width: 400px;
+	border: 1px solid #b4b4b5;
+	padding: 10px;
+}
+
+.t .t3 .addin .ch span {
+	display: inline-block;
+	width: 150px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.t .t3 .addin .ch input {
+	background-color: #e2e9f3;
+	border: 1px solid black;
+}
+
+.t .t3 .addin .po input {
+	display: block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+
+.t .t3 .addca {
+	width: 400px;
+	height: 37px;
+	margin: auto;
+}
+
+.t .t3 .addca form {
+	width: 400px;
+	border: 1px solid #b4b4b5;
+	padding: 10px;
+}
+
+.t .t3 .addca .ch span {
+	display: inline-block;
+	width: 150px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.t .t3 .addca .ch input {
+	background-color: #e2e9f3;
+	border: 1px solid black;
+}
+
+.t .t3 .addca .po input {
+	display: block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+
+
+/*管理分类end*/
+
+
+/*t4统计图start*/
+
+.t .t4 {
+	margin-top: 85px;
+	height: 500px;
+	width: 1185px;
+}
+
+.t .t4 .w {
+	width: 145px;
+	display: inline-block;
+}
+
+.t .t4 .menu {
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #d1d5dc;
+	color: #213862;
+}
+
+.t .t4 .bu_tr_cd_co {
+	margin: 0;
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #e2e5e9;
+	color: #213862;
+	display: none;
+}
+
+.t .t4 .rank {
+	margin: 0;
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #e2e5e9;
+	color: #213862;
+	display: none;
+}
+
+.t .t4 .char {
+	display: inline-block;
+	width: 987px;
+	height: 350px;
+}
+
+.t .t4 .char .charts {
+	display: inline-block;
+	width: 325px;
+	height: 300px;
+}
+
+.t .t4 .char .charts div {
+	display: inline-block;
+	width: 325px;
+	height: 300px;
+}
+
+.t .t4 p {
+	display: inline-block;
+	width: 340px;
+	text-align: center;
+}
+
+
+/*t4统计图end*/
+
+
+/*t5统计图start*/
+
+.t .t5 {
+	margin-top: 85px;
+	position: relative;
+}
+
+.t .t5 .w {
+	width: 145px;
+}
+
+.t .t5 .menu {
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #d1d5dc;
+	color: #213862;
+}
+
+.t .t5 .rank {
+	margin: 0;
+	width: 145px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	background-color: #e2e5e9;
+	color: #213862;
+	display: none;
+}
+
+.t .t5 .sac {
+	width: 1020px;
+	height: 400px;
+}
+
+.t .t5 .sac .search {
+	display: block;
+	width: 211px;
+	height: 28px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -202px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.t .t5 .sac .search input {
+	display: block;
+	width: 175px;
+	height: 27px;
+	margin-left: 36px;
+	background-color: #033b66;
+	border-radius: 10px;
+	border: 0;
+	outline: none;
+	color: white;
+}
+
+.t .t5 .accident form {
+	margin-right: 64px;
+	width: 1020px;
+	height: 300px;
+}
+
+.t .t5 .accident form table {
+	width: 1020px;
+}
+
+.t .t5 .accident form table th {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 80px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t5 .accident form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+.t .t5 .accident .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 17.4px;
+	margin: auto;
+}
+
+
+/*修改账户start*/
+
+.t .t5 .modify {
+	position: absolute;
+	left: 50%;
+	margin-top: 50px;
+}
+
+.t .t5 .modify table td {
+	height: 20px;
+}
+
+.t .t5 .modify .po input {
+	display: inline-block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+
+
+/*修改账户end*/
+
+
+/*增加账户start*/
+
+.t .t5 .add {
+	position: absolute;
+	left: 50%;
+	margin-top: 50px;
+}
+
+.t .t5 .add table td {
+	height: 25px;
+}
+
+.t .t5 .add table td input {
+	height: 20px;
+}
+
+.t .t5 .add .po input {
+	display: inline-block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: 0 auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	border-radius: 5px;
+}
+
+.t .t5 .add .return input {
+	display: inline-block;
+	color: white;
+	width: 90px;
+	height: 35px;
+	margin: auto;
+	background: url(../img/spirit/spirit.jpg) no-repeat;
+	background-position: 0 -49px;
+	border: 1px solid #d1d5dc;
+	margin-top: 12px;
+	margin-left: 44px;
+	border-radius: 5px;
+}
+
+
+/*增加账户end*/
+
+
+/*t5统计图end*/
+
+
+/*t6记录管理start*/
+
+.t .t6 {
+	margin-top: 85px;
+}
+
+.t .t6 .w {
+	width: 145px;
+}
+
+.t .t6 .sac {
+	width: 1170px;
+	height: 400px;
+}
+
+.t .t6 .sac .search {
+	display: block;
+	width: 211px;
+	height: 28px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -202px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+.t .t6 .sac .search input {
+	display: block;
+	width: 175px;
+	height: 27px;
+	margin-left: 36px;
+	background-color: #033b66;
+	border-radius: 10px;
+	border: 0;
+	outline: none;
+	color: white;
+}
+
+.t .t6 .accident form {
+	margin-right: 64px;
+	width: 1170px;
+	height: 300px;
+}
+
+.t .t6 .accident form table {
+	width: 1170px;
+}
+
+.t .t6 .accident .number {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 80px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t6 .accident .manage {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 1090px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+.t .t6 .accident form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+.t .t6 .accident .de a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -24px;
+	margin-left: 17.4px;
+	margin: auto;
+}
+
+
+/*t6记录管理end*/
+
+
+/*主内容end*/
+
+/*翻页start*/
+/*#f_content .f_y {
+	width: 919px;
+	height: 100px;
+	position: absolute;
+	left: 340px;
+	top: 795px;
+	margin: auto;
+}*/
+/*翻页end*/
+
+/*底部start*/
+
+footer {
+	width: 100%;
+	height: 100px;
+	background: url(../img/foot.jpg) no-repeat;
+	background-size: cover;
+}
+
+
+/*底部end*/

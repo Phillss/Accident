@@ -52,9 +52,11 @@ body {
 	width: 40px;
 	height: 47px;
 	float: left;
+	text-align: center;
 }
 .mainl .word ul span img {
 	padding-left: 20px;
+	margin: auto;
 }
 .mainl .word ul li {
 	float: left;
@@ -378,7 +380,8 @@ body {
 	border-radius: 15px;
 	background: url(../img/spirit/spirit.jpg) no-repeat;
 	background-position: 0 -167px;
-	margin: 0 auto;
+	margin: auto;
+	margin-top: 5px;
 }
 
 .t .t1 .industry {
@@ -416,10 +419,10 @@ body {
 /*行业法规end*/
 /*t2事故报告管理start*/
 .t .t2 {
-	height: 500px;
+	height: 600px;
 }
 .t .t2 .sac {
-	height: 400px;
+	height: 600px;
 	width: 100%;
 }
 .t .t2 .sac .search {
@@ -1101,6 +1104,14 @@ body {
 	top: 795px;
 	margin: auto;
 }
+
+.skipaccident {
+	width: 919px;
+	height: 100px;
+	margin: auto;
+	margin-top: 20px;
+}
+
 /*翻页end*/
 /*主内容end*/
 /*底部start*/

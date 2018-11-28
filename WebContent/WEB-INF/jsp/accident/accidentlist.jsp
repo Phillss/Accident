@@ -79,7 +79,7 @@
 								<td>事故报告</td>
 								<td>所属行业</td>
 								<td>删除</td>
-								<td></td>
+								<td>下载</td>
 							</tr>
 							<c:forEach items="${listaccident.beanList}" var="item">
 								<tr>
@@ -95,36 +95,42 @@
 									<td>${item.acc_org}</td>
 									<td>${item.acc_fileName}</td>
 									<td>${item.acc_industryName}</td>
-									<td class="de"><a href="${pageContext.request.contextPath}/accident/delete.action?acc_id=${item.acc_id}"></a></td>
-									<td><a href="${pageContext.request.contextPath}/accident/downloadfile.action?id=${item.acc_id}">下载</a></td>
+									<td class="de"><a
+										href="${pageContext.request.contextPath}/accident/delete.action?acc_id=${item.acc_id}"></a></td>
+									<td><a
+										href="${pageContext.request.contextPath}/accident/downloadfile.action?id=${item.acc_id}">下载</a></td>
 								</tr>
 							</c:forEach>
 						</table>
 					</form>
 					<div class="upload">
-						<a href="${pageContext.request.contextPath}/accident/showadd.action" onclick="addaccidents()"></a>
+						<a
+							href="${pageContext.request.contextPath}/accident/showadd.action"
+							onclick="addaccidents()"></a>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="skip">
-			<h3>第${listaccident.current+1}页 /共${listaccident.total_pages}页</h3><br>
-			<a
-				href="${pageContext.request.contextPath}/accident/findall.action?current=0">首页</a>
-			<c:if test="${listaccident.current>0 }">
-				<a
-					href="${pageContext.request.contextPath}
+				<div class="skipaccident">
+					<h3>第${listaccident.current+1}页 /共${listaccident.total_pages}页</h3>
+					<br> <a
+						href="${pageContext.request.contextPath}/accident/findall.action?current=0">首页</a>
+					<c:if test="${listaccident.current>0 }">
+						<a
+							href="${pageContext.request.contextPath}
 	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
-			</c:if>
-			<c:if test="${listaccident.current+1<listaccident.total_pages}">
-				<a
-					href="${pageContext.request.contextPath}
+					</c:if>
+					<c:if test="${listaccident.current+1<listaccident.total_pages}">
+						<a
+							href="${pageContext.request.contextPath}
 	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
-				<a
-					href="${pageContext.request.contextPath}
+						<a
+							href="${pageContext.request.contextPath}
 	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
-			</c:if>
+					</c:if>
+				</div>
+			</div>
+
 		</div>
+
 	</div>
 
 

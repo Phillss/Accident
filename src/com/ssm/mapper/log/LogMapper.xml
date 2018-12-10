@@ -4,8 +4,8 @@
 
 	<!--增加日志  -->
 	<insert id="insertLog" parameterType="com.ssm.pojo.Vo.Log_t_Vo">
-		INSERT INTO log_t(lo_id,lo_text,lo_createId,lo_createTime,lo_class)
-		VALUES(#{lo_id},#{lo_text},#{lo_createId},#{lo_createTime},#{lo_class})
+		INSERT INTO log_t(lo_id,lo_name,lo_text,lo_createId,lo_createTime,lo_class)
+		VALUES(#{lo_id},#{lo_text},#{lo_createId},#{lo_createTime},#{lo_class},#{lo_name})
 	</insert>
 	
 	<!--查询  -->
@@ -21,6 +21,6 @@
  	<!--查询所有记录  -->
  	<select id="findAlllog" parameterType="com.ssm.pojo.PageIndex" 
  	resultType="com.ssm.pojo.Vo.Log_t_Vo">
- 		SELECT * from ssm_demo.log_t LIMIT #{current},#{per_record}
+ 		SELECT * from log_t LIMIT #{current},#{per_record}
  	</select>
 </mapper>

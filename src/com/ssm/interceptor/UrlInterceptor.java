@@ -45,6 +45,8 @@ public class UrlInterceptor implements HandlerInterceptor {
 			log.setLo_id(logid);
 			log.setLo_class(8);
 			log.setLo_text("修改用户信息");
+			String name=service.serviceFindUserById(userid).getUs_account();
+			log.setLo_name(name);
 			logservice.serviceinsertlog(log);
 		}
 

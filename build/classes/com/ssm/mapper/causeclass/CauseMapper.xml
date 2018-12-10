@@ -5,7 +5,7 @@
 	<insert
 		id="insertCause"
 		parameterType="com.ssm.pojo.Vo.Causeclass_t_Vo">
-		INSERT INTO ssm_demo.causeclass_t
+		INSERT INTO causeclass_t
 		(ca_id, ca_name, ca_createTime, ca_flag)
 		VALUES (, #{ca_name}, #{ca_createTime}, #{ca_flag})
 	</insert>
@@ -13,7 +13,7 @@
 	<delete
 		id="deleteCause"
 		parameterType="String">
-		DELETE FROM ssm_demo.causeclass_t
+		DELETE FROM causeclass_t
 		WHERE ca_id = #{value}
 	</delete>
 
@@ -38,7 +38,7 @@
 	</select>
 	
 	<update id="updateCause" parameterType="com.ssm.pojo.Vo.Causeclass_t_Vo">
-		UPDATE ssm_demo.causeclass_t SET ca_name = #{ca_name}
+		UPDATE causeclass_t SET ca_name = #{ca_name}
 		 WHERE ca_id =#{ca_id}
 	</update>
 

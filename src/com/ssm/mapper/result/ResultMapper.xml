@@ -31,7 +31,7 @@
 	<!--模糊查询  -->
 	<select id="likefind" parameterType="com.ssm.pojo.PageIndex" 
  	resultType="com.ssm.pojo.Vo.Result_t_Vo">
-		SELECT * from ssm_demo.result_t LIMIT #{current},#{per_record}
+		SELECT * from result_t LIMIT #{current},#{per_record}
 	</select>
 	
 	<update id="updateResult" parameterType="com.ssm.pojo.Vo.Result_t_Vo">

@@ -3,7 +3,7 @@
 <mapper namespace="com.ssm.mapper.course.CourseMapper" >
 
 	<insert id="insertCourse" parameterType="com.ssm.pojo.Vo.Course_t_Vo">
-		INSERT INTO ssm_demo.course_t(cu_id, cu_industry, cu_name, 
+		INSERT INTO course_t(cu_id, cu_industry, cu_name, 
 		cu_introduce, cu_save, cu_uploadTime, cu_fileName, cu_industryName)
 		VALUES(#{cu_id},#{cu_industry},#{cu_name},#{cu_introduce},#{cu_save},
 		#{cu_uploadTime},#{cu_fileName},#{cu_industryName})
@@ -29,7 +29,7 @@
 	</select>
 	
 	<update id="updateCourse" parameterType="com.ssm.pojo.Vo.Course_t_Vo">
-		UPDATE ssm_demo.course_t SET cu_industry = #{cu_industry}, cu_name = #{cu_name}, 
+		UPDATE course_t SET cu_industry = #{cu_industry}, cu_name = #{cu_name}, 
 		cu_introduce = #{cu_introduce}, cu_fileName = #{cu_fileName}
 		 WHERE cu_id =#{cu_id}
 	</update>

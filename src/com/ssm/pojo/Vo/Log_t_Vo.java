@@ -7,6 +7,18 @@ import com.ssm.pojo.Log_t;
 public class Log_t_Vo extends Log_t {
 
 	
+	@Override
+	public String getLo_name() {
+		// TODO Auto-generated method stub
+		return super.getLo_name();
+	}
+
+	@Override
+	public void setLo_name(String lo_name) {
+		// TODO Auto-generated method stub
+		super.setLo_name(lo_name);
+	}
+
 	private String user_account;
 	
 	

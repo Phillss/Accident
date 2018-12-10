@@ -65,7 +65,7 @@
 							
 							<div class="ku">
 								<span>事故等级：</span>
-								<select name="acc_level">
+								<select name="acc_level" style="width: 150px">
 									<option value="000">一般事故</option>
 									<option value="001">普通事故</option>
 									<option value="010">重大事故</option>
@@ -106,16 +106,16 @@
 							</div>
 							<div class="ku">
 								<span>事故文档名称：</span>
-								<input type="file" value="" name="acc_file" style="width: 150px; height: 20px;" placeholder="事故文档名称" />
+								<input type="file" value="" name="acc_file" style="width: 150px; height: 20px; display: inline-block;" placeholder="事故文档名称" />
 							</div>
-			
-							<div class="ku">
+							<div class="kut">
 								<span>所属行业：</span>
-								<select name="acc_industryName">
+								<select name="acc_industryName" style="width: 150px">
 									<option value="矿工行业">矿工行业</option>
 									<option value="电子行业">电子行业</option>
 								</select>
 							</div>
+							<div></div>
 						</div>
 						<div class="po">
 							<input type="submit" value="提交" />

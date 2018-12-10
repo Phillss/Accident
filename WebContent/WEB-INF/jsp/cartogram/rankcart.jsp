@@ -70,7 +70,7 @@
 				<div class="menu" onclick="ggl()">等级</div>
 				<div class="chc">
 					<ul>
-						<li id="" class="rank">一般</li>
+						<li id="" class="rank"><a href="${pageContext.request.contextPath}/accident/accidentrank.action">一般</a></li>
 						<li id="" class="rank">较大</li>
 						<li id="" class="rank">重大</li>
 						<li id="" class="rank">特别重大</li>
@@ -196,7 +196,7 @@
 				setChartData(newChartData, option);
 			},
 			error : function() {
-				alert("点击统计图，请求失败，请重试");
+				//alert("点击统计图，请求失败，请重试");
 			}
 		});
 	});
@@ -214,7 +214,7 @@
 					//ret中的数据类型与上方开始时一致
 				},
 				error : function(err) {
-					alert("点击失败，请重试");
+					//alert("点击失败，请重试");
 					console.log(err);
 				}
 			});
@@ -236,7 +236,7 @@
 					setpieData(newPieData, option);
 				},
 				error : function(err) {
-					alert("点击失败，请重试");
+					//alert("点击失败，请重试");
 					console.log(err);
 				}
 			});
@@ -257,7 +257,7 @@
 						setChartData(newChartData, option);
 					},
 					error : function() {
-						alert("获取图表数据失败，请重试");
+						//alert("获取图表数据失败，请重试");
 					}
 				});
 			})

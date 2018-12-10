@@ -7,6 +7,15 @@ public class Log_t {
 	String lo_createId;// 生成日志的人员id
 	Date lo_createTime;// 产生日志的时间
 	Integer lo_class;// 日志的类型
+	String lo_name;
+
+	public String getLo_name() {
+		return lo_name;
+	}
+
+	public void setLo_name(String lo_name) {
+		this.lo_name = lo_name;
+	}
 
 	/**
 	 * 企业管理员部分 00 员工管理记录 01 课程更改记录 02 岗位管理记录

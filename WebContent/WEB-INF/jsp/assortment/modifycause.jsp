@@ -78,7 +78,7 @@
 					<input type="hidden" name="ca_id" value="${cause.ca_id}">
 						<div class="ch">
 							<span>类别：</span>
-							<span style="width: 28px;">原因</span>
+							<span style="width: 138px;">原因</span>
 							<br /><br />
 							<span>名称：</span>	
 							<input type="text" name="ca_name" id="" value="${cause.ca_name}" />

@@ -481,6 +481,15 @@ body {
 	margin-left: 17.4px;
 	margin: auto;
 }
+.t .t2 .accident .up a {
+	display: block;
+	width: 42px;
+	height: 22px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: -61px -24px;
+	margin-left: 17.4px;
+	margin: auto;
+}
 .t .t2 .accident .upload a {
 	display: block;
 	width: 113px;
@@ -502,20 +511,42 @@ body {
 	border: 1px solid #b4b4b5;
 	padding: 10px;
 }
+.t .t2 .uploadad .ch {
+	height: 220px;
+}
 .t .t2 .uploadad .ch .ku {
 	display: inline-block;
 	width: 386px;
 	height: 37px;
+	text-align: center;
 }
-.t .t2 .uploadad .ch span {
+.t .t2 .uploadad .ch .ku span {
 	display: inline-block;
 	width: 150px;
 	font-size: 14px;
 	text-align: center;
 }
-.t .t2 .uploadad .ch input {
+.t .t2 .uploadad .ch .ku input {
 	background-color: #e2e9f3;
 	border: 1px solid black;
+	margin: auto;
+}
+.t .t2 .uploadad .ch .kut {
+	display: inline-block;
+	width: 386px;
+	height: 37px;
+	float: left;
+}
+.t .t2 .uploadad .ch .kut span {
+	display: inline-block;
+	width: 150px;
+	font-size: 14px;
+	text-align: center;
+}
+.t .t2 .uploadad .ch .kut input {
+	background-color: #e2e9f3;
+	border: 1px solid black;
+	margin: auto;
 }
 .t .t2 .uploadad .po input {
 	display: block;
@@ -566,7 +597,7 @@ body {
 }
 .t .t3 .ind form {
 	width: 808px;
-	height: 300px;
+	height: 400px;
 }
 .t .t3 .ind form table {
 	margin: auto;
@@ -849,7 +880,7 @@ body {
 /*t4统计图end*/
 /*t5统计图start*/
 .t .t5 {
-	height: 500px;
+	height: 600px;
 	position: relative;
 }
 .t .t5 .w {
@@ -875,12 +906,12 @@ body {
 	display: none;
 }
 .t .t5 .sac {
-	width: 800px;
-	height: 500px;
+	width: 840px;
+	height: 600px;
 }
 .t .t5 .sac .accident form {
 	width: 754px;
-	height: 500px;
+	height: 450px;
 }
 .t .t5 .sac .search {
 	display: block;
@@ -892,7 +923,7 @@ body {
 	border-radius: 10px;
 	position: absolute;
 	top: 0%;
-	left: 75.5%;
+	left: 66%;
 }
 .t .t5 .sac .search input {
 	display: block;
@@ -906,7 +937,7 @@ body {
 	color: white;
 }
 .t .t5 .accident {
-	height: 400px;
+	height: 450px;
 	position: absolute;
 	top: 10%;
 	left: 20%;
@@ -1023,7 +1054,7 @@ body {
 }
 .t .t6 .sac {
 	width: 1170px;
-	height: 400px;
+	height: 500px;
 }
 .t .t6 .sac .search {
 	display: block;
@@ -1056,7 +1087,7 @@ body {
 .t .t6 .accident .number {
 	border: 1px solid #b4b4b5;
 	border-collapse:collapse;
-	width: 80px;
+	width: 550px;
 	height: 37px;
 	font-size: 16px;
 	line-height: 37px;
@@ -1112,6 +1143,15 @@ body {
 	margin-top: 20px;
 }
 
+.skipaccount {
+	width: 919px;
+	height: 100px;
+	position: absolute;
+	left: 154px;
+	top: 512px;
+	margin: auto;
+}
+
 /*翻页end*/
 /*主内容end*/
 /*底部start*/
@@ -1120,7 +1160,6 @@ footer {
 	height: 100px;
 	background: url(../img/foot.jpg) no-repeat;
 	background-size: cover;
-	position: absolute;
-	
+	margin-top: 100px;
 }
 /*底部end*/

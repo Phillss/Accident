@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt_rt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -61,7 +61,7 @@
 				<div class="menu" onclick="">分析人员</div>
 				<div class="menu" onclick="">审核人员</div>
 			</div>
-			<div class="fl sac">
+			<div class="fr sac">
 				<div class="search fr">
 					<form action="">
 						<input type="text" name="" id="" value="" />
@@ -115,35 +115,30 @@
 						</table>
 					</form>
 				</div>
-			</div>
-		</div>
-		<div class="skip main">
+				<div class="skipaccount">
 
-			<h3>第${listuser.current+1}页 /共${listuser.total_pages}页</h3>
+					<h3>第${listuser.current+1}页 /共${listuser.total_pages}页</h3>
 
-			<a
-				href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
-			<c:if test="${listuser.current>0 }">
-				<a
-					href="${pageContext.request.contextPath}
+					<a
+						href="${pageContext.request.contextPath}/userhandler/findAllUsers.action?current=0">首页</a>
+					<c:if test="${listuser.current>0 }">
+						<a
+							href="${pageContext.request.contextPath}
 	/userhandler/findAllUsers.action?current=${listuser.current-1}">上一页</a>
-			</c:if>
-			<c:if test="${listuser.current+1<listuser.total_pages}">
-				<a
-					href="${pageContext.request.contextPath}
+					</c:if>
+					<c:if test="${listuser.current+1<listuser.total_pages}">
+						<a
+							href="${pageContext.request.contextPath}
 	/userhandler/findAllUsers.action?current=${listuser.current+1}">下一页</a>
 
-				<a
-					href="${pageContext.request.contextPath}
+						<a
+							href="${pageContext.request.contextPath}
 	/userhandler/findAllUsers.action?current=${listuser.total_pages-1}">尾页</a>
-			</c:if>
+					</c:if>
+				</div>
+			</div>
 		</div>
 	</div>
-
-
-
-
-
 	<!--底部S-->
 	<footer></footer>
 	<!--底部E-->

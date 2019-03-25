@@ -113,6 +113,31 @@
 	<body>
 		<div class="t">
 			<div class="t2 main">
+			<div class="fl incause">
+					<table>
+						<tr id="visit">
+							<td>
+								<a href="${pageContext.request.contextPath}/assort/industrylist.action" onclick="industry()">
+									行业
+								</a>
+							</td>
+						</tr>
+						<tr id="visit">
+							<td>
+								<a href="${pageContext.request.contextPath}/assort/causelist.action" onclick="course()">
+									原因
+								</a>
+							</td>
+						</tr>
+						<tr id="visit">
+							<td>
+								<a href="${pageContext.request.contextPath}/assort/reason.action" onclick="course()">
+									原因分类
+								</a>
+							</td>
+						</tr>
+					</table>
+				</div>
 				<div class="sac">
 					<div class="search">
 						<input type="text" name="" id="" value="" />

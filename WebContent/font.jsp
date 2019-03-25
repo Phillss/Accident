@@ -42,7 +42,7 @@
 				/accident/findall.action" onclick="oDiv(2)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>事故报告管理</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}/assort/industrylist.action" onclick="oDiv(3)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>管理分类</a>
+						<a href="${pageContext.request.contextPath}/assort/reason.action" onclick="oDiv(3)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>原因分类</a>
 					</li>
 					<li>
 						<a href="${pageContext.request.contextPath}

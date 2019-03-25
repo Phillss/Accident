@@ -26,6 +26,18 @@ public class AssortHandler {
 	@Autowired
 	private CauseService causeservice;
 
+	
+	
+	@RequestMapping("reason")
+	public ModelAndView reasonlist() throws Exception {
+		ModelAndView view = new ModelAndView();
+		/*List<Industry_t_Vo> list = indusservice.findAllIndustry();
+		view.addObject("reasonlist", list);*/
+		view.setViewName("WEB-INF/jsp/assortment/reasons");
+		return view;
+	}
+	
+	
 	// 修改原因页面
 	@RequestMapping("modifycause")
 	public ModelAndView modifycause(String ca_id) throws Exception {

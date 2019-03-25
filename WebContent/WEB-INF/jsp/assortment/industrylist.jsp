@@ -73,6 +73,13 @@
 								</a>
 							</td>
 						</tr>
+						<tr id="visit">
+							<td>
+								<a href="${pageContext.request.contextPath}/assort/reason.action" onclick="course()">
+									原因分类
+								</a>
+							</td>
+						</tr>
 					</table>
 				</div>
 				<div class="ind">

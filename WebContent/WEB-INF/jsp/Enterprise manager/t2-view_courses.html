@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/style.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Managerstyle.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+	</head>
+
+	<body>
+		<div id="f_content">
+			<div class="leftl" id="left">
+				<div onclick="s(0)" class="get">查看课程</div>
+				<div onclick="s(1)" class="get">管理课程</div>
+				<div onclick="s(2)" class="get">事故致因理论</div>
+			</div>
+			<div class="right">
+				<div class="po fr">
+					<input type="button" name="" id="" value="增加课程" />
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+				<div>
+					<div class="div1"></div>
+					<div class="div2">小了白了兔</div>
+				</div>
+			</div>
+			<div class="f_y">
+				<h3>第<!--${listaccident.current+1}-->页 /共<!--${listaccident.total_pages}-->页</h3><br>
+				<a href="${pageContext.request.contextPath}/accident/findall.action?current=0-">首页</a>
+				<!--<c:if test="${listaccident.current>0 }">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
+				<!--</c:if>
+			<c:if test="${listaccident.current+1<listaccident.total_pages}">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
+				<!--</c:if>-->
+			</div>
+			<!--分页效果-->
+		</div>
+
+		<footer></footer>
+
+	</body>
+
+</html>

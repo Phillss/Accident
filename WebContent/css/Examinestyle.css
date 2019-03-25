@@ -1,0 +1,247 @@
+/*顶部start*/
+
+body {
+	background-color: #e3edfc;
+}
+
+#header {
+	width: 100%;
+	height: 235px;
+	position: relative;
+	clear: both;
+	background: url("../img/head.jpg") no-repeat;
+	background-size: cover;
+}
+
+#header .boy {
+	width: 224px;
+	height: 24px;
+	float: right;
+	padding-top: 23px;
+}
+
+#header .boy ul li {
+	float: left;
+	color: #ffffff;
+	padding-left: 43px;
+}
+
+#header .boy ul li a {
+	color: #ffffff;
+}
+
+#header .boy ul li a:hover {
+	color: #213862;
+}
+
+.a {
+	background: url("../img/boy.jpg") no-repeat 5px 0;
+	background-size: 14px 14px;
+}
+
+.b {
+	background: url("../img/b.jpg") no-repeat 21px 1px;
+}
+
+.mainl {
+	width: 100%;
+	height: 47px;
+	position: absolute;
+	background: rgba(255, 255, 255, 0.6);
+	top: 188px;
+	right: 0;
+}
+
+.mainl .word {
+	width: 666px;
+	height: 47px;
+	margin: auto;
+}
+
+.mainl .word ul span {
+	display: none;
+	width: 40px;
+	height: 47px;
+	float: left;
+}
+
+.mainl .word ul span img {
+	padding-left: 20px;
+}
+.mainl .word ul {
+	text-align: center;
+	height: 47px;
+}
+.mainl .word ul li {
+	display: inline-block;
+	line-height: 47px;
+	font-size: 14px;
+	padding-right: 40px;
+	padding-left: 40px;
+	background: url("../img/line.jpg") no-repeat right;
+	margin: auto;
+}
+
+.mainl .word ul li a {
+	color: #213862;
+}
+
+.mainl .word ul li a:link {
+	text-decoration: none;
+}
+
+.mainl .word ul li a:visited {
+	text-decoration: none;
+}
+
+.mainl .word ul li a:hover {}
+
+.mainl .word ul li a:active {}
+
+.mainl .word ul li.bg {
+	background: none;
+}
+
+/*顶部end*/
+
+/*左侧二级导航栏start*/
+
+#f_content {
+	width: 100%;
+	height: 927px;
+	background: #e3edfc;
+	position: relative;
+	text-align: center;
+}
+
+#f_content .left {
+	width: 145px;
+	height: 78px;
+	position: absolute;
+	top: 85px;
+	left: 95px;
+	background: #dfe2e7;
+}
+
+#f_content .left div {
+	width: 145px;
+	height: 39px;
+	text-align: center;
+	color: #213862;
+	font-family: "宋体";
+	font-size: 14px;
+	line-height: 39px;
+}
+
+/*左侧二级导航栏end*/
+
+/*审核start*/
+
+#f_content .right {
+	width: 1170px;
+	height: 705px;
+	position: absolute;
+	left: 260px;
+	top: 85px;
+}
+
+#f_content .sac {
+	width: 100%;
+	height: 666px;
+}
+
+#f_content .sac .search {
+	display: block;
+	width: 211px;
+	height: 28px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -202px;
+	margin-left: 959px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+#f_content .sac .search input {
+	display: block;
+	width: 175px;
+	height: 27px;
+	margin-left: 36px;
+	background-color: #033b66;
+	border-radius: 10px;
+	border: 0;
+	outline: none;
+	color: white;
+}
+
+#f_content .accident form {
+	margin-right: 64px;
+	width: 1170px;
+	height: 666px;
+}
+
+#f_content .accident form table {
+	width: 1170px;
+}
+
+#f_content .accident form table th {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 109.5px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	text-align: center;
+	color: #213862;
+	background-color: #e2e9f3;
+}
+
+#f_content .accident form table td {
+	border: 1px solid #b4b4b5;
+	border-collapse: collapse;
+	width: 78px;
+	height: 37px;
+	font-size: 16px;
+	line-height: 37px;
+	color: #213862;
+	text-align: center;
+}
+
+#f_content .accident {
+	text-align: center;
+}
+
+#f_content .accident .success {
+	display: inline-block;
+	width: 32px;
+	height: 30px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -234px;
+	border-radius: 15px;
+	vertical-align: middle;
+}
+#f_content .accident .fault {
+	display: inline-block;
+	width: 32px;
+	height: 30px;
+	background: url(../img/spirit/spirit.jpg);
+	background-position: 0 -268px;
+	border-radius: 15px;
+	vertical-align: middle;
+}
+
+/*审核end*/
+
+/*审核记录start*/
+
+/*审核记录end*/
+
+/*底部start*/
+
+footer {
+	width: 100%;
+	height: 100px;
+	background: url(../img/foot.jpg) no-repeat;
+	background-size: cover;
+}
+
+/*底部end*/

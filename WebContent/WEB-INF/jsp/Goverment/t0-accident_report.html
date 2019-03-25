@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/style.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Govermentstyle.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+	</head>
+
+	<body>
+		<div id="f_content">
+			<div class="leftl" id="left">
+				<div class="w">
+					<div class="menu" onclick="ggle()">
+						建筑
+					</div>
+					<div class="cht">
+						<ul>
+							<li id="builder" class="bu_tr_cd_co">一般</li>
+							<li id="chemical" class="bu_tr_cd_co">较大</li>
+							<li id="traffic" class="bu_tr_cd_co">重大</li>
+							<li id="coalmine" class="bu_tr_cd_co">特别重大</li>
+						</ul>
+					</div>
+					<div class="menu" onclick="ggl()">
+						化工
+					</div>
+					<div class="chc">
+						<ul>
+							<li id="" class="rank">一般</li>
+							<li id="" class="rank">较大</li>
+							<li id="" class="rank">重大</li>
+							<li id="" class="rank">特别重大</li>
+						</ul>
+					</div>
+					<div class="menu" onclick="gg()">
+						交通
+					</div>
+					<div class="chc">
+						<ul>
+							<li id="" class="ran">一般</li>
+							<li id="" class="ran">较大</li>
+							<li id="" class="ran">重大</li>
+							<li id="" class="ran">特别重大</li>
+						</ul>
+					</div>
+					<div class="menu" onclick="g()">
+						煤矿
+					</div>
+					<div class="chc">
+						<ul>
+							<li id="" class="ra">一般</li>
+							<li id="" class="ra">较大</li>
+							<li id="" class="ra">重大</li>
+							<li id="" class="ra">特别重大</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="rightl">
+				<div class="fr search">
+					<form>
+						<input type="text" name="" id="" value="" />
+					</form>
+				</div>
+				<div class="fr ta">
+					<form action="" method="post" class="fr">
+						<table>
+							<tr>
+								<th style="text-align: center;" class="indu">事故报告</th>
+								<th style="text-align: center;" class="re_de">分析结果</th>
+								<th style="text-align: center;" class="re_de">下载</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>
+									<div class="analysisresult">
+										<a href="#"></a>
+									</div>
+								</td>
+								<td>
+									<div class="up">
+										<a href="#"></a>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+
+				<!--分页效果-->
+			</div>
+			<div class="f_yl">
+				<h3>第<!--${listaccident.current+1}-->页 /共<!--${listaccident.total_pages}-->页</h3><br>
+				<a href="${pageContext.request.contextPath}/accident/findall.action?current=0-">首页</a>
+				<!--<c:if test="${listaccident.current>0 }">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
+				<!--</c:if>
+			<c:if test="${listaccident.current+1<listaccident.total_pages}">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
+				<!--</c:if>-->
+			</div>
+		</div>
+		<footer></footer>
+
+	</body>
+
+</html>

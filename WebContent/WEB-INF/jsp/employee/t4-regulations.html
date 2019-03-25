@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/style.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Employeestyle.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+	</head>
+
+	<body>
+
+		<div class="t">
+			<div class="t1 main">
+				<div class="regulation">
+					<form action="" method="post">
+						<table>
+							<tr>
+								<th style="text-align: center;">法律法规名称</th>
+								<th style="text-align: center;">制定修订(生效)日期</th>
+								<th style="text-align: center;">修订次数</th>
+								<th style="text-align: center;">编号</th>
+								<th style="text-align: center;">颁发机关</th>
+								<th style="text-align: center;">类别</th>
+								<th style="text-align: center;">适用行业</th>
+								<th style="width: 60px;text-align: center;">查看</th>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>123</td>
+								<td>
+									<div class="rs">
+										<a href=".txt" download=""></a>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div class="f_yo">
+				<h3>第<!--${listaccident.current+1}-->页 /共<!--${listaccident.total_pages}-->页</h3><br>
+				<a href="${pageContext.request.contextPath}/accident/findall.action?current=0-">首页</a>
+				<!--<c:if test="${listaccident.current>0 }">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
+				<!--</c:if>
+			<c:if test="${listaccident.current+1<listaccident.total_pages}">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
+				<!--</c:if>-->
+			</div>
+		</div>
+
+		<!--底部S-->
+		<footer></footer>
+		<!--底部E-->
+	</body>
+
+</html>

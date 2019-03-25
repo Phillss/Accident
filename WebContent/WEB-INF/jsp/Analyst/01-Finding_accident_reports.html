@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/style.js"></script>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Analyststyle.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+	</head>
+
+	<body>
+		<div class="t main">
+			<div class="sac">
+				<div class="fr search">
+					<form>
+						<input type="text" name="" id="" value="" />
+					</form>
+				</div>
+				<div class="fl accident">
+					<form action="">
+						<table>
+							<tr>
+								<th>报告编号</th>
+								<th>报告名称</th>
+								<th>事故等级</th>
+								<th>发生时间</th>
+								<th>发生地点</th>
+								<th>人员伤亡</th>
+								<th>财产损失</th>
+								<th>所属行业</th>
+								<th>下载</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+								<td>8</td>
+								<td>
+									<a class="load" href="#"></a>
+								</td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+			<div class="f_y">
+				<h3>第<!--${listaccident.current+1}-->页 /共<!--${listaccident.total_pages}-->页</h3><br>
+				<a href="${pageContext.request.contextPath}/accident/findall.action?current=0-">首页</a>
+				<!--<c:if test="${listaccident.current>0 }">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
+				<!--</c:if>
+			<c:if test="${listaccident.current+1<listaccident.total_pages}">-->
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
+				<a href="${pageContext.request.contextPath}
+	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
+				<!--</c:if>-->
+			</div>
+		</div>
+
+		<footer></footer>
+	</body>
+
+</html>

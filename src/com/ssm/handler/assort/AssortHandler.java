@@ -86,7 +86,7 @@ public class AssortHandler {
 	@RequestMapping("industrylist")
 	public ModelAndView industrylist() throws Exception {
 		ModelAndView view = new ModelAndView();
-		List<Industry_t_Vo> list = indusservice.serviceFindAll();
+		List<Industry_t_Vo> list = indusservice.findAllIndustry();
 		view.addObject("industrylist", list);
 		view.setViewName("WEB-INF/jsp/assortment/industrylist");
 		return view;

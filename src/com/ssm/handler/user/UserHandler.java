@@ -114,7 +114,8 @@ public class UserHandler {
 	// 人员添加提交页面
 	@RequestMapping("/submitadduser")
 	public ModelAndView submitadduser(HttpSession session) throws Exception {
-		
+		session.setAttribute("submitadduser", session.getAttribute(session.getId()));   //使用当前登陆用户的id
+		session.setAttribute("whouser", null);
 		ModelAndView model = new ModelAndView();
 		model.setViewName("WEB-INF/jsp/superadmin/adduser");
 		return null;
@@ -135,6 +136,7 @@ public class UserHandler {
 	@RequestMapping(value = "/userupdate", method = RequestMethod.POST)
 	public String update(String us_id, Integer us_roles, Integer us_flag, Model model,HttpSession session) throws Exception {
 		session.setAttribute("userupdate", session.getAttribute(session.getId()));   //使用当前登陆用户的id
+		session.setAttribute("whouser", us_id);
 		User_t_Vo user = new User_t_Vo();
 		user.setUs_id(us_id);
 		user.setUs_roles(us_roles);
@@ -148,8 +150,11 @@ public class UserHandler {
 
 	// 删除用户
 	@RequestMapping("/deleteUser")
-	public String deleteUser(String us_id, Model model) throws Exception {
+	public String deleteUser(String us_id, Model model,HttpSession session) throws Exception {
+		String userwho=service.serviceFindUserById(us_id).getUs_account();
 		service.serviceDelete(us_id);
+		session.setAttribute("deleteUser", session.getAttribute(session.getId()));   //使用当前登陆用户的id
+		session.setAttribute("whouser", userwho);
 		model.addAttribute("message", "已成功删除！");
 		return "forward:/userhandler/findAllUsers.action";
 	}

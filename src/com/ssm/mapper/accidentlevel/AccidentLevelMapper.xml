@@ -12,6 +12,11 @@
 	<select id="findAccidentlevelById" parameterType="String" resultType="com.ssm.pojo.Vo.Accidentlevel_t_Vo">
 		SELECT *FROM accidentlevel_t WHERE al_id =#{value}
 	</select>
+    
+    <!--查询所有事故等级信息  -->
+    <select id="findAllAccidentlevel" parameterType="com.ssm.pojo.Accidentlevel_t" resultType="com.ssm.pojo.Vo.Accidentlevel_t_Vo">
+        SELECT * FROM accidentlevel_t 
+    </select>
 	
 	<!--更新事故等级信息  -->
 	<update id="updateAccidentlevel" parameterType="com.ssm.pojo.Vo.Accidentlevel_t_Vo" >

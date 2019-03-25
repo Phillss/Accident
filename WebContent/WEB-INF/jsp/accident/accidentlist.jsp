@@ -59,8 +59,9 @@
 		<div class="t2 main">
 			<div class="sac">
 				<div class="fr search">
-					<form>
-						<input type="text" name="" id="" value="" />
+					<form action="${pageContext.request.contextPath}/accident/likefind.action">
+						<input type="text" name="id" id="" value="" />
+						<input type="submit" value="查找">
 					</form>
 				</div>
 				<div class="accident">
@@ -130,14 +131,14 @@
 			</div>
 
 		</div>
-
+		<!--底部S-->
+	<footer></footer>
+	<!--底部E-->
 	</div>
 
 
 
 
-	<!--底部S-->
-	<footer></footer>
-	<!--底部E-->
+	
 </body>
 </html>

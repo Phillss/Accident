@@ -48,6 +48,7 @@
 		});
 	});
 </script>
+<title>管理员</title>
 </head>
 
 

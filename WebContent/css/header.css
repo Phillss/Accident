@@ -331,9 +331,9 @@ body {
 .t .t1 {
 	margin-top: 85px;
 }
-.t .t1 .regulation form {
+/* .t .t1 .regulation form {
 	height: 500px;
-}
+} */
 .t .t1 .regulation form table {
 	margin: auto;
 }
@@ -418,11 +418,11 @@ body {
 }
 /*行业法规end*/
 /*t2事故报告管理start*/
-.t .t2 {
+/* .t .t2 {
 	height: 600px;
-}
+} */
 .t .t2 .sac {
-	height: 600px;
+	/* height: 600px; */
 	width: 100%;
 }
 .t .t2 .sac .search {
@@ -1132,7 +1132,7 @@ body {
 	height: 100px;
 	position: absolute;
 	left: 340px;
-	top: 795px;
+	right: 795px;
 	margin: auto;
 }
 
@@ -1160,6 +1160,6 @@ footer {
 	height: 100px;
 	background: url(../img/foot.jpg) no-repeat;
 	background-size: cover;
-	margin-top: 100px;
+	margin-bottom: 0px;
 }
 /*底部end*/

@@ -21,7 +21,7 @@
 	</select>
 	<!--模糊查询  -->
 	<select id="likefinds" parameterType="String" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
-		SELECT * FROM accidentinfo_t WHERE us_account LIKE '%${name}%'
+		SELECT * FROM accidentinfo_t WHERE acc_name LIKE '%${_parameter}%'
 	</select>
 	
 	<!--查询所有记录数  -->
@@ -52,4 +52,50 @@
 	<delete id="deleteAccidentinfo" parameterType="String" >
 		DELETE FROM accidentinfo_t WHERE acc_id =#{value}
 	</delete>
+	<!--默认查询所有行业不同等级的事故信息-->
+	<select id="findCountByLevel" parameterType="com.ssm.pojo.Accidentinfo_t"  resultType="java.util.Map">
+		SELECT
+            acl.al_name AS name,
+            COUNT( acl.al_id ) AS value
+        FROM
+            accidentinfo_t act,
+            accidentlevel_t acl 
+        WHERE
+            act.acc_level = acl.al_id 
+            <if test="industryId!=null and industryId!=''">
+            and acc_industryId = #{industryId}
+            </if>
+        GROUP BY
+            acl.al_id;
+	</select>
+	<!--查询所有行业-->
+	<select id="selCountIndustry" resultType="java.util.Map">
+		SELECT DISTINCT ind.in_name as name ,ind.in_id as id  from accidentinfo_t acf, industry_t ind WHERE acf.acc_industryId= ind.in_id and acf.acc_industryId is not null;
+	</select>
+	<!--查询所有类型，带有id的-->
+	<select id="findAllAccidentID" resultType="java.util.Map">
+		select DISTINCT acl.al_name as name ,acl.al_id as id from accidentinfo_t act ,accidentlevel_t acl where act.acc_level = acl.al_id and act.acc_level is not null;
+	</select>
+	<!---->
+	<select id="findSumByTime" parameterType="com.ssm.pojo.Accidentinfo_t" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo" >
+        SELECT
+            sum( acc_deathSum ) AS acc_deathSum,
+            sum( acc_injuredSum ) AS acc_injuredSum,
+            sum( acc_financial ) AS acc_financial,
+            acc_time 
+        FROM
+            accidentinfo_t 
+        WHERE
+            YEAR ( acc_time ) = ( SELECT YEAR ( CURRENT_DATE ) AS YEAR )
+            <if test="industryId!=null and industryId!=''">
+            and acc_industryId = #{industryId}
+            </if> 
+        GROUP BY
+            MONTH ( acc_time ) 
+        ORDER BY
+            MONTH ( acc_time )	
+    </select>
+	<select id="selAccidentById"  parameterType="String"  resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
+		SELECT  IFNULL(SUM(IFNULL( CONVERT(acc.acc_deathSum,CHAR),0)),0) as acc_deathSum,IFNULL(SUM(IFNULL(acc.acc_injuredSum,0)),0) as acc_injuredSum,IFNULL(SUM(IFNULL( acc.acc_financial,0)),0) as acc_financial ,COUNT(acc.acc_id),ind.in_name as acc_industryName from accidentinfo_t acc,industry_t ind where acc.acc_level=#{value}  and ind.in_id =acc.acc_industryId GROUP BY acc_industryId
+	</select>
 </mapper>

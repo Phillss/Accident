@@ -83,7 +83,7 @@
 							<td>${item.la_industryId}</td>
 							<td>
 								<div class="rs">
-									<a href="" download=""></a>
+									<a href="${pageContext.request.contextPath}/laws//downloadlaws.action?id=${item.la_id}"></a>
 								</div>
 
 							</td>
@@ -121,10 +121,11 @@
 	/laws/findall.action?current=${listlaws.total_pages-1}">尾页</a>
 			</c:if>
 		</div>
-	</div>
-
-	<!--底部S-->
+		<!--底部S-->
 	<footer></footer>
 	<!--底部E-->
+	</div>
+
+	
 </body>
 </html>

@@ -8,24 +8,21 @@
 		VALUES(#{in_id},#{in_name},#{in_createTime},#{in_info})
 	</insert>
 	
-	<select id="findAll" resultType="com.ssm.pojo.Vo.Industry_t_Vo">
-		SELECT * FROM industry_t
-	</select>
-	
 	<!--查询一条行业  -->
 	<select id="findIndustryById" parameterType="String" resultType="com.ssm.pojo.Vo.Industry_t_Vo">
 		SELECT * FROM industry_t WHERE in_id =#{value}
 	</select>
-	
-	<select id="findByName" parameterType="String" resultType="com.ssm.pojo.Vo.Industry_t_Vo">
-		SELECT * FROM industry_t WHERE in_name =#{value}
-	</select>
+    
+    <!--查询所有行业  -->
+    <select id="findAllIndustry" parameterType="com.ssm.pojo.Industry_t" resultType="com.ssm.pojo.Vo.Industry_t_Vo">
+        SELECT DISTINCT in_name FROM industry_t 
+    </select>
 	
 	<!--更新行业  -->
 	<update id="updateIndustry" parameterType="com.ssm.pojo.Vo.Industry_t_Vo">
-		UPDATE industry_t SET 
-		in_name =#{in_name} 
-		WHERE in_id =#{in_id} 
+		UPDATE industry_t SET in_createTime = #{in_createTime} ,
+		in_info =#{in_info} 
+		WHERE in_id =#{value} 
 	</update>
 	
 	<!--删除行业  -->	

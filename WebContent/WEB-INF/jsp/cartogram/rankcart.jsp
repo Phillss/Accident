@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -61,19 +62,17 @@
 				<div class="menu" onclick="ggle()">行业</div>
 				<div class="cht">
 					<ul>
-						<li id="builder" class="bu_tr_cd_co">建筑</li>
-						<li id="chemical" class="bu_tr_cd_co">化工</li>
-						<li id="traffic" class="bu_tr_cd_co">交通</li>
-						<li id="coalmine" class="bu_tr_cd_co">煤矿</li>
+					<c:forEach items="${industry }" var="in">
+						<li id="${in.in_id }" class="bu_tr_cd_co">${in.in_name }</li>
+					</c:forEach>	
 					</ul>
 				</div>
 				<div class="menu" onclick="ggl()">等级</div>
 				<div class="chc">
 					<ul>
-						<li id="" class="rank"><a href="${pageContext.request.contextPath}/accident/accidentrank.action">一般</a></li>
-						<li id="" class="rank">较大</li>
-						<li id="" class="rank">重大</li>
-						<li id="" class="rank">特别重大</li>
+					<c:forEach items="${level }" var="lv">
+						<li id="${lv.al_id }" class="rank">${lv.al_name }</li>
+					</c:forEach>
 					</ul>
 				</div>
 			</div>
@@ -93,17 +92,15 @@
 
 <script type="text/javascript">
 	//假数据后台写完后应将来要清掉这四行
-	var general = 1;
-	var larger = 2;
-	var great = 3;
-	var especially = 4;
-	var dieNum = [ 1, 3, 1, 1, 9, 2, 2, 1, 1, 9, 2, 20 ];
-	var hurtNum = [ 220, 182, 191, 234, 290, 330, 191, 234, 290, 330, 310, 300 ];
-	var loss = [ 150, 232, 201, 154, 190, 330, 410, 232, 201, 190, 330, 410 ];
+	var data = ${lvcount};
+	var dieNum = ${deathnum};
+	var hurtNum = ${injernum};
+	var loss = ${finanal};
 	var pieOption = {
 		series : {
 			type : 'pie',
-			data : [ {
+			data : data
+				/* [ {
 				name : '一般',
 				value : general
 			}, {
@@ -115,7 +112,7 @@
 			}, {
 				name : '特大',
 				value : especially
-			} ]
+			} ] */
 		}
 	}
 	// 绘制图表
@@ -186,7 +183,7 @@
 	//点击导航栏中的“统计图调用该方法”
 	$("#chart").click(function() {
 		$.ajax({
-			rul : "", //c请求表格数据数,据格式为json 分两个属性第一个为event下有属性 属性为'死亡人数'(dieNum), '伤亡人数'(hurtNum), '损失钱数(loss)'且每个属性下都为数组，长度为12
+			url : "", //c请求表格数据数,据格式为json 分两个属性第一个为event下有属性 属性为'死亡人数'(dieNum), '伤亡人数'(hurtNum), '损失钱数(loss)'且每个属性下都为数组，长度为12
 			type : "post",
 			dataType : "json",
 			seccess : function(ret) {
@@ -196,7 +193,7 @@
 				setChartData(newChartData, option);
 			},
 			error : function() {
-				//alert("点击统计图，请求失败，请重试");
+				alert("点击统计图，请求失败，请重试");
 			}
 		});
 	});
@@ -204,30 +201,34 @@
 	$(".rank").bind({
 		click : function() {
 			trade = $(this).attr("id");
+			location.href="${pageContext.request.contextPath}/accident/accidentrank.action?rank="+trade;
 			//postUrl +="tradeId="+trade;
 			//alert(postUrl);
-			$.ajax({
-				url : "${pageContext.request.contextPath}/accident/accidentrank.action",//值为：请求页名？ChartData=dataIndex
+			 /* $.ajax({
+				url : "${pageContext.request.contextPath}/accident/accidentrank.action?level="+trade,//值为：请求页名？ChartData=dataIndex
 				type : "post",
-				//dataType : "json",
+				dataType : "json",
 				success : function(ret) {
 					//ret中的数据类型与上方开始时一致
+					var newPieData = ret.chartData;
+                    setpieData(newPieData, option);
 				},
 				error : function(err) {
-					//alert("点击失败，请重试");
+					alert("点击失败，请重试");
 					console.log(err);
-				}
-			});
+				} 
+			});   */
 		}
 	});
 	//点击行业后调用该方法
 	$(".bu_tr_cd_co").bind({
 		click : function() {
 			trade = $(this).attr("id");
+			location.href="${pageContext.request.contextPath}/accident/getcartogram.action?industryId="+trade;
 			//postUrl +="tradeId="+trade;
 			//alert(postUrl);
-			$.ajax({
-				url : "",//值为：请求页名？ChartData=dataIndex
+			/* $.ajax({
+				url : "${pageContext.request.contextPath}/accident/accidentrank.action?ChartData="+trade,//值为：请求页名？ChartData=dataIndex
 				type : "post",
 				dataType : "json",
 				success : function(ret) {
@@ -236,10 +237,10 @@
 					setpieData(newPieData, option);
 				},
 				error : function(err) {
-					//alert("点击失败，请重试");
+					alert("点击失败，请重试");
 					console.log(err);
 				}
-			});
+			}); */
 		}
 	});
 	//饼状图扇形区的点击事件，点击后获取图表数据并返回返回视图
@@ -249,7 +250,7 @@
 				var dataIndex = params.dataIndex;
 				alert("点击了了第" + dataIndex + "扇形区");
 				$.ajax({
-					url : "",//值为：请求页名？ChartData=dataIndex
+					url : "${pageContext.request.contextPath}/accident/accidentrank.action?ChartData="+dataIndex,//值为：请求页名？ChartData=dataIndex
 					type : "post",
 					dataType : "json",
 					success : function(ret) {
@@ -257,7 +258,7 @@
 						setChartData(newChartData, option);
 					},
 					error : function() {
-						//alert("获取图表数据失败，请重试");
+						alert("获取图表数据失败，请重试");
 					}
 				});
 			})

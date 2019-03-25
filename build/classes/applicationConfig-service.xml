@@ -22,7 +22,7 @@
        	<property name="dataSource" ref="dataSource"></property>
        </bean>
        
-       <!--配置通知  -->
+      <!--配置通知   --> 
        <tx:advice transaction-manager="transactionManager" id="txAdvice">
        		<tx:attributes>
        			<tx:method name="serviceInsert*" propagation="REQUIRED"/>
@@ -34,16 +34,16 @@
        		</tx:attributes>
        </tx:advice> 
        
-       <!--配置切面  -->
+       <!--  配置切面 -->
        <aop:config>
        		<aop:pointcut expression="execution(* com.ssm.service.user.UserServiceImpl.serviceUpdate(..))" id="pt"/>
        		<aop:advisor advice-ref="txAdvice" pointcut-ref="pt"/>
        </aop:config>
        
-       <!--针对操作用户的记录  -->
+       <!--针对操作用户的记录   -->
 		<!-- <bean id="utils" class="com.ssm.utils.Utils"></bean> -->
 		
-		<!--开启AOP注解支持  -->
-		<!-- <aop:aspectj-autoproxy></aop:aspectj-autoproxy> -->
+		<!--开启AOP注解支持  --> 
+		<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 		
 </beans>

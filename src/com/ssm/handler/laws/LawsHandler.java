@@ -1,8 +1,14 @@
 package com.ssm.handler.laws;
 
+import java.io.FileInputStream;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,6 +38,19 @@ public class LawsHandler {
 		return "";
 	}
 	
+	@RequestMapping("/downloadlaws")
+	public void lawsdownload(@RequestParam(value="id") String id,HttpServletRequest request,HttpServletResponse response)throws Exception{
+		String file=this.service.serviceFind(id).getLa_save();
+		String filename=this.service.serviceFind(id).getLa_fileName();
+		System.out.println(file);
+		String mime=request.getServletContext().getMimeType(file);
+		String disposition="attachment;filename="+filename;
+		FileInputStream input=new FileInputStream(file);
+		response.setHeader("Content-Type", mime);
+		response.setHeader("Content-Disposition", disposition);
+		OutputStream output=response.getOutputStream();
+		IOUtils.copy(input, output);
+	}
 	
 	//法规列表（分页）
 	@RequestMapping("/findall")

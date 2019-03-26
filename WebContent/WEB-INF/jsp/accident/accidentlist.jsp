@@ -57,11 +57,20 @@
 <body>
 	<div class="t">
 		<div class="t2 main">
+		<div class="ws">
+						<input type="button" name="" id="" value="建筑" />
+						<input type="button" name="" id="" value="建筑" />
+						<input type="button" name="" id="" value="建筑" />
+						<input type="button" name="" id="" value="建筑" />
+						<input type="button" name="" id="" value="建筑" />
+					
+					
+				</div>
 			<div class="sac">
-				<div class="fr search">
+				<div class="search">
 					<form action="${pageContext.request.contextPath}/accident/likefind.action">
-						<input type="text" name="id" id="" value="" />
-						<input type="submit" value="查找">
+						<input type="submit" value="查找" class="i1">
+						<input type="text" name="" id="" value="" class="i2">
 					</form>
 				</div>
 				<div class="accident">
@@ -74,7 +83,7 @@
 								<td>地点</td>
 								<td>死亡人数</td>
 								<td>受伤人数</td>
-								<td>财产损失(万元)</td>
+								<td style="width: auto;">财产损失(万元)</td>
 								<!-- <td>负责人</td>
 								<td>所属公司</td>
 								<td>事故报告</td> -->

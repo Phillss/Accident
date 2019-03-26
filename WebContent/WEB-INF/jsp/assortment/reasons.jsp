@@ -113,7 +113,7 @@
 	<body>
 		<div class="t">
 			<div class="t2 main">
-			<div class="fl incause">
+			<div class="fl inca">
 					<table>
 						<tr id="visit">
 							<td>

@@ -19,6 +19,11 @@
 	<select id="findAll" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
 		SELECT * FROM accidentinfo_t LIMIT #{current},#{per_record}
 	</select>
+	
+	<select id="ClassFinds" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
+		SELECT * FROM accidentinfo_t WHERE acc_industryName = #{name} LIMIT #{current},#{per_record}
+	</select>
+	
 	<!--模糊查询  -->
 	<select id="likefinds" parameterType="String" resultType="com.ssm.pojo.Vo.Accidentinfo_t_Vo">
 		SELECT * FROM accidentinfo_t WHERE acc_name LIKE '%${_parameter}%'

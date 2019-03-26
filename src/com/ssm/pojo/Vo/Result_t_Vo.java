@@ -19,63 +19,39 @@ public class Result_t_Vo extends Result_t {
 	}
 
 	@Override
-	public String getRe_analyzeId() {
+	public String getRe_reasonAn() {
 		// TODO Auto-generated method stub
-		return super.getRe_analyzeId();
+		return super.getRe_reasonAn();
 	}
 
 	@Override
-	public String getRe_accidentInfo() {
+	public void setRe_reasonAn(String re_reasonAn) {
 		// TODO Auto-generated method stub
-		return super.getRe_accidentInfo();
+		super.setRe_reasonAn(re_reasonAn);
 	}
 
 	@Override
-	public void setRe_accidentInfo(String re_accidentInfo) {
+	public String getRe_reasonClass() {
 		// TODO Auto-generated method stub
-		super.setRe_accidentInfo(re_accidentInfo);
+		return super.getRe_reasonClass();
 	}
 
 	@Override
-	public String getRe_checkId() {
+	public void setRe_reasonClass(String re_reasonClass) {
 		// TODO Auto-generated method stub
-		return super.getRe_checkId();
+		super.setRe_reasonClass(re_reasonClass);
 	}
 
 	@Override
-	public void setRe_checkId(String re_checkId) {
+	public String getRe_Tiaokuan() {
 		// TODO Auto-generated method stub
-		super.setRe_checkId(re_checkId);
+		return super.getRe_Tiaokuan();
 	}
 
 	@Override
-	public String getRe_accidentName() {
+	public void setRe_Tiaokuan(String re_Tiaokuan) {
 		// TODO Auto-generated method stub
-		return super.getRe_accidentName();
-	}
-
-	@Override
-	public void setRe_accidentName(String re_accidentName) {
-		// TODO Auto-generated method stub
-		super.setRe_accidentName(re_accidentName);
-	}
-
-	@Override
-	public void setRe_analyzeId(String re_analyzeId) {
-		// TODO Auto-generated method stub
-		super.setRe_analyzeId(re_analyzeId);
-	}
-
-	@Override
-	public String getRe_reasion() {
-		// TODO Auto-generated method stub
-		return super.getRe_reasion();
-	}
-
-	@Override
-	public void setRe_reasion(String re_reasion) {
-		// TODO Auto-generated method stub
-		super.setRe_reasion(re_reasion);
+		super.setRe_Tiaokuan(re_Tiaokuan);
 	}
 
 	@Override
@@ -88,18 +64,6 @@ public class Result_t_Vo extends Result_t {
 	public void setRe_measure(String re_measure) {
 		// TODO Auto-generated method stub
 		super.setRe_measure(re_measure);
-	}
-
-	@Override
-	public String getRe_causeClass() {
-		// TODO Auto-generated method stub
-		return super.getRe_causeClass();
-	}
-
-	@Override
-	public void setRe_causeClass(String re_causeClass) {
-		// TODO Auto-generated method stub
-		super.setRe_causeClass(re_causeClass);
 	}
 
 	@Override
@@ -126,16 +90,6 @@ public class Result_t_Vo extends Result_t {
 		super.setRe_flag(re_flag);
 	}
 
-	@Override
-	public Date getRe_uploadTime() {
-		// TODO Auto-generated method stub
-		return super.getRe_uploadTime();
-	}
-
-	@Override
-	public void setRe_uploadTime(Date re_uploadTime) {
-		// TODO Auto-generated method stub
-		super.setRe_uploadTime(re_uploadTime);
-	}
+	
 	
 }

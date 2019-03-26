@@ -24,6 +24,10 @@ public class ResultServiceImpl{
 		return resultmapper.findall(pageindex);
 	}
 	
+	public List<Result_t_Vo> serviceReason(PageIndex pageindex) throws Exception{
+		return resultmapper.reasonClass(pageindex);
+	}
+	
 	public Integer servicefindcount() throws Exception{
 		return resultmapper.findcounts();
 	}

@@ -43,6 +43,24 @@ public class AccidentinfoController {
 		System.out.println(acciden.getAcc_name());
 	}
 	
+	
+	@RequestMapping("/ClassFinds")
+	public ModelAndView ClassFind(@RequestParam(value = "current", defaultValue = "0") int current, @RequestParam(value="clazz") String clazz) throws Exception{
+		PageIndex pageindex = new PageIndex();
+		pageindex.setCurrent(current * 10);
+		pageindex.setName(clazz);
+		List<Accidentinfo_t_Vo> list = this.service.serviceClassFinds(pageindex);
+		System.out.println(list.size()+clazz);
+		PageBean pagebean = new PageBean();
+		pagebean.setCurrent(current);
+		pagebean.setTotal_record(this.service.serviceFindCounts());
+		pagebean.setBeanList(list);
+		ModelAndView view = new ModelAndView();
+		view.addObject("listaccident", pagebean);
+		view.setViewName("WEB-INF/jsp/accident/accidentlist");
+		return view;
+	}
+	
 	@RequestMapping("/likefind")
 	public ModelAndView likefind(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		request.setCharacterEncoding("utf-8");

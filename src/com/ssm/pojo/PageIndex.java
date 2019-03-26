@@ -2,10 +2,19 @@ package com.ssm.pojo;
 
 public class PageIndex {
 	
+	private String clazz;
 	private String id;
 	private String name;
 	private int current;
 	private int per_record=10;
+	
+	
+	public String getClazz() {
+		return clazz;
+	}
+	public void setClazz(String clazz) {
+		this.clazz = clazz;
+	}
 	
 	public String getId() {
 		return id;

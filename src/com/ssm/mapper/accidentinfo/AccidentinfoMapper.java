@@ -19,6 +19,8 @@ public interface AccidentinfoMapper {
 	public void deleteAccidentinfo(String id) throws Exception;
 
 	public List<Accidentinfo_t_Vo> findAll(PageIndex pageindex) throws Exception;
+	
+	public List<Accidentinfo_t_Vo> ClassFinds(PageIndex pageindex) throws Exception;
 
 	public Integer findCounts() throws Exception;
 

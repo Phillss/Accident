@@ -12,6 +12,8 @@ public interface ResultMapper {
 	
 	public List<Result_t_Vo> findall(PageIndex pageindex) throws Exception;
 	
+	public List<Result_t_Vo> reasonClass(PageIndex pageindex) throws Exception;
+	
 	public Integer findcounts() throws Exception;
 	
 	public List<Result_t_Vo> likefind(String name) throws Exception;

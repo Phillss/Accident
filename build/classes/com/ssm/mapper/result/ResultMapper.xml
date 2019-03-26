@@ -23,6 +23,10 @@
 		SELECT * FROM result_t LIMIT #{current},#{per_record}
 	</select>
 	
+	<select id="reasonClass" parameterType="com.ssm.pojo.PageIndex" resultType="com.ssm.pojo.Vo.Result_t_Vo">
+		SELECT * FROM result_t WHERE re_reasonClass = #{name} LIMIT #{current},#{per_record}
+	</select>
+	
 	<!--查询所有记录数  -->
 	<select id="findcounts" resultType="Integer">
 		SELECT COUNT(*) FROM result_t

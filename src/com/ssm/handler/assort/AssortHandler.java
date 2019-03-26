@@ -13,8 +13,10 @@ import com.ssm.pojo.PageBean;
 import com.ssm.pojo.PageIndex;
 import com.ssm.pojo.Vo.Causeclass_t_Vo;
 import com.ssm.pojo.Vo.Industry_t_Vo;
+import com.ssm.pojo.Vo.Result_t_Vo;
 import com.ssm.service.cause.CauseService;
 import com.ssm.service.industry.IndustryServiceImpl;
+import com.ssm.service.result.ResultServiceImpl;
 
 @Component
 @RequestMapping("assort")
@@ -25,14 +27,40 @@ public class AssortHandler {
 
 	@Autowired
 	private CauseService causeservice;
+	
+	@Autowired
+	private ResultServiceImpl result;
 
 	
-	
+	//默认查询所有
 	@RequestMapping("reason")
-	public ModelAndView reasonlist() throws Exception {
+	public ModelAndView reasonlist(@RequestParam(value="current",defaultValue="0") int current) throws Exception {
+		PageIndex pageindex = new PageIndex();
+		pageindex.setCurrent(current * 10);
+		List<Result_t_Vo> list =result.servicefindall(pageindex);
+		PageBean pagebean = new PageBean();
+		pagebean.setCurrent(current);
+		pagebean.setTotal_record(result.servicefindcount());
+		pagebean.setBeanList(list);
 		ModelAndView view = new ModelAndView();
-		/*List<Industry_t_Vo> list = indusservice.findAllIndustry();
-		view.addObject("reasonlist", list);*/
+		view.addObject("reasonlist", pagebean);
+		view.setViewName("WEB-INF/jsp/assortment/reasons");
+		return view;
+	}
+	
+	//分类查询
+	@RequestMapping("reasonClass")
+	public ModelAndView reasonClass(@RequestParam(value="current",defaultValue="0") int current,@RequestParam(value="clazz") String clazz) throws Exception {
+		PageIndex pageindex = new PageIndex();
+		pageindex.setCurrent(current * 10);
+		pageindex.setName(clazz);
+		List<Result_t_Vo> list =result.serviceReason(pageindex);
+		PageBean pagebean = new PageBean();
+		pagebean.setCurrent(current);
+		pagebean.setTotal_record(result.servicefindcount());
+		pagebean.setBeanList(list);
+		ModelAndView view = new ModelAndView();
+		view.addObject("reasonlist", pagebean);
 		view.setViewName("WEB-INF/jsp/assortment/reasons");
 		return view;
 	}

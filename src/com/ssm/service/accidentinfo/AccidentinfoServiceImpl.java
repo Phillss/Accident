@@ -41,6 +41,11 @@ public class AccidentinfoServiceImpl{
 		return this.accidentMapper.findAll(pageindex);
 
 	}
+	
+	public List<Accidentinfo_t_Vo> serviceClassFinds(PageIndex pageindex) throws Exception{
+		return this.accidentMapper.ClassFinds(pageindex);
+
+	}
 
 	public Integer serviceFindCounts() throws Exception{
 		return this.accidentMapper.findCounts();

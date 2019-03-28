@@ -302,16 +302,19 @@ body {
 }
 /*提交新的分类end*/
 /*查看提交记录start*/
-
+.t .mai {
+	margin-left: 4%;
+	margin-right: 4%;
+}
 
 .t .inca {
 	display: inline-block;
-	width: 145px;
+	width: 100px;
 }
 
 .t .inca table a {
 	display: block;
-	width: 145px;
+	width: 100px;
 	height: 39px;
 	line-height: 39px;
 	text-align: center;

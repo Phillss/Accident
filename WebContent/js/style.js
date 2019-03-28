@@ -10,6 +10,12 @@ function ggl() {
 function gg() {
 	$('.rank').slideToggle(500);
 }
+function cause() {
+	$('.l1').slideToggle(500);
+}
+function cause4() {
+	$('.l2').slideToggle(500);
+}
 $(function() {
 	$('.menu').bind({
 		mouseover: function() {
@@ -38,6 +44,26 @@ $(function() {
 		},
 		mouseout: function() {
 			$(this).css('background-color', '#e2e5e9');
+			$(this).css('color', '#213862');
+		}
+	});
+	$('.d1').bind({
+		mouseover: function() {
+			$(this).parent().css('background-color', '#213862');
+			$(this).css('color', 'white');
+		},
+		mouseout: function() {
+			$(this).parent().css('background-color', 'rgba(255,255,255,0)');
+			$(this).css('color', '#213862');
+		}
+	});
+	$('.t1').bind({
+		mouseover: function() {
+			$(this).css('background-color', '#213862');
+			$(this).css('color', 'white');
+		},
+		mouseout: function() {
+			$(this).css('background', 'rgba(255,255,252,0.6)');
 			$(this).css('color', '#213862');
 		}
 	});

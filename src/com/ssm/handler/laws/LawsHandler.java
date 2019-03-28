@@ -2,6 +2,7 @@ package com.ssm.handler.laws;
 
 import java.io.FileInputStream;
 import java.io.OutputStream;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,7 +21,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.ssm.pojo.PageBean;
 import com.ssm.pojo.PageIndex;
 import com.ssm.pojo.Vo.Laws_t_Vo;
-import com.ssm.pojo.Vo.User_t_Vo;
 import com.ssm.service.laws.LawsServiceImpl;
 
 @Controller
@@ -41,10 +41,10 @@ public class LawsHandler {
 	@RequestMapping("/downloadlaws")
 	public void lawsdownload(@RequestParam(value="id") String id,HttpServletRequest request,HttpServletResponse response)throws Exception{
 		String file=this.service.serviceFind(id).getLa_save();
-		String filename=this.service.serviceFind(id).getLa_fileName();
-		System.out.println(file);
+		String filename=this.service.serviceFind(id).getLa_name();
 		String mime=request.getServletContext().getMimeType(file);
-		String disposition="attachment;filename="+filename;
+		String disposition="attachment;filename="+new Date().toString()+".pdf";
+		System.out.println(disposition);
 		FileInputStream input=new FileInputStream(file);
 		response.setHeader("Content-Type", mime);
 		response.setHeader("Content-Disposition", disposition);

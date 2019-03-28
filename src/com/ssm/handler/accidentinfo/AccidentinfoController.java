@@ -331,9 +331,10 @@ public class AccidentinfoController {
 	@RequestMapping("/downloadfile")
 	public void download(@RequestParam(value="id") String id,HttpServletResponse response,HttpServletRequest request) throws Exception {
 		String file=this.service.serviceAccidentinfoFind(id).getAcc_save();
-		String filename=this.service.serviceAccidentinfoFind(id).getAcc_fileName();
+		System.out.println(file);
+		/*String filename=this.service.serviceAccidentinfoFind(id).getAcc_fileName();*/
 		String mime=request.getServletContext().getMimeType(file);
-		String disposition="attachment;filename="+filename;
+		String disposition="attachment;filename="+new Date().toString()+".pdf";
 		FileInputStream input=new FileInputStream(file);
 		response.setHeader("Content-Type", mime);
 		response.setHeader("Content-Disposition", disposition);

@@ -102,24 +102,23 @@
 						onclick="addregulations()"></a>
 				</div>
 			</div class="skip">
-			<h3>第${listlaws.current+1}页 /共${listlaws.total_pages}页</h3>
+			
+			<div class="bott" style="width: 986px; height: 100px; text-align: center;">
+				<h3 style="display: block; width: 986px; height: 50px; text-align: center;">第${listlaws.current+1}页 /共${listlaws.total_pages}页</h3>
 
-			<a
-				href="${pageContext.request.contextPath}/laws/findall.action?current=0">首页</a>
-			<c:if test="${listlaws.current>0 }">
-				<a
-					href="${pageContext.request.contextPath}
-	/laws/findall.action?current=${listlaws.current-1}">上一页</a>
-			</c:if>
-			<c:if test="${listlaws.current+1<listlaws.total_pages}">
-				<a
-					href="${pageContext.request.contextPath}
-	/laws/findall.action?current=${listlaws.current+1}">下一页</a>
-
-				<a
-					href="${pageContext.request.contextPath}
-	/laws/findall.action?current=${listlaws.total_pages-1}">尾页</a>
-			</c:if>
+				<a href="${pageContext.request.contextPath}/laws/findall.action?current=0" style="display: inline-block; height: 50px;">首页</a>
+				<c:if test="${listlaws.current>0 }">
+				<a href="${pageContext.request.contextPath}
+	/laws/findall.action?current=${listlaws.current-1}" style="display: inline-block; height: 50px;">上一页</a>
+				</c:if>
+				<c:if test="${listlaws.current+1<listlaws.total_pages}">
+				<a href="${pageContext.request.contextPath}
+	/laws/findall.action?current=${listlaws.current+1}" style="display: inline-block; height: 50px;">下一页</a>
+				<a href="${pageContext.request.contextPath}
+	/laws/findall.action?current=${listlaws.total_pages-1}" style="display: inline-block; height: 50px;">尾页</a>
+				</c:if>
+			</div>
+			
 		</div>
 		<!--底部S-->
 	<footer></footer>

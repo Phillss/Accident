@@ -59,11 +59,11 @@
 	<div class="t">
 		<div class="t2 main">
 			<div class="w">
-				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=建筑">建筑</a>
-				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=建筑">建筑</a>
-				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=道路交通">道路交通</a>
-				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=火灾">火灾</a>
-				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=工矿商贸">工矿商贸</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=建筑" class="t1">建筑</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=建筑" class="t1">建筑</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=道路交通" class="t1">道路交通</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=火灾" class="t1">火灾</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=工矿商贸" class="t1">工矿商贸</a>
 			</div>
 			<div class="sac">
 				<div class="search">
@@ -83,9 +83,6 @@
 								<td>死亡人数</td>
 								<td>受伤人数</td>
 								<td style="width: auto;">财产损失(万元)</td>
-								<!-- <td>负责人</td>
-								<td>所属公司</td>
-								<td>事故报告</td> -->
 								<td>所属行业</td>
 								<td>删除</td>
 								<td>下载</td>

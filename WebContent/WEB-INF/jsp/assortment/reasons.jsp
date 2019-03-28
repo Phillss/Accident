@@ -64,7 +64,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/superstyle.css" />
 		<link rel="stylesheet" type="text/css" href="../css/base.css" />
 		<script src="../js/echarts.min.js"></script>
-		<script type="text/javascript">	
+		<!-- <script type="text/javascript">	
 //			下拉框
 			function ggle() {
 				$('.bu_tr_cd_co').slideToggle(500);
@@ -108,69 +108,92 @@
 					}
 				});
 			});
-		</script>
+		</script> -->
 	</head>
 
 	<body>
 		<div class="t">
-			<div class="t2 main">
+			<div class="t2 mai">
 			<div class="fl inca">
 					<table>
 						<tr id="visit">
 							<td>
-								<a href="${pageContext.request.contextPath}/assort/industrylist.action" onclick="industry()">
+								<a href="${pageContext.request.contextPath}/assort/industrylist.action">
 									行业
 								</a>
 							</td>
 						</tr>
 						<tr id="visit">
 							<td>
-								<a href="${pageContext.request.contextPath}/assort/causelist.action" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/causelist.action">
 									原因
 								</a>
 							</td>
 						</tr>
 						<tr id="visit">
 							<td>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=根源原因" onclick="course()">
+								<a onclick="cause()">
+									原因分类
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=根源原因" class="l1" onclick="cause1()" style="display:none;">
 									根源原因
 								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=根本原因" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=根本原因" class="l1" onclick="cause2()" style="display:none;">
 									根本原因
 								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=间接原因" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=间接原因" class="l1" onclick="cause3()" style="display:none;">
 									间接原因
 								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VC" onclick="course()">
-									VC
+								<a class="l1" onclick="cause4()" style="display:none;">
+									直接原因
 								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AV" onclick="course()">
-									AV
-								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AO" onclick="course()">
-									AO
-								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VO" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VO" class="l2" style="display:none;">
 									VO
 								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VA" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AV" class="l2" style="display:none;">
 									VA
 								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AC" onclick="course()">
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VC" class="l2" style="display:none;">
+									VC
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=HA" class="l2" style="display:none;">
+									HA
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AA" class="l2" style="display:none;">
+									AA
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AC" class="l2" style="display:none;">
 									AC
 								</a>
-								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AA" onclick="course()">
-									AA
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=HO" class="l2" style="display:none;">
+									HO
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=HA" class="l2" style="display:none;">
+									HA
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=HC" class="l2" style="display:none;">
+									HC
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=V" class="l2" style="display:none;">
+									V
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=A" class="l2" style="display:none;">
+									A
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=H" class="l2" style="display:none;">
+									H
 								</a>
 							</td>
 						</tr>
 					</table>
 				</div>
-				<div class="sac">
-					<div class="search">
-						<input type="text" name="" id="" value="" />
+			
+			<div class="sac">
+					<div class="search" style="margin-right: -60px;">
+						<input type="submit" value="查找" class="i1">
+						<input type="text" name="" id="" value="" class="i2">
 					</div>
-					<div class="accident">
+					<div class="accident" style="margin-left: 60px;">
 						<form action="">
 							<table>
 								<tr>
@@ -202,7 +225,7 @@
 							</table>
 						</form>
 					</div>
-				</div>
+			</div>
 			</div>
 			<div class="skipaccident">
 					<h3>第${reasonlist.current+1}页 /共${reasonlist.total_pages}页</h3>
@@ -226,7 +249,7 @@
 		</div>
 
 		<!--底部S-->
-			<footer></footer>
-			<!--底部E-->
+		<footer></footer>
+		<!--底部E-->
 	</body>
 </html>

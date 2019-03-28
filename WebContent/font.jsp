@@ -31,28 +31,25 @@
 			<div class="word" id=word>
 				<ul>
 					<li>
-						<a href="${pageContext.request.contextPath}
-						/course/findAll.action" onclick="oDiv(0)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>课程</a>
+						<a href="${pageContext.request.contextPath}/course/findAll.action" class="d1" onclick="oDiv(0)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>课程</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}/laws/findall.action" onclick="oDiv(1)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>行业法规</a>
+						<a href="${pageContext.request.contextPath}/laws/findall.action" class="d1" onclick="oDiv(1)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>行业法规</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}
-				/accident/findall.action" onclick="oDiv(2)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>事故报告管理</a>
+						<a href="${pageContext.request.contextPath}/accident/findall.action" class="d1" onclick="oDiv(2)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>事故报告管理</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}/assort/reason.action" onclick="oDiv(3)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>原因分类</a>
+						<a href="${pageContext.request.contextPath}/assort/reason.action" class="d1" onclick="oDiv(3)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>原因分类</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}/img/png.htm" onclick="oDiv(4)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>统计图</a>
+						<a href="${pageContext.request.contextPath}/img/png.htm" class="d1" onclick="oDiv(4)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>统计图</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}
-						/userhandler/findAllUsers.action" onclick="oDiv(5)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>账户管理</a>
+						<a href="${pageContext.request.contextPath}/userhandler/findAllUsers.action" class="d1" onclick="oDiv(5)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>账户管理</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}/log/loglist.action" onclick="oDiv(6)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>记录管理</a>
+						<a href="${pageContext.request.contextPath}/log/loglist.action" class="d1" onclick="oDiv(6)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>记录管理</a>
 					</li>
 					<!-- <li class="bg">
 						<a href="javascript:void(0)" onclick="oDiv(7)"><span><img src="img/small.png"></span>题库</a>

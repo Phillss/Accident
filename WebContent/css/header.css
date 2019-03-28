@@ -146,12 +146,6 @@ body {
 /*导航栏end*/
 /*主内容start*/
 /*t0课程模块start*/
-.t {
-	height: 600px;
-	width: 100%;
-	margin-top: 85px;
-	text-align: center;
-}
 .t .t0 {
 	height: 600px;
 	position: relative;
@@ -421,30 +415,6 @@ body {
 /* .t .t2 {
 	height: 600px;
 } */
-.t .t2 .sac {
-	/* height: 600px; */
-	width: 100%;
-}
-.t .t2 .sac .search {
-	display: block;
-	width: 211px;
-	height: 28px;
-	background: url(../img/spirit/spirit.jpg);
-	background-position: 0 -202px;
-	margin-bottom: 10px;
-	border-radius: 10px;
-}
-.t .t2 .sac .search input {
-	display: block;
-	width: 175px;
-	height: 27px;
-	margin-left: 36px;
-	background-color: #033b66;
-	border-radius: 10px;
-	border: 0;
-	outline: none;
-	color: white;
-}
 .t .t2 .accident form {
 	width: 100%;
 }
@@ -1141,6 +1111,7 @@ body {
 	height: 100px;
 	margin: auto;
 	margin-top: 20px;
+	text-align: center;
 }
 
 .skipaccount {

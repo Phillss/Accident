@@ -19,6 +19,42 @@ public class Result_t_Vo extends Result_t {
 	}
 
 	@Override
+	public String getRe_number() {
+		// TODO Auto-generated method stub
+		return super.getRe_number();
+	}
+
+	@Override
+	public void setRe_number(String re_number) {
+		// TODO Auto-generated method stub
+		super.setRe_number(re_number);
+	}
+
+	@Override
+	public String getRe_acc_number() {
+		// TODO Auto-generated method stub
+		return super.getRe_acc_number();
+	}
+
+	@Override
+	public void setRe_acc_number(String re_acc_number) {
+		// TODO Auto-generated method stub
+		super.setRe_acc_number(re_acc_number);
+	}
+
+	@Override
+	public String getRe_industry() {
+		// TODO Auto-generated method stub
+		return super.getRe_industry();
+	}
+
+	@Override
+	public void setRe_industry(String re_industry) {
+		// TODO Auto-generated method stub
+		super.setRe_industry(re_industry);
+	}
+
+	@Override
 	public String getRe_reasonAn() {
 		// TODO Auto-generated method stub
 		return super.getRe_reasonAn();
@@ -64,18 +100,6 @@ public class Result_t_Vo extends Result_t {
 	public void setRe_measure(String re_measure) {
 		// TODO Auto-generated method stub
 		super.setRe_measure(re_measure);
-	}
-
-	@Override
-	public String getRe_law() {
-		// TODO Auto-generated method stub
-		return super.getRe_law();
-	}
-
-	@Override
-	public void setRe_law(String re_law) {
-		// TODO Auto-generated method stub
-		super.setRe_law(re_law);
 	}
 
 	@Override

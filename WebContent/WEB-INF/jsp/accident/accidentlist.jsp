@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/superstyle.css" />
 <title>事故信息列表</title>
 <%@ include file="/font.jsp"%>
 <script type="text/javascript">
@@ -57,15 +58,13 @@
 <body>
 	<div class="t">
 		<div class="t2 main">
-		<div class="ws">
-						<input type="button" name="" id="" value="建筑" />
-						<input type="button" name="" id="" value="建筑" />
-						<input type="button" name="" id="" value="建筑" />
-						<input type="button" name="" id="" value="建筑" />
-						<input type="button" name="" id="" value="建筑" />
-					
-					
-				</div>
+			<div class="w">
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=建筑">建筑</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=建筑">建筑</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=道路交通">道路交通</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=火灾">火灾</a>
+				<a href="${pageContext.request.contextPath}/accident/ClassFinds.action?clazz=工矿商贸">工矿商贸</a>
+			</div>
 			<div class="sac">
 				<div class="search">
 					<form action="${pageContext.request.contextPath}/accident/likefind.action">
@@ -105,9 +104,6 @@
 									</td>
 									<td><c:if test="${item.acc_financial==0 }">-</c:if>
 									<c:if test="${item.acc_financial!=0 }">${item.acc_financial}</c:if></td>
-									<%-- <td>${item.acc_boss}</td> --%>
-									<%-- <td>${item.acc_org}</td> --%>
-									<%-- <td>${item.acc_fileName}</td> --%>
 									<td>${item.acc_industryName}</td>
 									<td class="de"><a
 										href="${pageContext.request.contextPath}/accident/delete.action?acc_id=${item.acc_id}"></a></td>
@@ -141,14 +137,16 @@
 	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
 					</c:if>
 				</div>
+				
 			</div>
+			
 
 		</div>
 		<!--底部S-->
-	<footer></footer>
-	<!--底部E-->
+				<footer></footer>
+				<!--底部E-->
 	</div>
-
+			
 
 
 

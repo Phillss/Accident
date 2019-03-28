@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/Analyststyle.css" />
 <title>原因列表</title>
 <%@ include file="/font.jsp"%>
 <script type="text/javascript">
@@ -131,8 +132,35 @@
 						</tr>
 						<tr id="visit">
 							<td>
-								<a href="${pageContext.request.contextPath}/assort/reason.action" onclick="course()">
-									原因分类
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=根源原因" onclick="course()">
+									根源原因
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=根本原因" onclick="course()">
+									根本原因
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=间接原因" onclick="course()">
+									间接原因
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VC" onclick="course()">
+									VC
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AV" onclick="course()">
+									AV
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AO" onclick="course()">
+									AO
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VO" onclick="course()">
+									VO
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=VA" onclick="course()">
+									VA
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AC" onclick="course()">
+									AC
+								</a>
+								<a href="${pageContext.request.contextPath}/assort/reasonClass.action?clazz=AA" onclick="course()">
+									AA
 								</a>
 							</td>
 						</tr>
@@ -147,42 +175,51 @@
 							<table>
 								<tr>
 									<th>事故编号</th>
-									<th>行业分类</th>
 									<th>原因分析</th>
 									<th>原因分类</th>
 									<th>违反条款</th>
 									<th>对应措施</th>
+									<th>所属行业</th>
+									<th>删除</th>
+									<th>下载</th>
 								</tr>
-								
+								<c:forEach items="${reasonlist.beanList}" var="item">
 								<tr>
-									<td>1</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
+									<td>${item.re_acc_number}</td>
+									<td>${item.re_reasonAn}</td>
+									<td>${item.re_reasonClass}</td>
+									<td>${item.re_Tiaokuan}</td>
+									<td>${item.re_measure}</td>
+									<td>${item.re_industry}</td>
+									<td class="de"><a
+										href="${pageContext.request.contextPath}/assort/delete.action?acc_id=${item.re_id}"></a></td>
+										<!--需要修改  -->
+									<td class="up"><a
+										href="${pageContext.request.contextPath}/assort/downloadfile.action?id=${item.re_id}"></a></td>
+										<!--需要修改  -->
 								</tr>
+							</c:forEach>
 							</table>
 						</form>
 					</div>
 				</div>
 			</div>
 			<div class="skipaccident">
-					<h3>第${listaccident.current+1}页 /共${listaccident.total_pages}页</h3>
+					<h3>第${reasonlist.current+1}页 /共${reasonlist.total_pages}页</h3>
 					<br> <a
-						href="${pageContext.request.contextPath}/accident/findall.action?current=0">首页</a>
-					<c:if test="${listaccident.current>0 }">
+						href="${pageContext.request.contextPath}/assort/reason.action?current=0">首页</a>
+					<c:if test="${reasonlist.current>0 }">
 						<a
 							href="${pageContext.request.contextPath}
-	/accident/findall.action?current=${listaccident.current-1}">上一页</a>
+	/assort/reason.action?current=${reasonlist.current-1}">上一页</a>
 					</c:if>
-					<c:if test="${listaccident.current+1<listaccident.total_pages}">
+					<c:if test="${reasonlist.current+1<reasonlist.total_pages}">
 						<a
 							href="${pageContext.request.contextPath}
-	/accident/findall.action?current=${listaccident.current+1}">下一页</a>
+	/assort/reason.action?current=${reasonlist.current+1}">下一页</a>
 						<a
 							href="${pageContext.request.contextPath}
-	/accident/findall.action?current=${listaccident.total_pages-1}">尾页</a>
+	/assort/reason.action?current=${reasonlist.total_pages-1}">尾页</a>
 					</c:if>
 				</div>
 			

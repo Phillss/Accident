@@ -13,9 +13,11 @@ public class FilterChainDefinitionBuilder {
 		//静态资源的访问（不需要认证）
 		map.put("/css/**", "anon");
 		map.put("/img/**","anon");
+		map.put("/images/**","anon");
 		map.put("/js/*", "anon");
 		
 		//不需要认证可以访问的资源
+		map.put("/home.html", "anon");
 		map.put("/font.jsp", "anon");
 		map.put("/adminlogin.jsp", "anon");
 		map.put("/logup.jsp", "anon");

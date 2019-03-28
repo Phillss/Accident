@@ -45,8 +45,7 @@
 						<a href="${pageContext.request.contextPath}/assort/reason.action" onclick="oDiv(3)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>原因分类</a>
 					</li>
 					<li>
-						<a href="${pageContext.request.contextPath}
-					/accident/cartogram.action" onclick="oDiv(4)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>统计图</a>
+						<a href="${pageContext.request.contextPath}/img/png.htm" onclick="oDiv(4)"><span><img src="${pageContext.request.contextPath}/img/small.png"></span>统计图</a>
 					</li>
 					<li>
 						<a href="${pageContext.request.contextPath}
